@@ -1,0 +1,443 @@
+{
+  "full_text": "Mohamed Nasser Sheikhon\nCairo, Nasr City, Zahraa Madinet Nasr | +201022752938 | LinkedIn\nGitHub | mohamednasserr654@gmail.com\n\nOBJECTIVE\nBackend Developer with a strong foundations in computer science and practical experience in building\napplications using ASP.NET Core, Entity Framework, and SQL Server. Skilled in designing scalable APIs,\nintegrating databases, and delivering efficient backend solutions. Passionate about backend architecture,\nperformance optimization, and contributing to impactful software projects.\n\nEDUCATION\nAin Shams University – Faculty of Computer and Information Science\nBachelor of Science in Computer Science (Major: Computer Science)\nExpected Graduation: July 2026\nCGPA: 3.4\n\nINTERNSHIP EXPERIENCE\nEJADA Egypt – Backend (Offshore Support & Demand Center) Intern\nEjada, Almazah, Cairo Aug 2025 – Sep 2025\n\nDeveloped and maintained backend services and web applications using Java, Spring Boot, Spring Security, and\nRESTful APIs, ensuring secure and scalable system design.\n\nLeveraged JPA, Hibernate, and Microservices architecture to build scalable, high-performance backend modules\nwith efficient data handling and persistence.\nInformation Technology Institute (ITI) – Web Development using ASP.NET Core MVC Intern\nOnline Sep 2025 – Oct 2025\n\nCompleted a practical internship focused on ASP.NET Core MVC Web Development using C#, Entity Framework\nCore, and SQL Server.\n\nGained hands-on experience in building dynamic, data-driven web applications by applying concepts of MVC\narchitecture, dependency injection, database design, and authentication & authorization.\n\nApplied SOLID principles, clean code practices, and layered architecture to ensure scalability, maintainability,\nand high-quality software design.\n\nTRAINING & COURSES\nAin Shams University\nAndroid Development Intern (Summer Training) Aug 2025 – Sep 2025\nBuilt a mobile application using Java and Android SDK as part of the training program.\nWeb Development Intern (Summer Training) Aug 2024 – Sep 2024\nDeveloped a web project using HTML, CSS, and JavaScript as part of the training program.\n\nPROJECTS\n Map Routing Project (C#): Applied graph algorithms (shortest path) with a focus on time complexity\noptimization for efficient route calculation.\n Pac-Man Game (C++): Built using Graph and SFML, applying data structures and BFS algorithm, with\nbasic AI techniques for enemy behavior.\n Operating System (C): Designed and developed operating system modules covering memory\nmanagement, process scheduling, and concurrency control with locks.\n Library Management System (Java): Developed using Object-Oriented Programming (OOP) principles to\nmanage books, users, and transactions.\n Flight Reservation DBMS Project (SQL): Developed a relational database system to handle flight\nbookings, passenger information, and scheduling.\n Gym Website (HTML , CSS , JS): Developed a responsive website showcasing gym services and\nmembership features.\n Sentiment Analysis Classification (Python): Implemented using Natural Language Processing (NLP)\ntechniques to classify text based on sentiment.\n Connect-4 Game (C++): Implemented game logic, win detection algorithms, and integrated audio\neffects for an enhanced gameplay experience.\n Video Game Sales Prediction (Python): Applied Machine Learning algorithms to analyze datasets and\npredict video game sales based on features such as genre, platform, and region.\n Tiny Compiler (C#): Developed a compiler for the Tiny language in C#, including lexical analysis, parsing,\nand code generation.\n E-Commerce Website (Java, Spring Boot, Microservices): Developed the backend of an e-commerce\nplatform, implementing REST APIs, product and order management, and a scalable microservices\narchitecture.\n University Management System (ASP.NET Core MVC): Enabled the management of students,\ninstructors, and courses with defined roles and access levels for each user type. Implemented key\nfeatures such as user registration and login, CRUD operations, role-based access control, and data\nmanagement using Entity Framework Core.\n\nSKILLS\nProgramming & Frameworks: C++, C#, Java, ASP.NET Core, Entity Framework, Spring Boot, Microservices,\nPython\nWeb Technologies: HTML, CSS, JavaScript, SQL\nCore Concepts: REST APIs, OOP, Data Structures, Algorithms, Problem Solving\nSoft Skills: Teamwork, Leadership, Time Management, Networking Fundamentals\n\nLANGUAGES\nArabic (Native)\nEnglish (Very good)",
+  "pages": [
+    {
+      "page_number": 1,
+      "text": "Mohamed Nasser Sheikhon\nCairo, Nasr City, Zahraa Madinet Nasr | +201022752938 | LinkedIn\nGitHub | mohamednasserr654@gmail.com\n\nOBJECTIVE\nBackend Developer with a strong foundations in computer science and practical experience in building\napplications using ASP.NET Core, Entity Framework, and SQL Server. Skilled in designing scalable APIs,\nintegrating databases, and delivering efficient backend solutions. Passionate about backend architecture,\nperformance optimization, and contributing to impactful software projects.\n\nEDUCATION\nAin Shams University – Faculty of Computer and Information Science\nBachelor of Science in Computer Science (Major: Computer Science)\nExpected Graduation: July 2026\nCGPA: 3.4\n\nINTERNSHIP EXPERIENCE\nEJADA Egypt – Backend (Offshore Support & Demand Center) Intern\nEjada, Almazah, Cairo Aug 2025 – Sep 2025\n\nDeveloped and maintained backend services and web applications using Java, Spring Boot, Spring Security, and\nRESTful APIs, ensuring secure and scalable system design.\n\nLeveraged JPA, Hibernate, and Microservices architecture to build scalable, high-performance backend modules\nwith efficient data handling and persistence.\nInformation Technology Institute (ITI) – Web Development using ASP.NET Core MVC Intern\nOnline Sep 2025 – Oct 2025\n\nCompleted a practical internship focused on ASP.NET Core MVC Web Development using C#, Entity Framework\nCore, and SQL Server.\n\nGained hands-on experience in building dynamic, data-driven web applications by applying concepts of MVC\narchitecture, dependency injection, database design, and authentication & authorization.\n\nApplied SOLID principles, clean code practices, and layered architecture to ensure scalability, maintainability,\nand high-quality software design.\n\nTRAINING & COURSES\nAin Shams University\nAndroid Development Intern (Summer Training) Aug 2025 – Sep 2025\nBuilt a mobile application using Java and Android SDK as part of the training program.\nWeb Development Intern (Summer Training) Aug 2024 – Sep 2024\nDeveloped a web project using HTML, CSS, and JavaScript as part of the training program.",
+      "blocks": [
+        {
+          "text": "Mohamed Nasser Sheikhon",
+          "page_number": 1,
+          "bbox": [
+            144.25999450683594,
+            45.750030517578125,
+            446.71502685546875,
+            71.79003143310547
+          ],
+          "kind": "heading"
+        },
+        {
+          "text": "Cairo, Nasr City, Zahraa Madinet Nasr | +201022752938 | LinkedIn",
+          "page_number": 1,
+          "bbox": [
+            63.0,
+            89.81002807617188,
+            512.3130493164062,
+            103.85002899169922
+          ],
+          "kind": "table"
+        },
+        {
+          "text": "GitHub | mohamednasserr654@gmail.com",
+          "page_number": 1,
+          "bbox": [
+            63.0,
+            106.85000610351562,
+            434.16302490234375,
+            120.89000701904297
+          ],
+          "kind": "other"
+        },
+        {
+          "text": "OBJECTIVE",
+          "page_number": 1,
+          "bbox": [
+            31.440000534057617,
+            124.00997924804688,
+            104.97200012207031,
+            157.49000549316406
+          ],
+          "kind": "heading"
+        },
+        {
+          "text": "Backend Developer with a strong foundations in computer science and practical experience in building\napplications using ASP.NET Core, Entity Framework, and SQL Server. Skilled in designing scalable APIs,\nintegrating databases, and delivering efficient backend solutions. Passionate about backend architecture,\nperformance optimization, and contributing to impactful software projects.",
+          "page_number": 1,
+          "bbox": [
+            31.440000534057617,
+            162.74002075195312,
+            509.83502197265625,
+            236.9000244140625
+          ],
+          "kind": "paragraph"
+        },
+        {
+          "text": "EDUCATION",
+          "page_number": 1,
+          "bbox": [
+            31.440000534057617,
+            239.93002319335938,
+            115.1069564819336,
+            273.55999755859375
+          ],
+          "kind": "heading"
+        },
+        {
+          "text": "Ain Shams University – Faculty of Computer and Information Science\nBachelor of Science in Computer Science (Major: Computer Science)\nExpected Graduation: July 2026\nCGPA: 3.4",
+          "page_number": 1,
+          "bbox": [
+            31.440000534057617,
+            278.80999755859375,
+            340.72503662109375,
+            330.1700134277344
+          ],
+          "kind": "paragraph"
+        },
+        {
+          "text": "INTERNSHIP EXPERIENCE",
+          "page_number": 1,
+          "bbox": [
+            31.440000534057617,
+            368.3599853515625,
+            200.0969696044922,
+            384.3199768066406
+          ],
+          "kind": "heading"
+        },
+        {
+          "text": "EJADA Egypt – Backend (Offshore Support & Demand Center) Intern\nEjada, Almazah, Cairo Aug 2025 – Sep 2025",
+          "page_number": 1,
+          "bbox": [
+            31.440000534057617,
+            389.92999267578125,
+            576.675048828125,
+            416.57000732421875
+          ],
+          "kind": "paragraph"
+        },
+        {
+          "text": "\nDeveloped and maintained backend services and web applications using Java, Spring Boot, Spring Security, and\nRESTful APIs, ensuring secure and scalable system design.\n\nLeveraged JPA, Hibernate, and Microservices architecture to build scalable, high-performance backend modules\nwith efficient data handling and persistence.",
+          "page_number": 1,
+          "bbox": [
+            49.439998626708984,
+            416.65478515625,
+            572.5773315429688,
+            471.5500183105469
+          ],
+          "kind": "paragraph"
+        },
+        {
+          "text": "Information Technology Institute (ITI) – Web Development using ASP.NET Core MVC Intern\nOnline Sep 2025 – Oct 2025",
+          "page_number": 1,
+          "bbox": [
+            31.440000534057617,
+            484.1499938964844,
+            578.3319702148438,
+            510.7900085449219
+          ],
+          "kind": "paragraph"
+        },
+        {
+          "text": "\nCompleted a practical internship focused on ASP.NET Core MVC Web Development using C#, Entity Framework\nCore, and SQL Server.\n\nGained hands-on experience in building dynamic, data-driven web applications by applying concepts of MVC\narchitecture, dependency injection, database design, and authentication & authorization.\n\nApplied SOLID principles, clean code practices, and layered architecture to ensure scalability, maintainability,\nand high-quality software design.",
+          "page_number": 1,
+          "bbox": [
+            49.439998626708984,
+            510.85479736328125,
+            571.5986328125,
+            593.1400146484375
+          ],
+          "kind": "paragraph"
+        },
+        {
+          "text": "TRAINING & COURSES",
+          "page_number": 1,
+          "bbox": [
+            31.440000534057617,
+            606.6100463867188,
+            181.70697021484375,
+            642.1300048828125
+          ],
+          "kind": "heading"
+        },
+        {
+          "text": "Ain Shams University\nAndroid Development Intern (Summer Training) Aug 2025 – Sep 2025\nBuilt a mobile application using Java and Android SDK as part of the training program.",
+          "page_number": 1,
+          "bbox": [
+            31.440000534057617,
+            647.8599853515625,
+            614.2236328125,
+            687.9400024414062
+          ],
+          "kind": "paragraph"
+        },
+        {
+          "text": "Web Development Intern (Summer Training) Aug 2024 – Sep 2024\nDeveloped a web project using HTML, CSS, and JavaScript as part of the training program.",
+          "page_number": 1,
+          "bbox": [
+            31.440000534057617,
+            700.5360107421875,
+            575.6919555664062,
+            725.9760131835938
+          ],
+          "kind": "paragraph"
+        }
+      ]
+    },
+    {
+      "page_number": 2,
+      "text": "PROJECTS\n Map Routing Project (C#): Applied graph algorithms (shortest path) with a focus on time complexity\noptimization for efficient route calculation.\n Pac-Man Game (C++): Built using Graph and SFML, applying data structures and BFS algorithm, with\nbasic AI techniques for enemy behavior.\n Operating System (C): Designed and developed operating system modules covering memory\nmanagement, process scheduling, and concurrency control with locks.\n Library Management System (Java): Developed using Object-Oriented Programming (OOP) principles to\nmanage books, users, and transactions.\n Flight Reservation DBMS Project (SQL): Developed a relational database system to handle flight\nbookings, passenger information, and scheduling.\n Gym Website (HTML , CSS , JS): Developed a responsive website showcasing gym services and\nmembership features.\n Sentiment Analysis Classification (Python): Implemented using Natural Language Processing (NLP)\ntechniques to classify text based on sentiment.\n Connect-4 Game (C++): Implemented game logic, win detection algorithms, and integrated audio\neffects for an enhanced gameplay experience.\n Video Game Sales Prediction (Python): Applied Machine Learning algorithms to analyze datasets and\npredict video game sales based on features such as genre, platform, and region.\n Tiny Compiler (C#): Developed a compiler for the Tiny language in C#, including lexical analysis, parsing,\nand code generation.\n E-Commerce Website (Java, Spring Boot, Microservices): Developed the backend of an e-commerce\nplatform, implementing REST APIs, product and order management, and a scalable microservices\narchitecture.\n University Management System (ASP.NET Core MVC): Enabled the management of students,\ninstructors, and courses with defined roles and access levels for each user type. Implemented key\nfeatures such as user registration and login, CRUD operations, role-based access control, and data\nmanagement using Entity Framework Core.\n\nSKILLS\nProgramming & Frameworks: C++, C#, Java, ASP.NET Core, Entity Framework, Spring Boot, Microservices,\nPython\nWeb Technologies: HTML, CSS, JavaScript, SQL\nCore Concepts: REST APIs, OOP, Data Structures, Algorithms, Problem Solving\nSoft Skills: Teamwork, Leadership, Time Management, Networking Fundamentals\n\nLANGUAGES\nArabic (Native)\nEnglish (Very good)",
+      "blocks": [
+        {
+          "text": "PROJECTS",
+          "page_number": 2,
+          "bbox": [
+            31.440000534057617,
+            43.829986572265625,
+            100.47095489501953,
+            59.78998947143555
+          ],
+          "kind": "heading"
+        },
+        {
+          "text": " Map Routing Project (C#): Applied graph algorithms (shortest path) with a focus on time complexity",
+          "page_number": 2,
+          "bbox": [
+            49.439998626708984,
+            62.94000244140625,
+            557.3778076171875,
+            78.0
+          ],
+          "kind": "paragraph"
+        },
+        {
+          "text": "optimization for efficient route calculation.\n Pac-Man Game (C++): Built using Graph and SFML, applying data structures and BFS algorithm, with",
+          "page_number": 2,
+          "bbox": [
+            49.439998626708984,
+            80.65997314453125,
+            556.9119262695312,
+            107.9000244140625
+          ],
+          "kind": "paragraph"
+        },
+        {
+          "text": "basic AI techniques for enemy behavior.\n Operating System (C): Designed and developed operating system modules covering memory",
+          "page_number": 2,
+          "bbox": [
+            49.439998626708984,
+            110.65997314453125,
+            521.6360473632812,
+            137.9000244140625
+          ],
+          "kind": "paragraph"
+        },
+        {
+          "text": "management, process scheduling, and concurrency control with locks.\n Library Management System (Java): Developed using Object-Oriented Programming (OOP) principles to",
+          "page_number": 2,
+          "bbox": [
+            49.439998626708984,
+            140.53997802734375,
+            577.7017822265625,
+            167.780029296875
+          ],
+          "kind": "paragraph"
+        },
+        {
+          "text": "manage books, users, and transactions.\n Flight Reservation DBMS Project (SQL): Developed a relational database system to handle flight",
+          "page_number": 2,
+          "bbox": [
+            49.439998626708984,
+            170.41998291015625,
+            538.5498657226562,
+            197.780029296875
+          ],
+          "kind": "paragraph"
+        },
+        {
+          "text": "bookings, passenger information, and scheduling.\n Gym Website (HTML , CSS , JS): Developed a responsive website showcasing gym services and",
+          "page_number": 2,
+          "bbox": [
+            49.439998626708984,
+            200.41998291015625,
+            528.721923828125,
+            227.65997314453125
+          ],
+          "kind": "paragraph"
+        },
+        {
+          "text": "membership features.\n Sentiment Analysis Classification (Python): Implemented using Natural Language Processing (NLP)",
+          "page_number": 2,
+          "bbox": [
+            49.439998626708984,
+            230.29998779296875,
+            551.1978759765625,
+            257.57000732421875
+          ],
+          "kind": "paragraph"
+        },
+        {
+          "text": "techniques to classify text based on sentiment.\n Connect-4 Game (C++): Implemented game logic, win detection algorithms, and integrated audio",
+          "page_number": 2,
+          "bbox": [
+            49.439998626708984,
+            260.33001708984375,
+            543.35595703125,
+            287.57000732421875
+          ],
+          "kind": "paragraph"
+        },
+        {
+          "text": "effects for an enhanced gameplay experience.\n Video Game Sales Prediction (Python): Applied Machine Learning algorithms to analyze datasets and",
+          "page_number": 2,
+          "bbox": [
+            49.439998626708984,
+            290.2099914550781,
+            564.0858154296875,
+            317.45001220703125
+          ],
+          "kind": "paragraph"
+        },
+        {
+          "text": "predict video game sales based on features such as genre, platform, and region.\n Tiny Compiler (C#): Developed a compiler for the Tiny language in C#, including lexical analysis, parsing,",
+          "page_number": 2,
+          "bbox": [
+            49.439998626708984,
+            320.2099914550781,
+            574.4480590820312,
+            347.45001220703125
+          ],
+          "kind": "paragraph"
+        },
+        {
+          "text": "and code generation.\n E-Commerce Website (Java, Spring Boot, Microservices): Developed the backend of an e-commerce",
+          "page_number": 2,
+          "bbox": [
+            49.439998626708984,
+            350.0899963378906,
+            560.2959594726562,
+            377.3299865722656
+          ],
+          "kind": "paragraph"
+        },
+        {
+          "text": "platform, implementing REST APIs, product and order management, and a scalable microservices\narchitecture.\n University Management System (ASP.NET Core MVC): Enabled the management of students,",
+          "page_number": 2,
+          "bbox": [
+            49.439998626708984,
+            380.0899963378906,
+            542.411865234375,
+            421.989990234375
+          ],
+          "kind": "paragraph"
+        },
+        {
+          "text": "instructors, and courses with defined roles and access levels for each user type. Implemented key\nfeatures such as user registration and login, CRUD operations, role-based access control, and data\nmanagement using Entity Framework Core.",
+          "page_number": 2,
+          "bbox": [
+            67.46399688720703,
+            424.6300048828125,
+            546.60986328125,
+            465.9100036621094
+          ],
+          "kind": "paragraph"
+        },
+        {
+          "text": "SKILLS",
+          "page_number": 2,
+          "bbox": [
+            31.440000534057617,
+            507.8200378417969,
+            76.71095275878906,
+            523.780029296875
+          ],
+          "kind": "heading"
+        },
+        {
+          "text": "Programming & Frameworks: C++, C#, Java, ASP.NET Core, Entity Framework, Spring Boot, Microservices,\nPython\nWeb Technologies: HTML, CSS, JavaScript, SQL\nCore Concepts: REST APIs, OOP, Data Structures, Algorithms, Problem Solving\nSoft Skills: Teamwork, Leadership, Time Management, Networking Fundamentals",
+          "page_number": 2,
+          "bbox": [
+            31.440000534057617,
+            529.510009765625,
+            555.8919677734375,
+            608.8599853515625
+          ],
+          "kind": "paragraph"
+        },
+        {
+          "text": "LANGUAGES",
+          "page_number": 2,
+          "bbox": [
+            31.440000534057617,
+            654.1300048828125,
+            117.98695373535156,
+            670.0899658203125
+          ],
+          "kind": "heading"
+        },
+        {
+          "text": "Arabic (Native)\nEnglish (Very good)",
+          "page_number": 2,
+          "bbox": [
+            31.440000534057617,
+            675.7000122070312,
+            130.29200744628906,
+            704.4959716796875
+          ],
+          "kind": "paragraph"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "heading": "General",
+      "content": "Mohamed Nasser Sheikhon\nCairo, Nasr City, Zahraa Madinet Nasr | +201022752938 | LinkedIn\nGitHub | mohamednasserr654@gmail.com",
+      "source_pages": [
+        1
+      ]
+    },
+    {
+      "heading": "Objective",
+      "content": "Backend Developer with a strong foundations in computer science and practical experience in building\napplications using ASP.NET Core, Entity Framework, and SQL Server. Skilled in designing scalable APIs,\nintegrating databases, and delivering efficient backend solutions. Passionate about backend architecture,\nperformance optimization, and contributing to impactful software projects.",
+      "source_pages": [
+        1
+      ]
+    },
+    {
+      "heading": "Education",
+      "content": "Ain Shams University – Faculty of Computer and Information Science\nBachelor of Science in Computer Science (Major: Computer Science)\nExpected Graduation: July 2026\nCGPA: 3.4\nINTERNSHIP EXPERIENCE\nEJADA Egypt – Backend (Offshore Support & Demand Center) Intern\nEjada, Almazah, Cairo Aug 2025 – Sep 2025\n\nDeveloped and maintained backend services and web applications using Java, Spring Boot, Spring Security, and\nRESTful APIs, ensuring secure and scalable system design.\n\nLeveraged JPA, Hibernate, and Microservices architecture to build scalable, high-performance backend modules\nwith efficient data handling and persistence.\nInformation Technology Institute (ITI) – Web Development using ASP.NET Core MVC Intern\nOnline Sep 2025 – Oct 2025\n\nCompleted a practical internship focused on ASP.NET Core MVC Web Development using C#, Entity Framework\nCore, and SQL Server.\n\nGained hands-on experience in building dynamic, data-driven web applications by applying concepts of MVC\narchitecture, dependency injection, database design, and authentication & authorization.\n\nApplied SOLID principles, clean code practices, and layered architecture to ensure scalability, maintainability,\nand high-quality software design.\nTRAINING & COURSES\nAin Shams University\nAndroid Development Intern (Summer Training) Aug 2025 – Sep 2025\nBuilt a mobile application using Java and Android SDK as part of the training program.\nWeb Development Intern (Summer Training) Aug 2024 – Sep 2024\nDeveloped a web project using HTML, CSS, and JavaScript as part of the training program.",
+      "source_pages": [
+        1
+      ]
+    },
+    {
+      "heading": "Projects",
+      "content": " Map Routing Project (C#): Applied graph algorithms (shortest path) with a focus on time complexity\noptimization for efficient route calculation.\n Pac-Man Game (C++): Built using Graph and SFML, applying data structures and BFS algorithm, with\nbasic AI techniques for enemy behavior.\n Operating System (C): Designed and developed operating system modules covering memory\nmanagement, process scheduling, and concurrency control with locks.\n Library Management System (Java): Developed using Object-Oriented Programming (OOP) principles to\nmanage books, users, and transactions.\n Flight Reservation DBMS Project (SQL): Developed a relational database system to handle flight\nbookings, passenger information, and scheduling.\n Gym Website (HTML , CSS , JS): Developed a responsive website showcasing gym services and\nmembership features.\n Sentiment Analysis Classification (Python): Implemented using Natural Language Processing (NLP)\ntechniques to classify text based on sentiment.\n Connect-4 Game (C++): Implemented game logic, win detection algorithms, and integrated audio\neffects for an enhanced gameplay experience.\n Video Game Sales Prediction (Python): Applied Machine Learning algorithms to analyze datasets and\npredict video game sales based on features such as genre, platform, and region.\n Tiny Compiler (C#): Developed a compiler for the Tiny language in C#, including lexical analysis, parsing,\nand code generation.\n E-Commerce Website (Java, Spring Boot, Microservices): Developed the backend of an e-commerce\nplatform, implementing REST APIs, product and order management, and a scalable microservices\narchitecture.\n University Management System (ASP.NET Core MVC): Enabled the management of students,\ninstructors, and courses with defined roles and access levels for each user type. Implemented key\nfeatures such as user registration and login, CRUD operations, role-based access control, and data\nmanagement using Entity Framework Core.",
+      "source_pages": [
+        2
+      ]
+    },
+    {
+      "heading": "Skills",
+      "content": "Programming & Frameworks: C++, C#, Java, ASP.NET Core, Entity Framework, Spring Boot, Microservices,\nPython\nWeb Technologies: HTML, CSS, JavaScript, SQL\nCore Concepts: REST APIs, OOP, Data Structures, Algorithms, Problem Solving\nSoft Skills: Teamwork, Leadership, Time Management, Networking Fundamentals",
+      "source_pages": [
+        2
+      ]
+    },
+    {
+      "heading": "Languages",
+      "content": "Arabic (Native)\nEnglish (Very good)",
+      "source_pages": [
+        2
+      ]
+    }
+  ],
+  "metadata": {
+    "source_path": "CVs/Mohamed_Nasser_(CV).pdf",
+    "extractor": "pymupdf",
+    "page_count": 2,
+    "document_metadata": {
+      "format": "PDF 1.5",
+      "title": "",
+      "author": "Mohamed Nasser",
+      "subject": "",
+      "keywords": "",
+      "creator": "Microsoft® Word 2010",
+      "producer": "Microsoft® Word 2010",
+      "creationDate": "D:20251020202514+03'00'",
+      "modDate": "D:20251020202514+03'00'",
+      "trapped": "",
+      "encryption": null
+    },
+    "fallback_triggered": false
+  }
+}

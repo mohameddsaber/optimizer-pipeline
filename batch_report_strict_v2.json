@@ -1,0 +1,67 @@
+{
+  "input_dir": "CVs",
+  "total_files": 110,
+  "processed_files": 110,
+  "failed_files": 0,
+  "weak_files": 2,
+  "strict_weak_files": 2,
+  "failures": [],
+  "weak_file_details": [
+    {
+      "file_path": "CVs/Manar_esam_flowCV.pdf",
+      "weak_extraction": true,
+      "audit_weak": true,
+      "audit_score": 45,
+      "audit_reasons": [
+        {
+          "code": "many_empty_pages",
+          "severity": "critical",
+          "message": "At least half of the pages are empty.",
+          "metric": 1
+        },
+        {
+          "code": "fallback_triggered",
+          "severity": "low",
+          "message": "The fallback extractor was required.",
+          "metric": true
+        }
+      ],
+      "page_count": 2,
+      "full_text_length": 1589,
+      "block_count": 37,
+      "section_count": 5,
+      "fallback_triggered": true
+    },
+    {
+      "file_path": "CVs/Omar Mohamed-CV.pdf",
+      "weak_extraction": true,
+      "audit_weak": true,
+      "audit_score": 33,
+      "audit_reasons": [
+        {
+          "code": "many_empty_pages",
+          "severity": "critical",
+          "message": "At least half of the pages are empty.",
+          "metric": 1
+        },
+        {
+          "code": "repeated_lines",
+          "severity": "medium",
+          "message": "Many lines repeat three or more times.",
+          "metric": 0.304
+        },
+        {
+          "code": "fallback_triggered",
+          "severity": "low",
+          "message": "The fallback extractor was required.",
+          "metric": true
+        }
+      ],
+      "page_count": 2,
+      "full_text_length": 2603,
+      "block_count": 63,
+      "section_count": 5,
+      "fallback_triggered": true
+    }
+  ]
+}
