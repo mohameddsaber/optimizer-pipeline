@@ -1,192 +1,465 @@
-"""Unit tests for raw CV extraction heuristics."""
+"""Unit tests for the phase-1 CV extraction pipeline."""
 
-from extraction.models import RawPageExtraction, RawTextBlock
-from extraction.normalize import normalize_text
+from pathlib import Path
+from typing import List
+
+import extraction.service as service_module
+from extraction.classification import classify_blocks
+from extraction.models import NormalizedBlock, RawPageExtraction, RawPdfExtraction, RawTextBlock
+from extraction.normalize import normalize_blocks, normalize_text
 from extraction.section_splitter import (
-    classify_heading_from_text,
-    is_heading_text,
+    normalize_section_heading,
     split_into_sections,
+    split_into_sections_with_diagnostics,
 )
-from extraction.models import RawPdfExtraction
-from extraction.service import audit_extraction_quality, is_extraction_weak
+from extraction.service import audit_extraction_quality, build_diagnostics, extract_raw_pdf, is_extraction_weak
 
 
-def test_normalize_text_collapses_whitespace_and_preserves_bullets() -> None:
-    text = "SUMMARY\r\n\r\n  -   Built   APIs \r\n\t•  Led migration\n\n\nPython    Developer"
-    normalized = normalize_text(text)
-
-    assert normalized == "SUMMARY\n\n- Built APIs\n• Led migration\n\nPython Developer"
-
-
-def test_is_heading_text_matches_known_variants_case_insensitively() -> None:
-    assert is_heading_text("WORK EXPERIENCE")
-    assert is_heading_text("technical skills:")
-    assert is_heading_text(" Summary ")
-    assert not is_heading_text("Senior Software Engineer")
-
-
-def test_classify_heading_from_text_detects_common_block_types() -> None:
-    assert classify_heading_from_text("EDUCATION") == "heading"
-    assert classify_heading_from_text("- Improved latency by 35%") == "bullet"
-    assert classify_heading_from_text("Python | SQL | Docker") == "table"
-    assert classify_heading_from_text("Built backend services for large-scale payments platform.") == "paragraph"
-
-
-def test_split_into_sections_uses_heading_lines_and_tracks_pages() -> None:
-    pages = [
-        RawPageExtraction(
+def test_normalize_blocks_merges_multiline_bullet() -> None:
+    raw_blocks = [
+        RawTextBlock(
+            block_id="raw-1-0",
+            text="• Built ingestion pipeline",
             page_number=1,
-            text="SUMMARY\nBackend engineer with 8 years of experience.\n\nEXPERIENCE\nAcme Corp\n- Built APIs",
-            blocks=[
-                RawTextBlock(text="SUMMARY", page_number=1, bbox=None, kind="heading"),
-                RawTextBlock(
-                    text="Backend engineer with 8 years of experience.",
-                    page_number=1,
-                    bbox=None,
-                    kind="paragraph",
-                ),
-                RawTextBlock(text="EXPERIENCE", page_number=1, bbox=None, kind="heading"),
-                RawTextBlock(text="Acme Corp", page_number=1, bbox=None, kind="other"),
-                RawTextBlock(text="- Built APIs", page_number=1, bbox=None, kind="bullet"),
-            ],
+            bbox=(72.0, 100.0, 260.0, 114.0),
         ),
-        RawPageExtraction(
-            page_number=2,
-            text="EDUCATION:\nCairo University",
-            blocks=[
-                RawTextBlock(text="EDUCATION:", page_number=2, bbox=None, kind="heading"),
-                RawTextBlock(text="Cairo University", page_number=2, bbox=None, kind="paragraph"),
-            ],
+        RawTextBlock(
+            block_id="raw-1-1",
+            text="for CV processing across teams",
+            page_number=1,
+            bbox=(90.0, 116.0, 290.0, 130.0),
         ),
     ]
 
-    sections = split_into_sections(pages)
+    normalized = normalize_blocks(raw_blocks)
+
+    assert len(normalized) == 1
+    assert normalized[0].text == "• Built ingestion pipeline for CV processing across teams"
+    assert normalized[0].source_block_ids == ["raw-1-0", "raw-1-1"]
+
+
+def test_normalize_blocks_merges_continuation_lines_by_alignment() -> None:
+    raw_blocks = [
+        RawTextBlock(
+            block_id="raw-1-0",
+            text="Built backend APIs and event-driven workflows",
+            page_number=1,
+            bbox=(72.0, 100.0, 330.0, 114.0),
+        ),
+        RawTextBlock(
+            block_id="raw-1-1",
+            text="for internal automation and reporting",
+            page_number=1,
+            bbox=(74.0, 116.0, 310.0, 130.0),
+        ),
+    ]
+
+    normalized = normalize_blocks(raw_blocks)
+
+    assert len(normalized) == 1
+    assert "for internal automation and reporting" in normalized[0].text
+
+
+def test_normalize_blocks_does_not_merge_following_section_heading() -> None:
+    raw_blocks = [
+        RawTextBlock(
+            block_id="raw-1-0",
+            text="High School, St. George's Collage School (SGC) Heliopolis | 2022",
+            page_number=1,
+            bbox=(72.0, 100.0, 340.0, 114.0),
+        ),
+        RawTextBlock(
+            block_id="raw-1-1",
+            text="Work Experience",
+            page_number=1,
+            bbox=(72.0, 118.0, 190.0, 132.0),
+        ),
+    ]
+
+    normalized = normalize_blocks(raw_blocks)
+
+    assert len(normalized) == 2
+    assert normalized[0].text == "High School, St. George's Collage School (SGC) Heliopolis | 2022"
+    assert normalized[1].text == "Work Experience"
+
+
+def test_classify_blocks_detects_heading_contact_and_skills() -> None:
+    normalized_blocks = [
+        NormalizedBlock(
+            block_id="norm-1-0",
+            page_number=1,
+            bbox=(72.0, 40.0, 410.0, 56.0),
+            text="ahmed@example.com | +20 100 000 0000 | linkedin.com/in/ahmed",
+            original_text="ahmed@example.com | +20 100 000 0000 | linkedin.com/in/ahmed",
+            source_block_ids=["raw-1-0"],
+            source_texts=["ahmed@example.com | +20 100 000 0000 | linkedin.com/in/ahmed"],
+        ),
+        NormalizedBlock(
+            block_id="norm-1-1",
+            page_number=1,
+            bbox=(72.0, 90.0, 160.0, 106.0),
+            text="EXPERIENCE",
+            original_text="EXPERIENCE",
+            source_block_ids=["raw-1-1"],
+            source_texts=["EXPERIENCE"],
+        ),
+        NormalizedBlock(
+            block_id="norm-1-2",
+            page_number=1,
+            bbox=(72.0, 180.0, 380.0, 194.0),
+            text="Python | SQL | Docker | FastAPI",
+            original_text="Python | SQL | Docker | FastAPI",
+            source_block_ids=["raw-1-2"],
+            source_texts=["Python | SQL | Docker | FastAPI"],
+        ),
+    ]
+
+    labels = [block.label for block in classify_blocks(normalized_blocks)]
+    assert labels == ["contact_line", "section_heading", "skills_line"]
+
+
+def test_split_into_sections_does_not_collapse_resume_into_one_section() -> None:
+    normalized_blocks = [
+        _normalized("norm-1-0", 1, "SUMMARY", (72.0, 60.0, 160.0, 76.0)),
+        _normalized("norm-1-1", 1, "Backend engineer focused on resilient systems.", (72.0, 80.0, 350.0, 94.0)),
+        _normalized("norm-1-2", 1, "EXPERIENCE", (72.0, 120.0, 180.0, 136.0)),
+        _normalized("norm-1-3", 1, "• Built APIs for high-volume workflows", (72.0, 140.0, 350.0, 154.0)),
+        _normalized("norm-1-4", 1, "EDUCATION", (72.0, 200.0, 180.0, 216.0)),
+        _normalized("norm-1-5", 1, "Cairo University", (72.0, 220.0, 210.0, 234.0)),
+    ]
+
+    sections = split_into_sections(classify_blocks(normalized_blocks))
 
     assert [section.heading for section in sections] == ["Summary", "Experience", "Education"]
-    assert sections[0].content == "Backend engineer with 8 years of experience."
-    assert sections[1].content == "Acme Corp\n- Built APIs"
-    assert sections[1].source_pages == [1]
-    assert sections[2].source_pages == [2]
+    assert sections[1].content == "• Built APIs for high-volume workflows"
 
 
-def test_split_into_sections_keeps_general_content_before_first_heading() -> None:
-    pages = [
-        RawPageExtraction(
-            page_number=1,
-            text="Jane Doe\nSenior Engineer\n\nSKILLS\nPython\nSQL",
-            blocks=[],
-        )
+def test_normalize_section_heading_maps_aliases_to_canonical_names() -> None:
+    assert normalize_section_heading("professional summary") == "Summary"
+    assert normalize_section_heading("career history") == "Experience"
+    assert normalize_section_heading("core competencies") == "Skills"
+    assert normalize_section_heading("education and training") == "Education"
+    assert normalize_section_heading("volunteer work") == "Additional Information"
+    assert normalize_section_heading("random heading") is None
+
+
+def test_split_into_sections_handles_variant_headings() -> None:
+    normalized_blocks = [
+        _normalized("norm-1-0", 1, "PROFESSIONAL SUMMARY", (72.0, 60.0, 220.0, 76.0)),
+        _normalized("norm-1-1", 1, "Backend engineer with platform experience.", (72.0, 80.0, 350.0, 94.0)),
+        _normalized("norm-1-2", 1, "CAREER HISTORY", (72.0, 120.0, 210.0, 136.0)),
+        _normalized("norm-1-3", 1, "Built APIs and internal tooling.", (72.0, 140.0, 320.0, 154.0)),
+        _normalized("norm-1-4", 1, "CORE COMPETENCIES", (72.0, 170.0, 220.0, 186.0)),
+        _normalized("norm-1-5", 1, "Python | SQL | Docker", (72.0, 190.0, 260.0, 204.0)),
     ]
 
-    sections = split_into_sections(pages)
+    sections = split_into_sections(classify_blocks(normalized_blocks))
 
+    assert [section.heading for section in sections] == ["Summary", "Experience", "Skills"]
+
+
+def test_split_into_sections_promotes_leading_embedded_heading() -> None:
+    semantic_blocks = [
+        _semantic(
+            "norm-1-0",
+            1,
+            "SUMMARY\nBackend engineer with strong API and platform experience.",
+            "paragraph",
+            (72.0, 80.0, 360.0, 120.0),
+        ),
+        _semantic(
+            "norm-1-1",
+            1,
+            "TECHNICAL SKILLS",
+            "section_heading",
+            (72.0, 140.0, 200.0, 156.0),
+        ),
+        _semantic(
+            "norm-1-2",
+            1,
+            "Python | SQL | FastAPI",
+            "skills_line",
+            (72.0, 160.0, 230.0, 176.0),
+        ),
+    ]
+
+    sections = split_into_sections(semantic_blocks)
+
+    assert [section.heading for section in sections] == ["Summary", "Skills"]
+    assert sections[0].content == "Backend engineer with strong API and platform experience."
+
+
+def test_split_into_sections_promotes_trailing_embedded_heading() -> None:
+    semantic_blocks = [
+        _semantic(
+            "norm-1-0",
+            1,
+            "Python | SQL | Docker | FastAPI PROJECTS",
+            "paragraph",
+            (72.0, 100.0, 360.0, 116.0),
+        ),
+        _semantic(
+            "norm-1-1",
+            1,
+            "Tellix platform for CV optimization.",
+            "paragraph",
+            (72.0, 130.0, 320.0, 146.0),
+        ),
+    ]
+
+    sections = split_into_sections(semantic_blocks)
+
+    assert [section.heading for section in sections] == ["General", "Projects"]
+    assert sections[0].content == "Python | SQL | Docker | FastAPI"
+    assert sections[1].content == "Tellix platform for CV optimization."
+
+
+def test_split_into_sections_promotes_inline_delimited_heading_at_start() -> None:
+    semantic_blocks = [
+        _semantic(
+            "norm-1-0",
+            1,
+            "Education and Qualifications | Computer Science | 2022-2026 | Ain Shams University",
+            "paragraph",
+            (72.0, 100.0, 360.0, 116.0),
+        ),
+        _semantic(
+            "norm-1-1",
+            1,
+            "Projects",
+            "section_heading",
+            (72.0, 140.0, 150.0, 156.0),
+        ),
+        _semantic(
+            "norm-1-2",
+            1,
+            "Tellix platform for CV optimization.",
+            "paragraph",
+            (72.0, 160.0, 300.0, 176.0),
+        ),
+    ]
+
+    sections = split_into_sections(semantic_blocks)
+
+    assert [section.heading for section in sections] == ["Education", "Projects"]
+    assert sections[0].content == "Computer Science | 2022-2026 | Ain Shams University"
+
+
+def test_split_into_sections_promotes_inline_delimited_heading_in_middle() -> None:
+    semantic_blocks = [
+        _semantic(
+            "norm-1-0",
+            1,
+            "High School | 2022 | Work Experience",
+            "paragraph",
+            (72.0, 100.0, 320.0, 116.0),
+        ),
+        _semantic(
+            "norm-1-1",
+            1,
+            "Founder & Web Developer | Built portfolio sites for clients.",
+            "paragraph",
+            (72.0, 120.0, 360.0, 136.0),
+        ),
+    ]
+
+    sections = split_into_sections(semantic_blocks)
+
+    assert [section.heading for section in sections] == ["General", "Experience"]
+    assert sections[0].content == "High School | 2022"
+    assert sections[1].content.startswith("Founder & Web Developer")
+
+
+def test_split_into_sections_promotes_inline_delimited_courses_heading() -> None:
+    semantic_blocks = [
+        _semantic(
+            "norm-1-0",
+            1,
+            "Assistant Accountant | 2024",
+            "paragraph",
+            (72.0, 100.0, 260.0, 116.0),
+        ),
+        _semantic(
+            "norm-1-1",
+            1,
+            "Certifications & Courses | Explore Emerging Tech, IBM SkillsBuild",
+            "paragraph",
+            (72.0, 130.0, 360.0, 146.0),
+        ),
+    ]
+
+    sections = split_into_sections(semantic_blocks)
+
+    assert [section.heading for section in sections] == ["General", "Courses"]
+    assert sections[1].content == "Explore Emerging Tech, IBM SkillsBuild"
+
+
+def test_recovery_splits_oversized_general_section_without_text_loss() -> None:
+    semantic_blocks = [
+        _semantic("norm-1-0", 1, "Jane Doe", "heading", (72.0, 40.0, 160.0, 54.0)),
+        _semantic("norm-1-1", 1, "Senior Backend Engineer", "heading", (72.0, 58.0, 220.0, 72.0)),
+        _semantic("norm-1-2", 1, "Professional Summary", "other", (72.0, 100.0, 220.0, 116.0)),
+        _semantic("norm-1-3", 1, "Built resilient systems for hiring workflows.", "paragraph", (72.0, 120.0, 360.0, 136.0)),
+        _semantic("norm-1-4", 1, "Career History", "other", (72.0, 160.0, 200.0, 176.0)),
+        _semantic("norm-1-5", 1, "Led backend delivery for internal tools.", "paragraph", (72.0, 180.0, 330.0, 196.0)),
+    ]
+
+    sections, section_diag = split_into_sections_with_diagnostics(semantic_blocks)
+    original_text = normalize_text("\n".join(block.text for block in semantic_blocks if block.label != "section_heading"))
+    split_text = normalize_text("\n".join(section.content for section in sections if section.content))
+
+    assert section_diag["recovered_section_splits"] >= 1
+    assert "oversized_general_section" not in section_diag["possible_errors"]
+    assert [section.heading for section in sections] == ["General", "Summary", "Experience"]
+    assert split_text == original_text
+
+
+def test_document_collapsed_into_general_is_flagged() -> None:
+    semantic_blocks = [
+        _semantic("norm-1-0", 1, "Jane Doe", "heading", (72.0, 40.0, 160.0, 54.0)),
+        _semantic("norm-1-1", 1, "Backend engineer with Python and cloud experience.", "paragraph", (72.0, 70.0, 360.0, 86.0)),
+        _semantic("norm-1-2", 1, "Built APIs and automation across teams.", "paragraph", (72.0, 96.0, 320.0, 112.0)),
+    ]
+
+    sections, section_diag = split_into_sections_with_diagnostics(semantic_blocks)
+
+    assert len(sections) == 1
     assert sections[0].heading == "General"
-    assert sections[0].content == "Jane Doe\nSenior Engineer"
-    assert sections[1].heading == "Skills"
+    assert "document_collapsed_into_general" in section_diag["possible_errors"]
+
+
+def test_build_diagnostics_reports_merged_and_suspicious_blocks() -> None:
+    normalized_blocks = [
+        NormalizedBlock(
+            block_id="norm-1-0",
+            page_number=1,
+            bbox=(72.0, 100.0, 330.0, 130.0),
+            text="• Built pipeline for CV ingestion",
+            original_text="• Built pipeline\nfor CV ingestion",
+            source_block_ids=["raw-1-0", "raw-1-1"],
+            source_texts=["• Built pipeline", "for CV ingestion"],
+        ),
+        NormalizedBlock(
+            block_id="norm-1-1",
+            page_number=1,
+            bbox=(72.0, 150.0, 90.0, 160.0),
+            text="| |",
+            original_text="| |",
+            source_block_ids=["raw-1-2"],
+            source_texts=["| |"],
+        ),
+    ]
+    semantic_blocks = classify_blocks(normalized_blocks)
+    sections, section_diag = split_into_sections_with_diagnostics(semantic_blocks)
+
+    diagnostics = build_diagnostics([], normalized_blocks, semantic_blocks, sections, {}, section_diag)
+
+    assert diagnostics.merged_block_count == 1
+    assert diagnostics.section_count >= 1
+    assert any(item.reason == "layout_noise_fragment" for item in diagnostics.suspicious_blocks)
 
 
 def test_is_extraction_weak_flags_sparse_results() -> None:
     weak_pages = [
-        RawPageExtraction(page_number=1, text="", blocks=[]),
-        RawPageExtraction(page_number=2, text="Short", blocks=[]),
+        RawPageExtraction(page_number=1, text="", blocks=[], raw_blocks=[]),
+        RawPageExtraction(page_number=2, text="Short", blocks=[], raw_blocks=[]),
     ]
 
     assert is_extraction_weak(weak_pages) is True
 
 
-def test_is_extraction_weak_accepts_reasonable_results() -> None:
-    strong_pages = [
-        RawPageExtraction(
+def test_extract_raw_pdf_uses_fallback_when_primary_is_weak(monkeypatch, tmp_path: Path) -> None:
+    pdf_path = tmp_path / "sample.pdf"
+    pdf_path.write_bytes(b"%PDF-1.4\n")
+
+    weak_primary = RawPdfExtraction(
+        full_text="",
+        pages=[RawPageExtraction(page_number=1, text="", blocks=[], raw_blocks=[])],
+        sections=[],
+        metadata={"extractor": "pymupdf"},
+        raw_blocks=[],
+    )
+    strong_fallback_blocks = [
+        RawTextBlock(
+            block_id="raw-1-0",
+            text="EXPERIENCE",
             page_number=1,
-            text="Experienced software engineer with strong Python and data engineering background.",
-            blocks=[
-                RawTextBlock(
-                    text="Experienced software engineer with strong Python and data engineering background.",
-                    page_number=1,
-                    bbox=None,
-                    kind="paragraph",
-                ),
-                RawTextBlock(text="SKILLS", page_number=1, bbox=None, kind="heading"),
-            ],
+            bbox=(72.0, 80.0, 170.0, 96.0),
         ),
-        RawPageExtraction(
-            page_number=2,
-            text="Professional Experience\nAcme Corp\nBuilt resilient pipelines and backend systems.",
-            blocks=[
-                RawTextBlock(text="Professional Experience", page_number=2, bbox=None, kind="heading"),
-                RawTextBlock(
-                    text="Built resilient pipelines and backend systems.",
-                    page_number=2,
-                    bbox=None,
-                    kind="paragraph",
-                ),
-            ],
+        RawTextBlock(
+            block_id="raw-1-1",
+            text="Built reliable data pipelines for document processing.",
+            page_number=1,
+            bbox=(72.0, 100.0, 380.0, 116.0),
         ),
     ]
+    strong_fallback = RawPdfExtraction(
+        full_text="EXPERIENCE\nBuilt reliable data pipelines for document processing.",
+        pages=[
+            RawPageExtraction(
+                page_number=1,
+                text="EXPERIENCE\nBuilt reliable data pipelines for document processing.",
+                blocks=strong_fallback_blocks,
+                raw_blocks=strong_fallback_blocks,
+            )
+        ],
+        sections=[],
+        metadata={"extractor": "pdfplumber"},
+        raw_blocks=strong_fallback_blocks,
+    )
 
-    assert is_extraction_weak(strong_pages) is False
+    monkeypatch.setattr(service_module, "extract_with_pymupdf", lambda _: weak_primary)
+    monkeypatch.setattr(service_module, "extract_with_pdfplumber", lambda _: strong_fallback)
+    monkeypatch.setattr(service_module, "merge_extractions", lambda primary, fallback: fallback)
+
+    extraction = extract_raw_pdf(str(pdf_path))
+
+    assert extraction.metadata["fallback_triggered"] is True
+    assert extraction.full_text.startswith("EXPERIENCE")
+    assert extraction.sections[0].heading == "Experience"
 
 
-def test_audit_extraction_quality_flags_fragmented_low_quality_output() -> None:
-    pages = [
-        RawPageExtraction(
-            page_number=1,
-            text="|\n|\nA\nB\nC\n|\n|\nX",
-            blocks=[],
-        ),
-        RawPageExtraction(
-            page_number=2,
-            text="A\nB\nC\n|\n|\nA\nB\nC",
-            blocks=[],
-        ),
+def test_audit_extraction_quality_flags_collapsed_sections() -> None:
+    blocks = [
+        _normalized("norm-1-0", 1, "Very long resume text without any recognized section boundaries " * 20, (72.0, 100.0, 400.0, 180.0))
     ]
-    extraction = RawPdfExtraction(full_text="\n".join(page.text for page in pages), pages=pages, sections=[], metadata={})
-
-    audit = audit_extraction_quality(extraction)
-
-    assert audit["weak"] is True
-    assert audit["score"] < 70
-    codes = {reason["code"] for reason in audit["reasons"]}
-    assert "low_text" in codes or "very_low_text" in codes
-    assert "very_few_blocks" in codes
-
-
-def test_audit_extraction_quality_accepts_reasonable_resume_like_output() -> None:
-    pages = [
-        RawPageExtraction(
-            page_number=1,
-            text=(
-                "SUMMARY\nExperienced software engineer with Python and backend expertise.\n"
-                "EXPERIENCE\nAcme Corp\nBuilt resilient APIs for high-scale systems.\n"
-                "SKILLS\nPython\nSQL\nDocker"
-            ),
-            blocks=[
-                RawTextBlock(text="SUMMARY", page_number=1, bbox=None, kind="heading"),
-                RawTextBlock(
-                    text="Experienced software engineer with Python and backend expertise.",
-                    page_number=1,
-                    bbox=None,
-                    kind="paragraph",
-                ),
-                RawTextBlock(text="EXPERIENCE", page_number=1, bbox=None, kind="heading"),
-                RawTextBlock(
-                    text="Built resilient APIs for high-scale systems.",
-                    page_number=1,
-                    bbox=None,
-                    kind="paragraph",
-                ),
-                RawTextBlock(text="SKILLS", page_number=1, bbox=None, kind="heading"),
-            ],
-        )
-    ]
+    semantic_blocks = classify_blocks(blocks)
     extraction = RawPdfExtraction(
-        full_text=pages[0].text,
-        pages=pages,
-        sections=split_into_sections(pages),
+        full_text=normalize_text("\n".join(block.text for block in blocks)),
+        pages=[],
+        sections=split_into_sections(semantic_blocks),
         metadata={},
+        raw_blocks=[],
+        normalized_blocks=blocks,
+        semantic_blocks=semantic_blocks,
+        diagnostics=build_diagnostics(
+            [],
+            blocks,
+            semantic_blocks,
+            split_into_sections(semantic_blocks),
+            {},
+            split_into_sections_with_diagnostics(semantic_blocks)[1],
+        ),
     )
 
     audit = audit_extraction_quality(extraction)
 
-    assert audit["weak"] is False
-    assert audit["score"] >= 70
+    assert audit["weak"] is True
+    assert any(reason["code"] == "collapsed_sections" for reason in audit["reasons"])
+
+
+def _normalized(block_id: str, page_number: int, text: str, bbox: tuple) -> NormalizedBlock:
+    return NormalizedBlock(
+        block_id=block_id,
+        page_number=page_number,
+        bbox=bbox,
+        text=text,
+        original_text=text,
+        source_block_ids=[block_id.replace("norm", "raw")],
+        source_texts=[text],
+    )
+
+
+def _semantic(block_id: str, page_number: int, text: str, label: str, bbox: tuple):
+    block = _normalized(block_id, page_number, text, bbox)
+    return classify_blocks([block])[0].model_copy(update={"label": label})

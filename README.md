@@ -20,11 +20,12 @@ Or use the included test runner:
 
 ```bash
 python run_extraction.py path/to/resume.pdf
-python run_extraction.py path/to/resume.pdf --output extracted.json
+python run_extraction.py "CVs/Mohamed Saber.pdf" --output extracted.jsonl
+python run_extraction.py "CVs/Jan_Osama CV.pdf" --output extracted.jsonl
 ```
 
-If you use `--output`, each run appends one JSON object per line to the file.
-This makes it easy to process many PDFs into a single `.jsonl`-style output file.
+`--output` appends one JSON object per line. Use a `.jsonl` filename so repeated
+single-PDF runs and batch runs all accumulate cleanly in the same file.
 
 ## Sample Returned JSON
 

@@ -47,8 +47,7 @@ def main() -> None:
         return
 
     result = extract_raw_pdf(str(input_path))
-    payload = result.model_dump()
-    payload["audit"] = audit_extraction_quality(result)
+    payload = _build_output_payload(result.model_dump(), input_path, audit_extraction_quality(result))
 
     if args.output:
         _append_json_line(Path(args.output), payload)
@@ -78,9 +77,9 @@ def _run_batch(input_dir: Path, output: Optional[str], report: Optional[str]) ->
     for pdf_file in pdf_files:
         try:
             extraction = extract_raw_pdf(str(pdf_file))
-            payload = extraction.model_dump()
             weak = is_extraction_weak(extraction.pages)
             audit = audit_extraction_quality(extraction)
+            payload = _build_output_payload(extraction.model_dump(), pdf_file, audit)
 
             record: Dict[str, object] = {
                 "file_path": str(pdf_file),
@@ -100,8 +99,6 @@ def _run_batch(input_dir: Path, output: Optional[str], report: Optional[str]) ->
                 weak_files.append(record)
 
             if output_path is not None:
-                payload["file_path"] = str(pdf_file)
-                payload["audit"] = audit
                 _append_json_line(output_path, payload)
 
             print(
@@ -144,6 +141,17 @@ def _append_json_line(output_path: Path, payload: Dict[str, object]) -> None:
     with output_path.open("a", encoding="utf-8") as handle:
         handle.write(json.dumps(payload, ensure_ascii=False))
         handle.write("\n")
+
+
+def _build_output_payload(
+    payload: Dict[str, object], input_path: Path, audit: Dict[str, object]
+) -> Dict[str, object]:
+    """Attach consistent metadata for appended JSONL records."""
+
+    output_payload = dict(payload)
+    output_payload["file_path"] = str(input_path)
+    output_payload["audit"] = audit
+    return output_payload
 
 
 if __name__ == "__main__":

@@ -1,4 +1,4 @@
-"""PDF extraction backends for raw CV text preservation."""
+"""PDF extraction backends for phase-1 CV extraction."""
 
 from pathlib import Path
 from typing import TYPE_CHECKING, Any, Dict, List, Optional
@@ -9,11 +9,10 @@ if TYPE_CHECKING:
 
 from extraction.models import RawPageExtraction, RawPdfExtraction, RawTextBlock
 from extraction.normalize import normalize_text
-from extraction.section_splitter import classify_heading_from_text
 
 
 def extract_with_pymupdf(pdf_path: str) -> RawPdfExtraction:
-    """Extract page text and blocks with PyMuPDF."""
+    """Extract pages and raw blocks with PyMuPDF in reading order."""
 
     try:
         import fitz
@@ -22,14 +21,15 @@ def extract_with_pymupdf(pdf_path: str) -> RawPdfExtraction:
 
     path = Path(pdf_path)
     if not path.exists():
-        raise FileNotFoundError(f"PDF file does not exist: {pdf_path}")
+        raise FileNotFoundError("PDF file does not exist: {0}".format(pdf_path))
 
     try:
         document = fitz.open(pdf_path)
     except Exception as exc:
-        raise RuntimeError(f"Failed to open PDF with PyMuPDF: {pdf_path}") from exc
+        raise RuntimeError("Failed to open PDF with PyMuPDF: {0}".format(pdf_path)) from exc
 
     pages: List[RawPageExtraction] = []
+    raw_blocks: List[RawTextBlock] = []
     metadata: Dict[str, Any] = {
         "source_path": str(path),
         "extractor": "pymupdf",
@@ -38,23 +38,34 @@ def extract_with_pymupdf(pdf_path: str) -> RawPdfExtraction:
     }
 
     try:
-        for index, page in enumerate(document, start=1):
-            page_text = normalize_text(page.get_text("text") or "")
-            blocks = _extract_pymupdf_blocks(page, index)
+        for page_number, page in enumerate(document, start=1):
+            page_blocks = _extract_pymupdf_blocks(page, page_number)
+            page_text = normalize_text("\n".join(block.text for block in page_blocks))
             pages.append(
-                RawPageExtraction(page_number=index, text=page_text, blocks=blocks)
+                RawPageExtraction(
+                    page_number=page_number,
+                    text=page_text,
+                    blocks=page_blocks,
+                    raw_blocks=page_blocks,
+                )
             )
+            raw_blocks.extend(page_blocks)
     except Exception as exc:
-        raise RuntimeError(f"Failed during PyMuPDF extraction: {pdf_path}") from exc
+        raise RuntimeError("Failed during PyMuPDF extraction: {0}".format(pdf_path)) from exc
     finally:
         document.close()
 
-    full_text = "\n\n".join(page.text for page in pages if page.text).strip()
-    return RawPdfExtraction(full_text=full_text, pages=pages, sections=[], metadata=metadata)
+    return RawPdfExtraction(
+        full_text=normalize_text("\n\n".join(page.text for page in pages if page.text)),
+        pages=pages,
+        sections=[],
+        metadata=metadata,
+        raw_blocks=raw_blocks,
+    )
 
 
 def extract_with_pdfplumber(pdf_path: str) -> RawPdfExtraction:
-    """Extract page text and coarse blocks with pdfplumber."""
+    """Extract pages and raw blocks with pdfplumber."""
 
     try:
         import pdfplumber
@@ -63,95 +74,100 @@ def extract_with_pdfplumber(pdf_path: str) -> RawPdfExtraction:
 
     path = Path(pdf_path)
     if not path.exists():
-        raise FileNotFoundError(f"PDF file does not exist: {pdf_path}")
+        raise FileNotFoundError("PDF file does not exist: {0}".format(pdf_path))
 
     try:
         document = pdfplumber.open(pdf_path)
     except Exception as exc:
-        raise RuntimeError(f"Failed to open PDF with pdfplumber: {pdf_path}") from exc
+        raise RuntimeError("Failed to open PDF with pdfplumber: {0}".format(pdf_path)) from exc
 
     pages: List[RawPageExtraction] = []
+    raw_blocks: List[RawTextBlock] = []
     metadata: Dict[str, Any] = {
         "source_path": str(path),
         "extractor": "pdfplumber",
     }
 
     try:
-        for index, page in enumerate(document.pages, start=1):
-            page_text = normalize_text(page.extract_text() or "")
-            blocks = _extract_pdfplumber_blocks(page, index)
+        for page_number, page in enumerate(document.pages, start=1):
+            page_blocks = _extract_pdfplumber_blocks(page, page_number)
+            page_text = normalize_text("\n".join(block.text for block in page_blocks))
             pages.append(
-                RawPageExtraction(page_number=index, text=page_text, blocks=blocks)
+                RawPageExtraction(
+                    page_number=page_number,
+                    text=page_text,
+                    blocks=page_blocks,
+                    raw_blocks=page_blocks,
+                )
             )
+            raw_blocks.extend(page_blocks)
     except Exception as exc:
-        raise RuntimeError(f"Failed during pdfplumber extraction: {pdf_path}") from exc
+        raise RuntimeError("Failed during pdfplumber extraction: {0}".format(pdf_path)) from exc
     finally:
         document.close()
 
     metadata["page_count"] = len(pages)
-    full_text = "\n\n".join(page.text for page in pages if page.text).strip()
-    return RawPdfExtraction(full_text=full_text, pages=pages, sections=[], metadata=metadata)
+    return RawPdfExtraction(
+        full_text=normalize_text("\n\n".join(page.text for page in pages if page.text)),
+        pages=pages,
+        sections=[],
+        metadata=metadata,
+        raw_blocks=raw_blocks,
+    )
 
 
-def merge_extractions(
-    primary: RawPdfExtraction, fallback: RawPdfExtraction
-) -> RawPdfExtraction:
-    """Merge fallback data conservatively, preferring the primary extractor."""
+def merge_extractions(primary: RawPdfExtraction, fallback: RawPdfExtraction) -> RawPdfExtraction:
+    """Merge extractor outputs conservatively page by page."""
 
     if len(primary.pages) != len(fallback.pages):
         return fallback if _score_extraction(fallback) > _score_extraction(primary) else primary
 
     merged_pages: List[RawPageExtraction] = []
+    merged_raw_blocks: List[RawTextBlock] = []
     fallback_used_pages: List[int] = []
 
     for primary_page, fallback_page in zip(primary.pages, fallback.pages):
-        use_fallback_text = len(primary_page.text.strip()) < len(fallback_page.text.strip())
-        use_fallback_blocks = len(primary_page.blocks) < len(fallback_page.blocks)
-
-        selected_text = fallback_page.text if use_fallback_text else primary_page.text
-        selected_blocks = fallback_page.blocks if use_fallback_blocks else primary_page.blocks
-
-        if use_fallback_text or use_fallback_blocks:
+        use_fallback = _page_score(fallback_page) > _page_score(primary_page)
+        selected_page = fallback_page if use_fallback else primary_page
+        if use_fallback:
             fallback_used_pages.append(primary_page.page_number)
+        merged_pages.append(selected_page)
+        merged_raw_blocks.extend(selected_page.raw_blocks or selected_page.blocks)
 
-        merged_pages.append(
-            RawPageExtraction(
-                page_number=primary_page.page_number,
-                text=selected_text,
-                blocks=selected_blocks,
-            )
-        )
-
-    full_text = "\n\n".join(page.text for page in merged_pages if page.text).strip()
     metadata = dict(primary.metadata)
     metadata["fallback_extractor"] = fallback.metadata.get("extractor")
     metadata["fallback_used_pages"] = fallback_used_pages
-    return RawPdfExtraction(full_text=full_text, pages=merged_pages, sections=[], metadata=metadata)
+    return RawPdfExtraction(
+        full_text=normalize_text("\n\n".join(page.text for page in merged_pages if page.text)),
+        pages=merged_pages,
+        sections=[],
+        metadata=metadata,
+        raw_blocks=merged_raw_blocks,
+    )
 
 
 def _extract_pymupdf_blocks(page: "fitz.Page", page_number: int) -> List[RawTextBlock]:
-    """Convert PyMuPDF text dict output into raw text blocks."""
-
+    raw_dict = page.get_text("dict", sort=True)
     blocks: List[RawTextBlock] = []
-    raw_dict = page.get_text("dict")
-    for raw_block in raw_dict.get("blocks", []):
+
+    for block_index, raw_block in enumerate(raw_dict.get("blocks", [])):
         if raw_block.get("type") != 0:
             continue
         text = _flatten_pymupdf_block_text(raw_block)
-        normalized = normalize_text(text)
-        if not normalized:
+        if not normalize_text(text):
             continue
         bbox_raw = raw_block.get("bbox")
         bbox = tuple(float(value) for value in bbox_raw) if bbox_raw else None
         blocks.append(
             RawTextBlock(
-                text=normalized,
+                block_id="raw-{0}-{1}".format(page_number, block_index),
+                text=text,
                 page_number=page_number,
                 bbox=bbox,  # type: ignore[arg-type]
-                kind=classify_heading_from_text(normalized),
+                kind="other",
             )
         )
-    return blocks
+    return sorted(blocks, key=_raw_block_sort_key)
 
 
 def _flatten_pymupdf_block_text(raw_block: Dict[str, Any]) -> str:
@@ -164,11 +180,7 @@ def _flatten_pymupdf_block_text(raw_block: Dict[str, Any]) -> str:
     return "\n".join(lines)
 
 
-def _extract_pdfplumber_blocks(
-    page: "pdfplumber.page.Page", page_number: int
-) -> List[RawTextBlock]:
-    """Build coarse text blocks from pdfplumber words grouped by line position."""
-
+def _extract_pdfplumber_blocks(page: "pdfplumber.page.Page", page_number: int) -> List[RawTextBlock]:
     words = page.extract_words(
         x_tolerance=2,
         y_tolerance=3,
@@ -178,45 +190,56 @@ def _extract_pdfplumber_blocks(
     if not words:
         return []
 
-    grouped_lines: List[List[Dict[str, Any]]] = []
-    current_line: List[Dict[str, Any]] = []
+    groups: List[List[Dict[str, Any]]] = []
+    current_group: List[Dict[str, Any]] = []
     current_top: Optional[float] = None
 
-    for word in words:
+    for word in sorted(words, key=lambda item: (float(item["top"]), float(item["x0"]))):
         top = float(word["top"])
         if current_top is None or abs(top - current_top) <= 3:
-            current_line.append(word)
-            current_top = top if current_top is None else min(current_top, top)
+            current_group.append(word)
+            current_top = top if current_top is None else current_top
             continue
-        grouped_lines.append(current_line)
-        current_line = [word]
+        groups.append(current_group)
+        current_group = [word]
         current_top = top
 
-    if current_line:
-        grouped_lines.append(current_line)
+    if current_group:
+        groups.append(current_group)
 
     blocks: List[RawTextBlock] = []
-    for line_words in grouped_lines:
-        sorted_words = sorted(line_words, key=lambda item: (float(item["x0"]), float(item["top"])))
-        text = normalize_text(" ".join(word["text"] for word in sorted_words))
-        if not text:
+    for block_index, group in enumerate(groups):
+        text = " ".join(word["text"] for word in sorted(group, key=lambda item: float(item["x0"])))
+        if not normalize_text(text):
             continue
         bbox = (
-            min(float(word["x0"]) for word in sorted_words),
-            min(float(word["top"]) for word in sorted_words),
-            max(float(word["x1"]) for word in sorted_words),
-            max(float(word["bottom"]) for word in sorted_words),
+            min(float(word["x0"]) for word in group),
+            min(float(word["top"]) for word in group),
+            max(float(word["x1"]) for word in group),
+            max(float(word["bottom"]) for word in group),
         )
         blocks.append(
             RawTextBlock(
+                block_id="raw-{0}-{1}".format(page_number, block_index),
                 text=text,
                 page_number=page_number,
                 bbox=bbox,
-                kind=classify_heading_from_text(text),
+                kind="other",
             )
         )
-    return blocks
+    return sorted(blocks, key=_raw_block_sort_key)
+
+
+def _raw_block_sort_key(block: RawTextBlock) -> tuple:
+    if block.bbox is None:
+        return (block.page_number, 0.0, 0.0, block.block_id)
+    return (block.page_number, round(block.bbox[1], 2), round(block.bbox[0], 2), block.block_id)
 
 
 def _score_extraction(extraction: RawPdfExtraction) -> int:
-    return sum(len(page.text) + (len(page.blocks) * 20) for page in extraction.pages)
+    return sum(_page_score(page) for page in extraction.pages)
+
+
+def _page_score(page: RawPageExtraction) -> int:
+    raw_blocks = page.raw_blocks or page.blocks
+    return len(page.text) + (len(raw_blocks) * 20)
