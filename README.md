@@ -27,6 +27,25 @@ python run_extraction.py "CVs/Jan_Osama CV.pdf" --output extracted.jsonl
 `--output` appends one JSON object per line. Use a `.jsonl` filename so repeated
 single-PDF runs and batch runs all accumulate cleanly in the same file.
 
+## Run Phase 2 On One PDF
+
+```bash
+python run_phase2.py "CVs/Mohamed Saber.pdf"
+python run_phase2.py "CVs/Mohamed Saber.pdf" \
+  --parser-payload data/cv_parser_output.jsonl \
+  --parser-index 1
+python run_phase2.py "CVs/Mohamed Saber.pdf" \
+  --parser-payload parser_payload.json \
+  --optimizer-payload optimizer_payload.json \
+  --milestone 2 \
+  --output phase2_results.jsonl
+```
+
+`run_phase2.py` prints:
+- `phase2_input`
+- `validated_cv`
+- the parser and optimizer payloads actually used
+
 ## Sample Returned JSON
 
 ```json
