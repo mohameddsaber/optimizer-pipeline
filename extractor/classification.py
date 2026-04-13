@@ -3,8 +3,8 @@
 import re
 from typing import List
 
-from extraction.models import NormalizedBlock, SemanticBlock
-from extraction.normalize import normalize_text
+from extractor.models import NormalizedBlock, SemanticBlock
+from extractor.normalize import normalize_text
 
 _DATE_RE = re.compile(
     r"(?i)\b(?:jan|feb|mar|apr|may|jun|jul|aug|sep|sept|oct|nov|dec|present|current|\d{4})\b"

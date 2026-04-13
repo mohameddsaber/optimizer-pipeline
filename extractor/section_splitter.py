@@ -4,8 +4,8 @@ import re
 from collections import OrderedDict
 from typing import Dict, List, Optional, Tuple
 
-from extraction.models import RawSection, SemanticBlock
-from extraction.normalize import normalize_text
+from extractor.models import RawSection, SemanticBlock
+from extractor.normalize import normalize_text
 
 _SECTION_ALIASES = {
     "header": "Header",

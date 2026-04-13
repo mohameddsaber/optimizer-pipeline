@@ -3,7 +3,7 @@
 import re
 from typing import List, Optional
 
-from extraction.models import BBox, NormalizedBlock, RawTextBlock
+from extractor.models import BBox, NormalizedBlock, RawTextBlock
 
 _LINE_ENDINGS_RE = re.compile(r"\r\n?|\u2028|\u2029")
 _SPACE_RE = re.compile(r"[^\S\n]+")

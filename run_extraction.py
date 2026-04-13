@@ -11,7 +11,7 @@ import json
 from pathlib import Path
 from typing import Dict, List, Optional
 
-from extraction.service import audit_extraction_quality, extract_raw_pdf, is_extraction_weak
+from extractor.service import audit_extraction_quality, extract_raw_pdf, is_extraction_weak
 
 
 def main() -> None:

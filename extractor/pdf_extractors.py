@@ -7,8 +7,8 @@ if TYPE_CHECKING:
     import fitz
     import pdfplumber
 
-from extraction.models import RawPageExtraction, RawPdfExtraction, RawTextBlock
-from extraction.normalize import normalize_text
+from extractor.models import RawPageExtraction, RawPdfExtraction, RawTextBlock
+from extractor.normalize import normalize_text
 
 
 def extract_with_pymupdf(pdf_path: str) -> RawPdfExtraction:

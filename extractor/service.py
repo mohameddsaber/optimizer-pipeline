@@ -4,17 +4,17 @@ from pathlib import Path
 import re
 from typing import Any, Dict, List
 
-from extraction.classification import classify_blocks
-from extraction.models import (
+from extractor.classification import classify_blocks
+from extractor.models import (
     ExtractionDiagnostics,
     NormalizedBlock,
     RawPageExtraction,
     RawPdfExtraction,
     SuspiciousBlock,
 )
-from extraction.normalize import normalize_blocks, normalize_text
-from extraction.pdf_extractors import extract_with_pdfplumber, extract_with_pymupdf, merge_extractions
-from extraction.section_splitter import split_into_sections_with_diagnostics
+from extractor.normalize import normalize_blocks, normalize_text
+from extractor.pdf_extractors import extract_with_pdfplumber, extract_with_pymupdf, merge_extractions
+from extractor.section_splitter import split_into_sections_with_diagnostics
 
 _ALNUM_RE = re.compile(r"[A-Za-z0-9]")
 _NOISE_RE = re.compile(r"[|_~`^<>[\]{}]")

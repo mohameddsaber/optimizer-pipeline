@@ -1,6 +1,6 @@
 """Raw CV PDF extraction package."""
 
-from extraction.models import (
+from extractor.models import (
     ExtractionDiagnostics,
     NormalizedBlock,
     RawPageExtraction,
@@ -9,7 +9,7 @@ from extraction.models import (
     RawTextBlock,
     SemanticBlock,
 )
-from extraction.service import audit_extraction_quality, extract_raw_pdf, is_extraction_weak
+from extractor.service import audit_extraction_quality, extract_raw_pdf, is_extraction_weak
 
 __all__ = [
     "RawTextBlock",

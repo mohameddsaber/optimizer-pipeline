@@ -3,16 +3,16 @@
 from pathlib import Path
 from typing import List
 
-import extraction.service as service_module
-from extraction.classification import classify_blocks
-from extraction.models import NormalizedBlock, RawPageExtraction, RawPdfExtraction, RawTextBlock
-from extraction.normalize import normalize_blocks, normalize_text
-from extraction.section_splitter import (
+import extractor.service as service_module
+from extractor.classification import classify_blocks
+from extractor.models import NormalizedBlock, RawPageExtraction, RawPdfExtraction, RawTextBlock
+from extractor.normalize import normalize_blocks, normalize_text
+from extractor.section_splitter import (
     normalize_section_heading,
     split_into_sections,
     split_into_sections_with_diagnostics,
 )
-from extraction.service import audit_extraction_quality, build_diagnostics, extract_raw_pdf, is_extraction_weak
+from extractor.service import audit_extraction_quality, build_diagnostics, extract_raw_pdf, is_extraction_weak
 
 
 def test_normalize_blocks_merges_multiline_bullet() -> None:
