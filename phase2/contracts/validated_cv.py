@@ -1,97 +1,25 @@
-"""Validated CV contracts for Phase 2."""
+"""Phase 2 coverage-mode output contract."""
 
-from typing import Generic, List, Literal, Optional, TypeVar
+from typing import Any, Dict, List, Literal
 
 from pydantic import BaseModel, ConfigDict, Field
 
-T = TypeVar("T")
 
-FieldSource = Literal["phase2_input", "parser", "optimizer", "merged", "unresolved"]
-
-
-class ReconciledField(BaseModel, Generic[T]):
-    """A deterministic reconciliation result for one field."""
+class CoverageAudit(BaseModel):
+    """Audit payload describing what coverage mode recovered or patched."""
 
     model_config = ConfigDict(extra="forbid")
 
-    value: Optional[T] = None
-    source: FieldSource = "unresolved"
-    confidence: float = 0.0
-    notes: List[str] = Field(default_factory=list)
-    grounded: bool = False
-
-
-class ValidatedExperienceEntry(BaseModel):
-    """Deterministic validated experience entry."""
-
-    model_config = ConfigDict(extra="forbid")
-
-    title: Optional[str] = None
-    organization: Optional[str] = None
-    date_range: Optional[str] = None
-    description: str = ""
-    source: FieldSource = "unresolved"
-    grounded: bool = False
-    notes: List[str] = Field(default_factory=list)
-
-
-class ValidatedProjectEntry(BaseModel):
-    """Deterministic validated project entry."""
-
-    model_config = ConfigDict(extra="forbid")
-
-    name: Optional[str] = None
-    date_range: Optional[str] = None
-    description: str = ""
-    technologies: List[str] = Field(default_factory=list)
-    source: FieldSource = "unresolved"
-    grounded: bool = False
-    notes: List[str] = Field(default_factory=list)
-
-
-class ValidatedEducationEntry(BaseModel):
-    """Deterministic validated education entry."""
-
-    model_config = ConfigDict(extra="forbid")
-
-    institution: Optional[str] = None
-    degree: Optional[str] = None
-    date_range: Optional[str] = None
-    description: str = ""
-    source: FieldSource = "unresolved"
-    grounded: bool = False
-    notes: List[str] = Field(default_factory=list)
-
-
-class ValidatedTrainingEntry(BaseModel):
-    """Deterministic validated training/course entry."""
-
-    model_config = ConfigDict(extra="forbid")
-
-    name: Optional[str] = None
-    provider: Optional[str] = None
-    date_range: Optional[str] = None
-    description: str = ""
-    source: FieldSource = "unresolved"
-    grounded: bool = False
+    recovered_items: List[str] = Field(default_factory=list)
+    recovered_fields: List[str] = Field(default_factory=list)
     notes: List[str] = Field(default_factory=list)
 
 
 class ValidatedCv(BaseModel):
-    """Stable validated CV artifact for the current Phase 2 milestone."""
+    """Coverage-mode Phase 2 output preserving optimizer schema plus coverage fields."""
 
     model_config = ConfigDict(extra="forbid")
 
-    name: ReconciledField[str]
-    email: ReconciledField[str]
-    phone_number: ReconciledField[str]
-    location: ReconciledField[str]
-    linkedin: ReconciledField[str]
-    github: ReconciledField[str]
-    technical_skills: ReconciledField[List[str]]
-    languages: ReconciledField[List[str]]
-    certifications: ReconciledField[List[str]]
-    experience: ReconciledField[List[ValidatedExperienceEntry]]
-    projects: ReconciledField[List[ValidatedProjectEntry]]
-    education: ReconciledField[List[ValidatedEducationEntry]]
-    trainings_courses: ReconciledField[List[ValidatedTrainingEntry]]
+    data: Dict[str, Any] = Field(default_factory=dict)
+    audit: CoverageAudit = Field(default_factory=CoverageAudit)
+    mode: Literal["coverage"] = "coverage"

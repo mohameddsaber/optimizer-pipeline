@@ -91,7 +91,7 @@ def build_phase2_input(phase1_output: Phase1Output) -> Phase2Input:
     phase1 = _coerce_phase1_output(phase1_output)
     canonical_sections, uncategorized_text, section_block_map = merge_section_texts(phase1)
     contact_candidates = extract_contact_candidates(phase1, canonical_sections, uncategorized_text)
-    skill_candidates = extract_skill_candidates(phase1, canonical_sections)
+    skill_candidates = extract_skill_candidates(phase1, canonical_sections, section_block_map)
     language_candidates = extract_language_candidates(phase1, canonical_sections)
     experience_candidates = build_lightweight_entry_candidates(
         "Experience", canonical_sections, section_block_map
@@ -102,9 +102,7 @@ def build_phase2_input(phase1_output: Phase1Output) -> Phase2Input:
     education_candidates = build_lightweight_entry_candidates(
         "Education", canonical_sections, section_block_map
     )
-    training_candidates = build_lightweight_entry_candidates(
-        "Courses", canonical_sections, section_block_map
-    )
+    training_candidates = extract_training_candidates(canonical_sections, section_block_map)
     certification_candidates = _extract_certification_candidates(canonical_sections)
     diagnostics_flags = _map_diagnostics_flags(phase1, uncategorized_text, canonical_sections)
     source_metadata = _build_source_metadata(phase1)
@@ -227,17 +225,18 @@ def extract_contact_candidates(
 
 
 def extract_skill_candidates(
-    phase1_output: Phase1Output, canonical_sections: Dict[str, str]
+    phase1_output: Phase1Output,
+    canonical_sections: Dict[str, str],
+    section_block_map: Dict[str, List[SemanticBlock]],
 ) -> List[str]:
     """Extract deterministic skill candidates from Skills content and skill-like blocks."""
 
     texts: List[str] = []
     if "Skills" in canonical_sections:
         texts.append(canonical_sections["Skills"])
-    texts.extend(block.text for block in phase1_output.semantic_blocks if block.label == "skills_line")
-    texts.extend(
-        block.text for block in phase1_output.semantic_blocks if block.label == "paragraph" and _looks_like_skill_dense_block(block.text)
-    )
+    skill_blocks = section_block_map.get("Skills", [])
+    texts.extend(block.text for block in skill_blocks if block.label == "skills_line")
+    texts.extend(block.text for block in skill_blocks if block.label == "paragraph" and _looks_like_skill_dense_block(block.text))
 
     candidates: List[str] = []
     for text in texts:
@@ -295,7 +294,9 @@ def build_lightweight_entry_candidates(
             if not text:
                 continue
             if block.label in {"heading", "date"} and current_parts:
-                candidates.append(_make_entry_candidate(current_parts, source_section, current_hints))
+                candidate = _make_entry_candidate(current_parts, source_section, current_hints)
+                if _is_valid_entry_candidate(candidate):
+                    candidates.append(candidate)
                 current_parts = []
                 current_hints = {"dates": [], "header_lines": []}
             current_parts.append(text)
@@ -304,18 +305,77 @@ def build_lightweight_entry_candidates(
             if block.label == "heading":
                 current_hints["header_lines"].append(text)
         if current_parts:
-            candidates.append(_make_entry_candidate(current_parts, source_section, current_hints))
+            candidate = _make_entry_candidate(current_parts, source_section, current_hints)
+            if _is_valid_entry_candidate(candidate):
+                candidates.append(candidate)
 
     if not candidates and section_text:
         for chunk in _split_entry_chunks(section_text):
-            candidates.append(
-                {
-                    "text": chunk,
-                    "source_section": source_section,
-                    "hints": {"detected_dates": _DATE_HINT_RE.findall(chunk)},
-                }
-            )
+            candidate = {
+                "text": chunk,
+                "source_section": source_section,
+                "hints": {"detected_dates": _DATE_HINT_RE.findall(chunk)},
+            }
+            if _is_valid_entry_candidate(candidate):
+                candidates.append(candidate)
     return candidates
+
+
+def extract_training_candidates(
+    canonical_sections: Dict[str, str],
+    section_block_map: Dict[str, List[SemanticBlock]],
+) -> List[Dict[str, Any]]:
+    """Extract course/training candidates from course sections and additional information."""
+
+    candidates = build_lightweight_entry_candidates("Courses", canonical_sections, section_block_map)
+    additional_information = canonical_sections.get("Additional Information", "")
+    if not additional_information:
+        return candidates
+
+    pending_provider: Optional[str] = None
+    for line in additional_information.splitlines():
+        normalized_line = normalize_text(line)
+        if not normalized_line:
+            continue
+        lowered = normalized_line.lower()
+        if pending_provider and _looks_like_training_candidate(normalized_line):
+            for chunk in _split_candidate_text(normalized_line):
+                if _looks_like_training_candidate(chunk):
+                    combined = chunk
+                    if not chunk.lower().startswith(pending_provider.lower()):
+                        combined = normalize_text("{0} {1}".format(pending_provider, chunk))
+                    candidates.append(
+                        {
+                            "text": combined,
+                            "source_section": "Courses",
+                            "hints": {"detected_dates": _DATE_HINT_RE.findall(chunk), "possible_header_lines": []},
+                        }
+                    )
+            pending_provider = None
+            continue
+        if not lowered.startswith(("certifications:", "courses:", "training:", "trainings:", "workshops:")):
+            continue
+        label, _, remainder = normalized_line.partition(":")
+        if not remainder:
+            continue
+        if label.strip().lower().startswith("certification"):
+            split_candidates = _split_candidate_text(remainder)
+            if split_candidates:
+                tail = split_candidates[-1]
+                if tail.lower() == "udemy":
+                    pending_provider = tail
+            continue
+        for chunk in _split_candidate_text(remainder):
+            if _looks_like_training_candidate(chunk):
+                candidates.append(
+                    {
+                        "text": chunk,
+                        "source_section": "Courses",
+                        "hints": {"detected_dates": _DATE_HINT_RE.findall(chunk), "possible_header_lines": []},
+                    }
+                )
+
+    return _dedupe_entry_candidates(candidates)
 
 
 def _coerce_phase1_output(phase1_output: Any) -> Phase1Output:
@@ -328,11 +388,20 @@ def _coerce_phase1_output(phase1_output: Any) -> Phase1Output:
 
 def _extract_certification_candidates(canonical_sections: Dict[str, str]) -> List[str]:
     candidates: List[str] = []
-    for section_name in ("Certifications", "Courses"):
+    for section_name in ("Certifications",):
         if section_name not in canonical_sections:
             continue
         for candidate in _split_candidate_text(canonical_sections[section_name]):
             if candidate:
+                candidates.append(candidate)
+    additional_information = canonical_sections.get("Additional Information", "")
+    for line in additional_information.splitlines():
+        normalized_line = normalize_text(line)
+        if not normalized_line.lower().startswith("certifications:"):
+            continue
+        _, _, remainder = normalized_line.partition(":")
+        for candidate in _split_candidate_text(remainder):
+            if candidate and candidate.lower() != "udemy" and not _looks_like_training_candidate(candidate):
                 candidates.append(candidate)
     return _dedupe_preserve_order(candidates)
 
@@ -420,6 +489,13 @@ def _looks_like_skill_candidate(text: str) -> bool:
         return False
     if normalized.lower().startswith(("languages:", "certifications:")):
         return False
+    lowered = normalized.lower()
+    if lowered in _LANGUAGE_WORDS:
+        return False
+    if any(token in lowered for token in ("certification", "certificate", "course", "bootcamp", "workshop")):
+        return False
+    if any(token in lowered for token in ("udemy", "comptia", "ccna", "saa-c03")):
+        return False
     return len(normalized.split()) <= 8
 
 
@@ -442,6 +518,45 @@ def _make_entry_candidate(
             "possible_header_lines": _dedupe_preserve_order(hints.get("header_lines", [])),
         },
     }
+
+
+def _is_valid_entry_candidate(candidate: Dict[str, Any]) -> bool:
+    text = normalize_text(str(candidate.get("text", "")))
+    source_section = str(candidate.get("source_section", ""))
+    if not text:
+        return False
+    if source_section != "Projects":
+        return True
+
+    first_line = normalize_text(text.splitlines()[0] if "\n" in text else text.split(" | ", 1)[0])
+    lowered = first_line.lower().strip(":")
+    if canonicalize_section_name(first_line) not in (None, "Projects"):
+        return False
+    if lowered in {"engineering practices", "professional highlights"}:
+        return False
+    if any(token in lowered for token in ("practices", "methodology", "scrum-based development")):
+        return False
+    return True
+
+
+def _looks_like_training_candidate(text: str) -> bool:
+    normalized = normalize_text(text)
+    lowered = normalized.lower()
+    if not normalized:
+        return False
+    return any(token in lowered for token in ("bootcamp", "course", "training", "workshop"))
+
+
+def _dedupe_entry_candidates(candidates: Iterable[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    seen = set()
+    deduped: List[Dict[str, Any]] = []
+    for candidate in candidates:
+        text = normalize_text(str(candidate.get("text", ""))).lower()
+        if not text or text in seen:
+            continue
+        seen.add(text)
+        deduped.append(candidate)
+    return deduped
 
 
 def _split_entry_chunks(text: str) -> List[str]:

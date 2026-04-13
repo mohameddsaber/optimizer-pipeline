@@ -1,0 +1,1652 @@
+﻿cv_id,raw_text,json_output,missed_count,missed_from_raw_text
+1,"Mohamed Nasser Sheikhon
+Cairo, Nasr City, Zahraa Madinet Nasr | +201022752938 | LinkedIn
+GitHub | mohamednasserr654@gmail.com
+
+─────────────
+OBJECTIVE
+─────────────
+Backend Developer with a strong foundations in computer science and practical experience in building
+applications using ASP.NET Core, Entity Framework, and SQL Server. Skilled in designing scalable APIs,
+integrating databases, and delivering efficient backend solutions. Passionate about backend architecture,
+performance optimization, and contributing to impactful software projects.
+
+─────────────
+EDUCATION
+─────────────
+Ain Shams University – Faculty of Computer and Information Science
+Bachelor of Science in Computer Science (Major: Computer Science)
+Expected Graduation: July 2026
+CGPA: 3.4
+
+─────────────────────────
+INTERNSHIP EXPERIENCE
+─────────────────────────
+EJADA Egypt – Backend (Offshore Support & Demand Center) Intern
+Ejada, Almazah, Cairo | Aug 2025 – Sep 2025
+ Developed and maintained backend services and web applications using Java, Spring Boot, Spring Security, and
+RESTful APIs, ensuring secure and scalable system design.
+ Leveraged JPA, Hibernate, and Microservices architecture to build scalable, high-performance backend modules
+with efficient data handling and persistence.
+Information Technology Institute (ITI) – Web Development using ASP.NET Core MVC Intern
+Online | Sep 2025 – Oct 2025
+ Completed a practical internship focused on ASP.NET Core MVC Web Development using C#, Entity Framework
+Core, and SQL Server.
+ Gained hands-on experience in building dynamic, data-driven web applications by applying concepts of MVC
+architecture, dependency injection, database design, and authentication & authorization.
+ Applied SOLID principles, clean code practices, and layered architecture to ensure scalability, maintainability,
+and high-quality software design.
+
+──────────────────────
+TRAINING & COURSES
+──────────────────────
+Ain Shams University
+Android Development Intern (Summer Training) | Aug 2025 – Sep 2025
+Built a mobile application using Java and Android SDK as part of the training program.
+Web Development Intern (Summer Training) | Aug 2024 – Sep 2024
+Developed a web project using HTML, CSS, and JavaScript as part of the training program.
+
+────────────
+PROJECTS
+────────────
+Map Routing Project (C#): Applied graph algorithms (shortest path) with a focus on time complexity
+optimization for efficient route calculation.
+Pac-Man Game (C++): Built using Graph and SFML, applying data structures and BFS algorithm, with
+basic AI techniques for enemy behavior.
+Operating System (C): Designed and developed operating system modules covering memory
+management, process scheduling, and concurrency control with locks.
+Library Management System (Java): Developed using Object-Oriented Programming (OOP) principles to
+manage books, users, and transactions.
+Flight Reservation DBMS Project (SQL): Developed a relational database system to handle flight
+bookings, passenger information, and scheduling.
+Gym Website (HTML , CSS , JS): Developed a responsive website showcasing gym services and
+membership features.
+Sentiment Analysis Classification (Python): Implemented using Natural Language Processing (NLP)
+techniques to classify text based on sentiment.
+Connect-4 Game (C++): Implemented game logic, win detection algorithms, and integrated audio
+effects for an enhanced gameplay experience.
+Video Game Sales Prediction (Python): Applied Machine Learning algorithms to analyze datasets and
+predict video game sales based on features such as genre, platform, and region.
+Tiny Compiler (C#): Developed a compiler for the Tiny language in C#, including lexical analysis, parsing,
+and code generation.
+E-Commerce Website (Java, Spring Boot, Microservices): Developed the backend of an e-commerce
+platform, implementing REST APIs, product and order management, and a scalable microservices
+architecture.
+University Management System (ASP.NET Core MVC): Enabled the management of students,
+instructors, and courses with defined roles and access levels for each user type. Implemented key
+features such as user registration and login, CRUD operations, role-based access control, and data
+management using Entity Framework Core.
+
+──────────
+SKILLS
+──────────
+Programming & Frameworks: C++, C#, Java, ASP.NET Core, Entity Framework, Spring Boot, Microservices,
+Python
+Web Technologies: HTML, CSS, JavaScript, SQL
+Core Concepts: REST APIs, OOP, Data Structures, Algorithms, Problem Solving
+Soft Skills: Teamwork, Leadership, Time Management, Networking Fundamentals
+
+─────────────
+LANGUAGES
+─────────────
+Arabic (Native)
+English (Very good)","{""name"": ""Mohamed Nasser Sheikhon"", ""job_title"": ""Backend Developer"", ""email"": ""mohamednasserr654@gmail.com"", ""phone_number"": ""+201022752938"", ""location"": ""Cairo, Nasr City, Zahraa Madinet Nasr"", ""summary"": ""Backend Developer with a strong foundations in computer science and practical experience in building applications using ASP.NET Core, Entity Framework, and SQL Server. Skilled in designing scalable APIs, integrating databases, and delivering efficient backend solutions. Passionate about backend architecture, performance optimization, and contributing to impactful software projects."", ""technical_skills"": [""C++"", ""C#"", ""Java"", ""ASP.NET Core"", ""Entity Framework"", ""Spring Boot"", ""Microservices"", ""Python"", ""HTML"", ""CSS"", ""JavaScript"", ""SQL"", ""REST APIs"", ""OOP"", ""Data Structures"", ""Algorithms"", ""Problem Solving""], ""soft_skills"": [""Teamwork"", ""Leadership"", ""Time Management"", ""Networking Fundamentals""], ""experience"": [{""company_name"": ""EJADA Egypt"", ""title"": ""Backend (Offshore Support & Demand Center) Intern"", ""duration"": ""Aug 2025-Sep 2025"", ""description"": ""Developed and maintained backend services and web applications using Java, Spring Boot, Spring Security, and RESTful APIs, ensuring secure and scalable system design. Leveraged JPA, Hibernate, and Microservices architecture to build scalable, high-performance backend modules with efficient data handling and persistence.""}, {""company_name"": ""Information Technology Institute (ITI)"", ""title"": ""Web Development using ASP.NET Core MVC Intern"", ""duration"": ""Sep 2025-Oct 2025"", ""description"": ""Completed a practical internship focused on ASP.NET Core MVC Web Development using C#, Entity Framework Core, and SQL Server. Gained hands-on experience in building dynamic, data-driven web applications by applying concepts of MVC architecture, dependency injection, database design, and authentication & authorization. Applied SOLID principles, clean code practices, and layered architecture to ensure scalability, maintainability, and high-quality software design.""}], ""education"": [{""university_name"": ""Ain Shams University - Faculty of Computer and Information Science"", ""degree"": ""Bachelor of Science in Computer Science"", ""specialization"": ""Major: Computer Science"", ""graduation_date"": ""July 2026"", ""graduation_status"": ""Expected"", ""GPA"": ""3.4"", ""coursework"": []}], ""trainings_courses"": [{""institution"": ""Ain Shams University"", ""title"": ""Android Development Intern (Summer Training)"", ""description"": ""Built a mobile application using Java and Android SDK as part of the training program.""}, {""institution"": ""Ain Shams University"", ""title"": ""Web Development Intern (Summer Training)"", ""description"": ""Developed a web project using HTML, CSS, and JavaScript as part of the training program.""}], ""certifications"": [], ""projects"": [{""project_name"": ""Map Routing Project"", ""description"": ""Applied graph algorithms (shortest path) with a focus on time complexity optimization for efficient route calculation."", ""tools"": [""C#""], ""duration"": """", ""link"": """"}, {""project_name"": ""Pac-Man Game"", ""description"": ""Built using Graph and SFML, applying data structures and BFS algorithm, with basic Al techniques for enemy behavior."", ""tools"": [""C++""], ""duration"": """", ""link"": """"}, {""project_name"": ""Operating System"", ""description"": ""Designed and developed operating system modules covering memory management, process scheduling, and concurrency control with locks."", ""tools"": [""C""], ""duration"": """", ""link"": """"}, {""project_name"": ""Library Management System"", ""description"": ""Developed using Object-Oriented Programming (OOP) principles to manage books, users, and transactions."", ""tools"": [""Java""], ""duration"": """", ""link"": """"}, {""project_name"": ""Flight Reservation DBMS Project"", ""description"": ""Developed a relational database system to handle flight bookings, passenger information, and scheduling."", ""tools"": [""SQL""], ""duration"": """", ""link"": """"}, {""project_name"": ""Gym Website"", ""description"": ""Developed a responsive website showcasing gym services and membership features."", ""tools"": [""HTML"", ""CSS"", ""JS""], ""duration"": """", ""link"": """"}, {""project_name"": ""Sentiment Analysis Classification"", ""description"": ""Implemented using Natural Language Processing (NLP) techniques to classify text based on sentiment."", ""tools"": [""Python""], ""duration"": """", ""link"": """"}, {""project_name"": ""Connect-4 Game"", ""description"": ""Implemented game logic, win detection algorithms, and integrated audio effects for an enhanced gameplay experience."", ""tools"": [""C++""], ""duration"": """", ""link"": """"}, {""project_name"": ""Video Game Sales Prediction"", ""description"": ""Applied Machine Learning algorithms to analyze datasets and predict video game sales based on features such as genre, platform, and region."", ""tools"": [""Python""], ""duration"": """", ""link"": """"}, {""project_name"": ""Tiny Compiler"", ""description"": ""Developed a compiler for the Tiny language in C#, including lexical analysis, parsing, and code generation."", ""tools"": [""C#""], ""duration"": """", ""link"": """"}, {""project_name"": ""E-Commerce Website"", ""description"": ""Developed the backend of an e-commerce platform, implementing REST APIs, product and order management, and a scalable microservices architecture."", ""tools"": [""Java"", ""Spring Boot"", ""Microservices""], ""duration"": """", ""link"": """"}, {""project_name"": ""University Management System"", ""description"": ""Enabled the management of students, instructors, and courses with defined roles and access levels for each user type. Implemented key features such as user registration and login, CRUD operations, role-based access control, and data management using Entity Framework Core."", ""tools"": [""ASP.NET Core MVC"", ""Entity Framework Core""], ""duration"": """", ""link"": """"}], ""languages"": [""Arabic (Native)"", ""English (Very good)""], ""linkedin"": """", ""github"": """"}",0,
+2,"Abdelrahman Khaled
+Software Engineer
+
+Giza , Egypt dev.abdelrahmankhaled@gmail.com +201002849120
+abdelrahman-khaled-mohamed abdelra7man-khaled
+
+───────────
+SUMMARY
+───────────
+Motivated Computer Science student and Back-End Developer with experience building APIs, managing
+databases, and developing secure server-side applications. Equipped with solid frontend knowledge and
+problem-solving skills, allowing effective contribution across the full development cycle. Committed to writing
+clean, efficient, and reliable code.
+
+─────────────
+EDUCATION
+─────────────
+Ain Shams University - Faculty of Computer and Information Sciences, | 2022 – 2026
+Bachelor's in Information Systems | Cairo , Egypt
+GPA: 3.0/4.0
+Coursework: Algorithms Analysis & Design, Object oriented programming,
+Database Management System, Data structures, Operating System, System
+Analysis & Design, Software Engineering, Web Development, Design Patterns,
+Computer Networks
+
+──────────
+SKILLS
+──────────
+
+─────────────
+LANGUAGES
+─────────────
+Version Control
+C, C++, C#, Java, Java Script, Type Script, Python, | Git, GitHub
+
+──────────────────
+SQL, HTML, CSS
+──────────────────
+
+────────────────
+TECHNOLOGIES
+────────────────
+Technical Concepts | C# / .NET Core
+RESTful API Design | ASP.NET Web API
+Database Design & Normalization | Entity Framework
+Authentication & Authorization | SQL / Sqlite
+MVC Architecture
+
+────────
+LINQ
+────────
+Clean Code Principles | JWT Authentication
+Software Development Life Cycle (SDLC) | Postman
+Design Patterns | Visual Studio / VS Code
+SOLID Principles
+
+────────────
+PROJECTS
+────────────
+Clinic Appointment System | 12/2025 – Present
+A web-based application that allows patients to register and book appointments
+with doctors. Doctors can manage their schedules, and administrators oversee
+clinic operations, including doctor availability and patient records. The system
+ensures appointment conflict prevention, status tracking, and supports billing.
+Tools: ASP.NET Core Web API, Entity Framework Core, Microsoft SQL Server, Visual
+Studio, JWT Authentication, RESTful API
+
+BookCommerce | 11/2025 – Present
+A full-stack e-commerce web application for buying books online. Includes
+product catalog, shopping cart, order management, secure user authentication
+using ASP.NET Core Identity, and implementation using N-Tier Architecture.
+Tools: ASP.NET Core MVC, Entity Framework Core, Microsoft SQL Server, Visual
+Studio.
+FOS Operating System | 10/2024 – 01/2025
+Developed as a project for the Operating Systems course, focusing on OS
+fundamentals . Implemented memory management, process scheduling, system
+calls, and synchronization techniques.
+Tools: C.
+
+───────────
+COURSES
+───────────
+.NET Core MVC - [E-commerce], Udemy | 11/2025 – Present
+Complete ASP.NET Core MVC (.NET 8) & Razor Course – Udemy Learned the
+fundamentals and project structure of ASP.NET Core MVC and Razor. Gained handson experience building two full projects with Entity Framework Core (Code-First),
+ASP.NET Core Identity with role management, authentication & authorization,
+custom Tag Helpers, View Components, sessions, TempData, and Bootstrap v5.
+Implemented Stripe payments, email notifications, repository pattern, and
+deployed projects to Microsoft Azure.
+Mastering ASP.NET Core: Concepts to Production-Ready APIs, | 10/2025 – Present
+Essam AbdelNabi (Metigator)
+Completed a structured course covering the full ASP.NET Core API development
+lifecycle, from fundamentals to advanced concepts. Gained hands-on experience in
+building production-ready APIs, implementing authentication, authorization, and
+API security, and applying best practices for scalable, secure, and maintainable
+backend systems. The course included step-by-step exercises and practical projects
+to strengthen both understanding and real-world application.","{""name"": ""Abdelrahman Khaled"", ""job_title"": ""Software Engineer"", ""email"": ""dev.abdelrahmankhaled@gmail.com"", ""phone_number"": ""+201002849120"", ""location"": ""Giza, Egypt"", ""summary"": ""Motivated Computer Science student and Back-End Developer with experience building APIs, managing databases, and developing secure server-side applications. Equipped with solid frontend knowledge and problem-solving skills, allowing effective contribution across the full development cycle. Committed to writing clean, efficient, and reliable code."", ""technical_skills"": [""C"", ""C++"", ""C#"", ""Java"", ""Java Script"", ""Type Script"", ""Python"", ""SQL"", ""HTML"", ""CSS"", ""RESTful API Design"", ""Database Design & Normalization"", ""Authentication & Authorization"", ""MVC Architecture"", ""Clean Code Principles"", ""Software Development Life Cycle (SDLC)"", ""Design Patterns"", ""SOLID Principles"", ""Git"", ""GitHub"", ""C#/.NET Core"", ""ASP.NET Web API"", ""Entity Framework"", ""SQL/Sqlite"", ""LINQ"", ""JWT Authentication"", ""Postman"", ""Visual Studio/ VS Code""], ""soft_skills"": [], ""experience"": [], ""education"": [{""university_name"": ""Ain Shams University - Faculty of Computer and Information Sciences"", ""degree"": ""Bachelor's in Information Systems"", ""specialization"": """", ""graduation_date"": ""2022-2026"", ""graduation_status"": ""Expected"", ""GPA"": ""3.0/4.0"", ""coursework"": [""Algorithms Analysis & Design"", ""Object oriented programming"", ""Database Management System"", ""Data structures"", ""Operating System"", ""System Analysis & Design"", ""Software Engineering"", ""Web Development"", ""Design Patterns"", ""Computer Networks""]}], ""trainings_courses"": [{""institution"": ""Udemy"", ""title"": "".NET Core MVC - [E-commerce"", ""description"": """"}, {""institution"": ""Udemy"", ""title"": ""Complete ASP.NET Core MVC (.NET 8) & Razor Course"", ""description"": ""Learned the fundamentals and project structure of ASP.NET Core MVC and Razor. Gained hands-on experience building two full projects with Entity Framework Core (Code-First), ASP.NET Core Identity with role management, authentication & authorization, custom Tag Helpers, View Components, sessions, TempData, and Bootstrap v5. Implemented Stripe payments, email notifications, repository pattern, and deployed projects to Microsoft Azure.""}, {""institution"": ""Essam AbdelNabi (Metigator)"", ""title"": ""Mastering ASP.NET Core: Concepts to Production-Ready APIs"", ""description"": ""Completed a structured course covering the full ASP.NET Core API development lifecycle, from fundamentals to advanced concepts. Gained hands-on experience in building production-ready APIs, implementing authentication, authorization, and API security, and applying best practices for scalable, secure, and maintainable backend systems. The course included step-by-step exercises and practical projects to strengthen both understanding and real-world application.""}], ""certifications"": [], ""projects"": [{""project_name"": ""Clinic Appointment System"", ""description"": ""A web-based application that allows patients to register and book appointments with doctors. Doctors can manage their schedules, and administrators oversee clinic operations, including doctor availability and patient records. The system ensures appointment conflict prevention, status tracking, and supports billing."", ""tools"": [""ASP.NET Core Web API"", ""Entity Framework Core"", ""Microsoft SQL Server"", ""Visual Studio"", ""JWT Authentication"", ""RESTful API""], ""duration"": ""12/2025 - Present"", ""link"": """"}, {""project_name"": ""BookCommerce"", ""description"": ""A full-stack e-commerce web application for buying books online. Includes product catalog, shopping cart, order management, secure user authentication using ASP.NET Core Identity, and implementation using N-Tier Architecture."", ""tools"": [""ASP.NET Core MVC"", ""Entity Framework Core"", ""Microsoft SQL Server"", ""Visual Studio""], ""duration"": ""11/2025 Present"", ""link"": """"}, {""project_name"": ""FOS Operating System"", ""description"": ""Developed as a project for the Operating Systems course, focusing on OS fundamentals. Implemented memory management, process scheduling, system calls, and synchronization techniques."", ""tools"": [""C""], ""duration"": ""10/2024-01/2025"", ""link"": """"}], ""languages"": [], ""linkedin"": ""nabdelrahman-khaled-mohamed"", ""github"": ""abdelra7man-khaled""}",0,
+3,"Abdelrahman Essam
+
+Software Engineering Student | Full-Stack Developer (Java, Spring Boot & React)
++(20) 115 160 4204 | abdelrahmanessm508@gmail.com | Alexandria, Egypt
+LinkedIn GitHub LeetCode Codeforces
+
+─────────────
+EDUCATION
+─────────────
+Faculty of Engineering, Alexandria University | Aug 2022 – May 2027
+B.Sc. in Computer and Systems Engineering | Alexandria, Egypt
+– GPA: 3.78/4.0 Top 20 students in cohort.
+– Relevant Coursework: Algorithms, Data Structures, Operating Systems, Computer Networks, Database Systems, Software
+Engineering.
+
+────────────────────
+TECHNICAL SKILLS
+────────────────────
+Languages: Java, C++, C, C#, Python, JavaScript Frontend: React.js, HTML5, CSS3, Tailwind CSS
+Backend: Spring Boot, Spring Security, REST APIs, JWT, JPA/Hibernate, Microservices
+Databases: MySQL, SQL Testing/DevOps: Git, Docker, Linux, Maven, JUnit, Mockito, JMeter
+Core CS: Algorithms, Data Structures, OOP, Multithreading, OS, Networking, Software Design & Design Patterns
+
+────────────
+PROJECTS
+────────────
+Social Media Application | GitHub | Spring Boot, React, MySQL, JWT, WebSockets | Feb 2025 – May 2025
+– Engineered 45+ RESTful APIs enabling posts, comments, friendships, and messaging workflows.
+– Implemented secure JWT Authentication and Spring Security role-based authorization.
+– Built real-time messaging using WebSockets with MySQL persistence.
+– Performed performance testing using Apache JMeter achieving <10ms response time.
+E-Commerce Platform | GitHub | Spring Boot, React, Java, MySQL, JWT, JUnit, Docker | Oct 2024 – Jan 2025
+– Developed full-stack E-Commerce platform exposing 40+ REST APIs.
+– Implemented JWT authentication and RBAC authorization.
+– Applied layered architecture with DTO/Mapper patterns for scalable backend design.
+– Containerized backend using Docker and validated performance with Apache JMeter.
+Online Learning Platform | GitHub | Spring Boot, React, Tailwind CSS, MySQL, JWT, REST APIs Jun 2024 – Sep 2024
+– Built full-stack Learning Management System (LMS) with courses, enrollment, quizzes, and certificates.
+– Implemented multi-role JWT Authentication (Student, Instructor, Admin).
+– Developed Instructor Dashboard and Admin Panel for course and user management.
+– Designed scalable REST APIs with validation, exception handling, and MySQL/JPA integration.
+
+──────────────
+ACTIVITIES
+──────────────
+ACM Algorithms Training Camp | Jun 2024 – Sep 2024
+Participant | Alexandria, Egypt
+– Ranked Top 30 in competitive programming mock contests solving advanced graph, dynamic programming, and algorithmic
+problems.
+ICT and CS Assistant Teacher | Dec 2021 – Sep 2022
+Teaching Assistant
+– Mentored 50+ students in programming, algorithms, and software engineering; assisted labs, debugging, and project evaluations.
+
+────────────────
+ACHIEVEMENTS
+────────────────
+ECPC 2025 Finalist Ranked 98th nationally among competitive programming teams in Egypt.
+Solved 1000+ algorithmic problems across LeetCode and Codeforces, specializing in Data Structures, Graph Algorithms, and
+Dynamic Programming.
+Competitive Programming Participant Alextreme and ACM training camps focusing on advanced algorithm design and optimization.
+Academic Excellence: Achieved 9 A* grades in IGCSE examinations.","{""name"": ""Abdelrahman Essam"", ""job_title"": ""Software Engineering Student | Full-Stack Developer (Java, Spring Boot & React)"", ""email"": ""abdelrahmanessm508@gmail.com"", ""phone_number"": ""+(20) 115 160 4204"", ""location"": ""Alexandria, Egypt"", ""summary"": """", ""technical_skills"": [""Java"", ""C++"", ""C"", ""C#"", ""Python"", ""JavaScript"", ""React.js"", ""HTML5"", ""CSS3"", ""Tailwind CSS"", ""Spring Boot"", ""Spring Security"", ""REST APIs"", ""JWT"", ""JPA/Hibernate"", ""Microservices"", ""MySQL"", ""SQL"", ""Git"", ""Docker"", ""Linux"", ""Maven"", ""JUnit"", ""Mockito"", ""JMeter"", ""Algorithms"", ""Data Structures"", ""OOP"", ""Multithreading"", ""OS"", ""Networking"", ""Software Design & Design Patterns""], ""soft_skills"": [], ""experience"": [{""company_name"": ""ICT and CS Assistant Teacher"", ""title"": ""Teaching Assistant"", ""duration"": ""Dec 2021-Sep 2022"", ""description"": ""Mentored 50+ students in programming, algorithms, and software engineering; assisted labs, debugging, and project evaluations.""}], ""education"": [{""university_name"": ""Faculty of Engineering, Alexandria University"", ""degree"": ""B.Sc. in Computer and Systems Engineering"", ""specialization"": """", ""graduation_date"": ""Aug 2022- May 2027"", ""graduation_status"": ""Expected"", ""GPA"": ""3.78/4.0"", ""coursework"": [""Algorithms"", ""Data Structures"", ""Operating Systems"", ""Computer Networks"", ""Database Systems"", ""Software Engineering.""]}], ""trainings_courses"": [{""institution"": ""ACM Algorithms Training Camp"", ""title"": ""Participant"", ""description"": ""Ranked Top 30 in competitive programming mock contests solving advanced graph, dynamic programming, and algorithmic problems.""}], ""certifications"": [], ""projects"": [{""project_name"": ""Social Media Application"", ""description"": ""Engineered 45+ RESTful APIs enabling posts, comments, friendships, and messaging workflows. Implemented secure JWT Authentication and Spring Security role-based authorization. Built real-time messaging using WebSockets with MySQL persistence. Performed performance testing using Apache JMeter achieving <10ms response time."", ""tools"": [""Spring Boot"", ""React"", ""MySQL"", ""JWT"", ""WebSockets""], ""duration"": ""Feb 2025-May 2025"", ""link"": """"}, {""project_name"": ""E-Commerce Platform"", ""description"": ""Developed full-stack E-Commerce platform exposing 40+ REST APIs. Implemented JWT authentication and RBAC authorization. Applied layered architecture with DTO/Mapper patterns for scalable backend design. Containerized backend using Docker and validated performance with Apache JMeter."", ""tools"": [""Spring Boot"", ""React"", ""Java"", ""MySQL"", ""JWT"", ""JUnit"", ""Docker""], ""duration"": ""Oct 2024 Jan 2025"", ""link"": """"}, {""project_name"": ""Online Learning Platform"", ""description"": ""Built full-stack Learning Management System (LMS) with courses, enrollment, quizzes, and certificates. Implemented multi-role JWT Authentication (Student, Instructor, Admin). Developed Instructor Dashboard and Admin Panel for course and user management. Designed scalable REST APIs with validation, exception handling, and MySQL/JPA integration."", ""tools"": [""Spring Boot"", ""React"", ""Tailwind CSS"", ""MySQL"", ""JWT"", ""REST APIs""], ""duration"": ""Jun 2024-Sep 2024"", ""link"": """"}], ""languages"": [], ""linkedin"": """", ""github"": """"}",2,"ECPC 2025 Finalist Ranked 98th nationally among competitive programming teams in Egypt. Solved 1000+ algorithmic problems across LeetCode and Codeforces, specializing in Data Structures, Graph Algorithms, and
+
+Dynamic Programming. Competitive Programming Participant Alextreme and ACM training camps focusing on advanced algorithm design and optimization. Academic Excellence: Achieved 9 A* grades in IGCSE examinations."
+4,"Abdelrahman Amro Zakzouk
+
+01013693331 | Abdulrahman.zakzouk@yahoo.com | linkedin.com/in/abdelrahman-zakzouk-863a44253 | github.com/abdelrahman1903
+
+─────────────
+EDUCATION
+─────────────
+German University in Cairo | Cairo, Egypt
+Bachelor of Computer science and Engineering | Oct. 2021 – July 2026
+• Bachelor Thesis (A+): AI-powered multimodal assistant for cultural interpretation and tourism.
+• Publication (AC 2025): Smart Tourism Meets AI: A Multimodal Assistant for Exploratory Cultural Engagement. Peer-reviewed
+short paper accepted at the International Conference on Applied Computing, based on my A+ bachelor thesis.
+
+────────────
+PROJECTS
+────────────
+Fantasy Premier League Graph-RAG Assistant | Python, Neo4j, LangChain, LLMs 3 December 2025 – 15 December 2025
+• Built a Graph-RAG FPL assistant combining Neo4j knowledge graphs with LLMs for grounded player insights.
+• Implemented deterministic intent routing to select Cypher queries, RAG-based embedding retrieval, or clarification.
+• Designed reusable Cypher templates for player stats, fixtures, and season-level analysis.
+• Integrated RAG embedding pipelines for player similarity and recommendation using numerical and text-based features.
+• Evaluated multiple LLMs (Gemini, LLaMA, DeepSeek, Mistral) across accuracy, latency, and response quality.
+ZakAI: Personal AI Assistant | Python, Node.js, FastAPI, langchain, Flutter, Next.js | July 2025 – October 2025
+• Built a production-style multimodal AI assistant with Python and Node.js backends and Flutter/Next.js frontends.
+• Implemented LLM tool-calling, structured outputs (Pydantic), dynamic routing, and robust logging for observability and debugging.
+• Integrated STT (Whisper), TTS (ElevenLabs), vision (Qwen3-VL-2B), and image generation (Stable Diffusion).
+• Designed multi-user architecture with JWT authentication, isolated sessions, and persistent chat history.
+• Connected external tools (Gmail OAuth2, Weather APIs) through function calling and agent-style orchestration.
+AI Tourist Assistant for Cultural Interpretation — Thesis Project (Awarded an A+ Grade) March 2025 – June 2025
+Python, React, FastAPI, Google Gemini Flash 2.5
+• Designed an AI-powered cultural assistant using RAG, tool calling, and structured LLM outputs.
+• Built a router-based backend supporting Cultural Q&A, Retrieval-Augmented Generation, and Tool Execution.
+• Implemented document ingestion and semantic search using Docling, LanceDB, and Nomic embeddings.
+• Added geographic reasoning for nearby place recommendations and contextual responses.
+• Integrated Whisper STT for real-time voice interaction.
+CariGo: Trip Planner Website | React, Node.js, MongoDB, Express.js, Postman | October 2024 – December 2024
+
+• Developed a MERN stack trip planner platform with JWT authentication for secure access.
+• Built REST APIs for itineraries, bookings, and user preferences with Node.js and Express.js.
+• Implemented payments system with Stripe integration, including refunds and points redemption.
+• Integrated a currency conversion API to display trip prices in users’ preferred currency.
+• Automated booking updates and offers via email notifications using Nodemailer.
+Database Engine | Java, Serialization, B+ Trees | March 2024 – May 2024
+
+• Implemented table storage using serialized files with B+ tree indices for fast retrieval.
+• Developed CRUD operations, schema management, and a custom query function replicating SQL SELECT for data retrieval.
+• Optimized memory with on-demand page loading for efficient disk usage.
+Database System for Advising Students | SQL, ASP.NET, | September 2023 – January 2024
+
+• Designed a relational database schema for an academic advising system.
+• Implemented stored procedures, views, and triggers for business logic and consistency.
+• Built an ASP.NET app supporting course scheduling, graduation planning, and payments.
+
+──────────────────────────────
+EXTRACURRICULAR ACTIVITIES
+──────────────────────────────
+
+Henkel ThinkTech Hackathon — 3rd Place | Python, Next | 16 October 2025 – 18 October 2025
+Selected from 250+ applicants as one of 50 participants to solve a real Henkel business challenge; our team developed and pitched a AI
+tech-driven solution that secured 3rd place among 11 competing teams.
+
+────────────────────
+TECHNICAL SKILLS
+────────────────────
+Languages: Python, Java, JavaScript, SQL, C/C++ (basic), HTML, CSS
+Frameworks & Libraries: LangChain, Node.js, Express.js, React, Next.js (Basic), ASP.NET (Basic)
+Databases: MySQL, MongoDB (Mongoose), Neo4j
+Developer Tools: Git, Postman, Kaggle
+Spoken Languages: Arabic (Native), English (Fluent), German (Basic)","{""name"": ""Abdelrahman Amro Zakzouk"", ""job_title"": """", ""email"": ""Abdulrahman.zakzouk@yahoo.com"", ""phone_number"": ""01013693331"", ""location"": """", ""summary"": """", ""technical_skills"": [""Python"", ""Java"", ""JavaScript"", ""SQL"", ""C/C++ (basic)"", ""HTML"", ""CSS"", ""LangChain"", ""Node.js"", ""Express.js"", ""React"", ""Next.js (Basic)"", ""ASP.NET (Basic)"", ""MySQL"", ""MongoDB (Mongoose)"", ""Neo4j"", ""Git"", ""Postman"", ""Kaggle""], ""soft_skills"": [], ""experience"": [], ""education"": [{""university_name"": ""German University in Cairo"", ""degree"": ""Bachelor of Computer science and Engineering"", ""specialization"": """", ""graduation_date"": ""Oct. 2021 July 2026"", ""graduation_status"": ""Expected"", ""GPA"": """", ""coursework"": []}], ""trainings_courses"": [], ""certifications"": [], ""projects"": [{""project_name"": ""Fantasy Premier League Graph-RAG Assistant"", ""description"": ""Built a Graph-RAG FPL assistant combining Neo4j knowledge graphs with LLMs for grounded player insights. Implemented deterministic intent routing to select Cypher queries, RAG-based embedding retrieval, or clarification. Designed reusable Cypher templates for player stats, fixtures, and season-level analysis. Integrated RAG embedding pipelines for player similarity and recommendation using numerical and text-based features. Evaluated multiple LLMs (Gemini, LLAMA, DeepSeek, Mistral) across accuracy, latency, and response quality."", ""tools"": [""Python"", ""Neo4j"", ""Lang Chain"", ""LLMs""], ""duration"": ""3 December 2025 15 December 2025"", ""link"": """"}, {""project_name"": ""ZakAI: Personal AI Assistant"", ""description"": ""Built a production-style multimodal Al assistant with Python and Node.js backends and Flutter/Next.js frontends. Implemented LLM tool-calling, structured outputs (Pydantic), dynamic routing, and robust logging for observability and debugging. Integrated STT (Whisper), TTS (ElevenLabs), vision (Qwen3-VL-2B), and image generation (Stable Diffusion). Designed multi-user architecture with JWT authentication, isolated sessions, and persistent chat history. Connected external tools (Gmail OAuth2. Weather APIs) through function calling and agent-style orchestration."", ""tools"": [""Python"", ""Node.js"", ""FastAPI"", ""langchain"", ""Flutter"", ""Next.js""], ""duration"": ""July 2025 October 2025"", ""link"": """"}, {""project_name"": ""AI Tourist Assistant for Cultural Interpretation"", ""description"": ""Thesis Project (Awarded an A+ Grade) Designed an Al-powered cultural assistant using RAG, tool calling, and structured LLM outputs. Built a router-based backend supporting Cultural Q&A, Retrieval-Augmented Generation, and Tool Execution. Implemented document ingestion and semantic search using Docling, LanceDB, and Nomic embeddings. Added geographic reasoning for nearby place recommendations and contextual responses. Integrated Whisper STT for real-time voice interaction."", ""tools"": [""Python"", ""React"", ""FastAPI"", ""Google Gemini Flash 2.5""], ""duration"": ""March 2025 June 2025"", ""link"": """"}, {""project_name"": ""CariGo: Trip Planner Website"", ""description"": ""Developed a MERN stack trip planner platform with JWT authentication for secure access. Built REST APIs for itineraries, bookings, and user preferences with Node.js and Express.js. Implemented payments system with Stripe integration, including refunds and points redemption. Integrated a currency conversion API to display trip prices in users' preferred currency. Automated booking updates and offers via email notifications using Nodemailer."", ""tools"": [""React"", ""Node.js"", ""MongoDB"", ""Express.js"", ""Postman""], ""duration"": ""October 2024 December 2024"", ""link"": """"}, {""project_name"": ""Database Engine"", ""description"": ""Implemented table storage using serialized files with B+ tree indices for fast retrieval. Developed CRUD operations, schema management, and a custom query function replicating SQL SELECT for data retrieval. Optimized memory with on-demand page loading for efficient disk usage."", ""tools"": [""Java"", ""Serialization"", ""B+ Trees""], ""duration"": ""March 2024 May 2024"", ""link"": """"}, {""project_name"": ""Database System for Advising Students"", ""description"": ""Designed a relational database schema for an academic advising system. Implemented stored procedures, views, and triggers for business logic and consistency. Built an ASP.NET app supporting course scheduling, graduation planning, and payments."", ""tools"": [""SQL"", ""ASP.NET""], ""duration"": ""September 2023 January 2024"", ""link"": """"}, {""project_name"": ""Henkel ThinkTech Hackathon 3rd Place"", ""description"": ""Selected from 250+ applicants as one of 50 participants to solve a real Henkel business challenge; our team developed and pitched a AI tech-driven solution that secured 3rd place among 11 competing teams."", ""tools"": [""Python"", ""Next""], ""duration"": ""16 October 2025 18 October 2025"", ""link"": """"}], ""languages"": [""Arabic (Native)"", ""English (Fluent)"", ""German (Basic)""], ""linkedin"": ""linkedin.com/in/abdelrahman-zakzouk-863a44253"", ""github"": ""github.com/abdelrahman1903""}",1,"• Publication (AC 2025): Smart Tourism Meets AI: A Multimodal Assistant for Exploratory Cultural Engagement. Peer-reviewed short paper accepted at the International Conference on Applied Computing, based on my A+ bachelor thesis."
+5,"───────────────────────────────────
+ABDULRAHMAN MAHMOUD ALI MOHAMED
+───────────────────────────────────
+
+Computer Engineer | AI Solutions Architect | Multipotentialite Tech & Branding Strategist
+Location: Helwan, Cairo, Egypt
+Phone: +20 1159192735 / 01023385827
+Emails: abdelrahmanmahmoud1269@gmail.com |
+abdelrahmanmahmoud359@gmail.com
+LinkedIn: linkedin.com/in/abdulrahman-mahmoud-
+
+────────────────────────
+PROFESSIONAL SUMMARY
+────────────────────────
+A visionary Computer Engineer and Natural-born Leader driven by a competitive #1 mentality. A
+Social Introvert who combines deep analytical focus with high-level Social Intelligence. Expert in 7
+Programming Languages, Odoo ERP, and High-Performance Sales. Pioneer Technical Content
+Creator with over a decade of experience tracking global platform algorithms (from Musical.ly to
+TikTok). Known for 100% Data Accuracy, high-speed execution, and an insatiable passion for
+learning from world-class success stories.
+CORE COMPETENCIES
+• Engineering & IT: Proficiency in 7 Programming Languages, Expert
+Algorithm Design (Ranked #1), Odoo ERP Implementation, Linux System
+Administration (Kali/Ubuntu), Penetration Testing.
+• AI & Automation: AI Automation (n8n), Prompt Engineering, Meticulous Data
+Cleaning, AI-Powered Visual Storytelling.
+• Sales & Communication: High-Ticket Sales, Professional Telesales, Call
+Center Excellence, Consumer Psychology, Strategic Negotiation.
+• Digital Finance & Marketing: Cryptocurrency (Bitcoin), Strategic Media
+Buying, Viral Trend Forecasting, Global Market Tracking.
+• Management: Natural Leadership, HR Management, Dropshipping
+Operations, International Tourism.
+
+───────────────────────────
+PROFESSIONAL EXPERIENCE
+───────────────────────────
+
+Real Estate & Tourism Investment Consultant | The Address Investments | Feb
+2025 – Present
+• Managing premium portfolios for HNW clients using Sales Psychology and
+Telesales mastery.
+• Ensuring 100% Data Accuracy in CRM management and high-stakes financial
+reporting.
+AI & ERP Solutions Strategist (Freelance) | Upwork | June 2025 – Present
+• Architecting end-to-end AI automation workflows and managing Odoo ERP
+systems for global clients.
+• Optimizing customer acquisition through Media Buying and data-driven
+psychological triggers.
+Computer Engineer (Front-end) | Atlantis Company | Jan 2023 – Present
+• Engineering scalable web interfaces with a focus on Psychological UI/UX and
+secure data architecture.
+
+─────────────────────────────────
+NOTABLE IMPACT & ACHIEVEMENTS
+─────────────────────────────────
+• Pioneer Tech Influencer: First Egyptian creator to technically dissect social media
+algorithms, leveraging deep-rooted insights since the Musical.ly era.
+• Multi-Language Developer: Mastered 7 programming languages, enabling versatile
+architecture across different platforms and OS.
+• High-Speed Execution: Professional Ultra-Fast Typing Speed with an obsession for detail
+and data integrity.
+
+──────────────────────────────
+EDUCATION & CERTIFICATIONS
+──────────────────────────────
+• B.Sc. in Management Information Systems (MIS) | Cairo, Egypt.
+• Certified Algorithm Specialist (Ranked #1) | NTI & ITI.
+• Certified Cybersecurity Fundamentals | National Telecommunication Institute (NTI).
+• AI for Digital Marketing | Information Technology Institute (ITI).
+• HR Management Certification | Professional Course.
+
+────────────────────────────────
+TECHNICAL SKILLS & LANGUAGES
+────────────────────────────────
+• Software & Tools: Odoo, Linux (Kali), Meta Ads Manager, Crypto Wallets, Shopify, n8n,
+Power BI.
+• Personal Traits: Avid Reader, Strategic Thinker, Global Success Tracker.
+• Languages: Arabic (Native), English (Excellent Reading/Listening | Intermediate
+Speaking).","{""name"": ""ABDULRAHMAN MAHMOUD ALI MOHAMED"", ""job_title"": ""Computer Engineer | AI Solutions Architect | Multipotentialite Tech & Branding Strategist"", ""email"": ""abdelrahmanmahmoud1269@gmail.com"", ""phone_number"": ""+20 1159192735/01023385827"", ""location"": ""Helwan, Cairo, Egypt"", ""summary"": ""A visionary Computer Engineer and Natural-born Leader driven by a competitive #1 mentality. A Social Introvert who combines deep analytical focus with high-level Social Intelligence. Expert in 7 Programming Languages, Odoo ERP, and High-Performance Sales. Pioneer Technical Content Creator with over a decade of experience tracking global platform algorithms (from Musical.ly to Tik Tok). Known for 100% Data Accuracy, high-speed execution, and an insatiable passion for learning from world-class success stories."", ""technical_skills"": [""7 Programming Languages"", ""Algorithm Design"", ""Odoo ERP Implementation"", ""Linux System Administration (Kali/Ubuntu)"", ""Penetration Testing"", ""Al Automation (n8n)"", ""Prompt Engineering"", ""Data Cleaning"", ""Al-Powered Visual Storytelling"", ""Cryptocurrency (Bitcoin)"", ""Odoo"", ""Linux (Kali)"", ""Meta Ads Manager"", ""Crypto Wallets"", ""Shopify"", ""n8n"", ""Power BI""], ""soft_skills"": [], ""experience"": [{""company_name"": ""The Address Investments"", ""title"": ""Real Estate & Tourism Investment Consultant"", ""duration"": ""Feb 2025-Present"", ""description"": ""Managing premium portfolios for HNW clients using Sales Psychology and Telesales mastery. Ensuring 100% Data Accuracy in CRM management and high-stakes financial reporting.""}, {""company_name"": ""Upwork"", ""title"": ""AI & ERP Solutions Strategist (Freelance)"", ""duration"": ""June 2025 - Present"", ""description"": ""Architecting end-to-end Al automation workflows and managing Odoo ERP systems for global clients. Optimizing customer acquisition through Media Buying and data-driven psychological triggers.""}, {""company_name"": ""Atlantis Company"", ""title"": ""Computer Engineer (Front-end)"", ""duration"": ""Jan 2023 - Present"", ""description"": ""Engineering scalable web interfaces with a focus on Psychological UI/UX and secure data architecture.""}], ""education"": [{""university_name"": """", ""degree"": ""B.Sc."", ""specialization"": ""Management Information Systems (MIS)"", ""graduation_date"": """", ""graduation_status"": """", ""GPA"": """", ""coursework"": []}], ""trainings_courses"": [], ""certifications"": [""Certified Algorithm Specialist (Ranked #1) | ΝΤΙ & ΙΤΙ."", ""Certified Cybersecurity Fundamentals | National Telecommunication Institute (NTI)."", ""Al for Digital Marketing | Information Technology Institute (ITI)."", ""HR Management Certification | Professional Course.""], ""projects"": [], ""languages"": [""Arabic (Native)"", ""English (Excellent Reading/Listening | Intermediate Speaking)""], ""linkedin"": ""linkedin.com/in/abdulrahman-mahmoud-"", ""github"": """"}",7,"• Sales & Communication: High-Ticket Sales, Professional Telesales, Call Center Excellence, Consumer Psychology, Strategic Negotiation.
+
+• Digital Finance & Marketing: Cryptocurrency (Bitcoin), Strategic Media Buying, Viral Trend Forecasting, Global Market Tracking.
+
+• Management: Natural Leadership, HR Management, Dropshipping Operations, International Tourism.
+
+• Pioneer Tech Influencer: First Egyptian creator to technically dissect social media algorithms, leveraging deep-rooted insights since the Musical.ly era.
+
+• Multi-Language Developer: Mastered 7 programming languages, enabling versatile architecture across different platforms and OS.
+
+• High-Speed Execution: Professional Ultra-Fast Typing Speed with an obsession for detail and data integrity.
+
+• Personal Traits: Avid Reader, Strategic Thinker, Global Success Tracker."
+6,"Adel Hesham Elnimr
+
+IT Engineer
+
+adelelnimr32@gmail.com | ¯ linkedin.com/in/adel-elnimr |  github.com/adel-hesham
+Ó +20 103 476 3706 |  Cairo, Egypt | Military Service Status: Postponed
+
+───────────
+SUMMARY
+───────────
+Electronics & Communications Engineering graduate with hands-on experience in Linux, networking, and cloud technologies (AWS).
+Skilled in system administration, version control (Git/GitHub), and IT workflow automation. Experienced with monitoring tools
+(Prometheus, Grafana) and supporting IT infrastructure. Passionate about learning, troubleshooting, and optimizing systems to improve
+performance and reliability in professional IT environments.
+
+─────────────
+EDUCATION
+─────────────
+Higher Technological Institute | Alsharqia, Egypt
+Bachelor of Engineering, Communications & Electronics Department | Oct. 2020 – Jan. 2026
+• GPA 2.75 / 4.0 (Good).
+• Graduation Project Grade (A+)
+
+──────────────
+EXPERIENCE
+──────────────
+Digital Egypt Pioneers Initiative (DEPI) | Jun. 2025 – Dec. 2025
+DevOps Track Trainee - Ministry of Communications and Information Technology | Online
+• Gained hands-on experience in Linux, Bash scripting, Git, and Python while automating cloud infrastructure with Docker,
+Kubernetes, Helm, AWS, Terraform, and Ansible.
+• Developed full-stack observability solutions with Prometheus and Grafana to ensure 99.9% system reliability through real-time
+performance visualization.
+• Learned to optimize CI/CD workflows by integrating Jenkins with source control for automated builds and seamless deployments
+to EKS.
+
+────────────
+PROJECTS
+────────────
+Graduation Project: Cloud-Native Node.js App with IaC & CI/CD and Observability ® | Jun. 2026
+• Built scalable AWS EKS infrastructure using Terraform modules for reusable environment provisioning.
+• Designed GitHub Actions CI/CD pipeline with AWS authentication and Git SHA-based image tagging for traceable deployments.
+• Implemented HPA and Cluster Autoscaler to optimize resource usage under traffic fluctuations.
+• Set up Prometheus & Grafana for centralized monitoring and real-time application observability.
+Cloud-Native EKS Infrastructure & CI/CD Pipeline ® | Dec. 2025
+• Provisioned AWS EKS cluster with private Nexus registry using Terraform and Ansible for high availability and secure image
+management.
+• Built a Jenkins CI/CD pipeline with automated EKS deployments, HPA, and Cluster Autoscaler to optimize resource usage and
+eliminate manual steps.
+PC Controller ® | C++ | Mar. 2025
+• Developed a remote control server utilizing TCP socket programming on Linux to execute administrative commands.
+Python Alexa Simulation ® | Python | Aug. 2024
+• Developed a voice assistant featuring speech recognition, automated application control, and web search integration.
+
+────────────────────
+TECHNICAL SKILLS
+────────────────────
+• Cloud & Infrastructure: AWS, Terraform (IaC), Ansible (Configuration Management)
+• Containers & Orchestration: Docker, Kubernetes, Helm
+• CI/CD & Automation: GitHub Actions, Jenkins, Git, CI/CD Pipelines
+• Observability & Monitoring: Prometheus and Grafana
+• Languages & Scripting: Python, Bash Scripting, Linux Command Line, C/C++
+• Networking: Computer networking fundamentals, TCP/IP, UDP, DNS, SSH, Socket Programming, Wireshark
+• Databases: PostgreSql
+SOFT SKILLS
+• Problem Solving & Critical Thinking
+
+• Ownership & Accountability
+• Team Collaboration & Communication
+• Adaptability & Fast Learning
+• Time Management & Prioritization
+• Attention to Detail
+
+───────────
+COURSES
+───────────
+• Embedded Linux by pn-junction
+• Embedded Systems by IMT
+
+─────────────
+LANGUAGES
+─────────────
+• Arabic (Native)
+• English (Professional working proficiency)","{""name"": ""Adel Hesham Elnimr"", ""job_title"": ""IT Engineer"", ""email"": ""adelelnimr32@gmail.com"", ""phone_number"": ""+20 103 476 3706"", ""location"": ""Cairo, Egypt"", ""summary"": ""Electronics & Communications Engineering graduate with hands-on experience in Linux, networking, and cloud technologies (AWS). Skilled in system administration, version control (Git/GitHub), and IT workflow automation. Experienced with monitoring tools (Prometheus, Grafana) and supporting IT infrastructure. Passionate about learning, troubleshooting, and optimizing systems to improve performance and reliability in professional IT environments."", ""technical_skills"": [""AWS"", ""Terraform (IaC)"", ""Ansible (Configuration Management)"", ""Docker"", ""Kubernetes"", ""Helm"", ""GitHub Actions"", ""Jenkins"", ""Git"", ""CI/CD Pipelines"", ""Prometheus and Grafana"", ""Python"", ""Bash Scripting"", ""Linux Command Line"", ""C/C++"", ""Computer networking fundamentals"", ""TCP/IP"", ""UDP"", ""DNS"", ""SSH"", ""Socket Programming"", ""Wireshark"", ""PostgreSql""], ""soft_skills"": [""Problem Solving & Critical Thinking"", ""Ownership & Accountability"", ""Team Collaboration & Communication"", ""Adaptability & Fast Learning"", ""Time Management & Prioritization"", ""Attention to Detail""], ""experience"": [{""company_name"": ""Digital Egypt Pioneers Initiative (DEPI)"", ""title"": ""DevOps Track Trainee - Ministry of Communications and Information Technology"", ""duration"": ""Jun. 2025 Dec. 2025"", ""description"": ""Gained hands-on experience in Linux, Bash scripting, Git, and Python while automating cloud infrastructure with Docker, Kubernetes, Helm, AWS, Terraform, and Ansible. Developed full-stack observability solutions with Prometheus and Grafana to ensure 99.9% system reliability through real-time performance visualization. Learned to optimize CI/CD workflows by integrating Jenkins with source control for automated builds and seamless deployments to EKS.""}], ""education"": [{""university_name"": ""Higher Technological Institute"", ""degree"": ""Bachelor of Engineering"", ""specialization"": ""Communications & Electronics Department"", ""graduation_date"": ""Oct. 2020 Jan. 2026"", ""graduation_status"": ""Graduated"", ""GPA"": ""2.75/4.0"", ""coursework"": []}], ""trainings_courses"": [{""institution"": ""pn-junction"", ""title"": ""Embedded Linux"", ""description"": """"}, {""institution"": ""IMT"", ""title"": ""Embedded Systems"", ""description"": """"}], ""certifications"": [], ""projects"": [{""project_name"": ""Graduation Project: Cloud-Native Node.js App with IaC & CI/CD and Observability"", ""description"": ""Built scalable AWS EKS infrastructure using Terraform modules for reusable environment provisioning. Designed GitHub Actions CI/CD pipeline with AWS authentication and Git SHA-based image tagging for traceable deployments. Implemented HPA and Cluster Autoscaler to optimize resource usage under traffic fluctuations. Set up Prometheus & Grafana for centralized monitoring and real-time application observability."", ""tools"": [], ""duration"": ""Jun. 2026"", ""link"": """"}, {""project_name"": ""Cloud-Native EKS Infrastructure & CI/CD Pipeline"", ""description"": ""Provisioned AWS EKS cluster with private Nexus registry using Terraform and Ansible for high availability and secure image management. Built a Jenkins CI/CD pipeline with automated EKS deployments, HPA, and Cluster Autoscaler to optimize resource usage and eliminate manual steps."", ""tools"": [], ""duration"": ""Dec. 2025"", ""link"": """"}, {""project_name"": ""PC Controller"", ""description"": ""Developed a remote control server utilizing TCP socket programming on Linux to execute administrative commands."", ""tools"": [""C++""], ""duration"": ""Mar. 2025"", ""link"": """"}, {""project_name"": ""Python Alexa Simulation"", ""description"": ""Developed a voice assistant featuring speech recognition, automated application control, and web search integration."", ""tools"": [""Python""], ""duration"": ""Aug. 2024"", ""link"": """"}], ""languages"": [""Arabic (Native)"", ""English (Professional working proficiency)""], ""linkedin"": ""linkedin.com/in/adel-elnimr"", ""github"": ""github.com/adel-hesham""}",4,"• GPA 2.75 / 4.0 (Good).
+
+• Graduation Project Grade (A+)
+
+• Containers & Orchestration: Docker, Kubernetes, Helm
+
+• Databases: PostgreSql SOFT SKILLS"
+7,"───────────────
+ADNAN AHMED
+───────────────
+
+New Borg El-Arab city, Alexandria • +201274477638 • adnanalmaraghy777@gmail.com
+24/9/2005
+www.linkedin.com/in/adnan-ahmed-4a6278328
+
+───────────
+SUMMARY
+───────────
+Motivated Engineering Student with a passion for learning and hands-on experience. Eager to
+apply academic knowledge in real-world settings through volunteering and internships.
+Enthusiastic about traveling and connecting with diverse people to broaden perspectives and
+develop professional skills. Committed to personal growth and making meaningful
+contributions to projects and teams.
+
+─────────────
+EDUCATION
+─────────────
+Thanaweya Amma, Hassan Abbas Helmy Language School | Sep 2020 - Aug 2023
+·Thanaweya Amma Diploma
+·Graduated with a score of 79.39% (Mathematics Section)
+·4th ranked student among the school mathematics section stdents
+Oct 2023 - Present
+Bachelor of Engineering and Applied Sciences, Egypt-Japan
+University of science and technology
+Computer Science Engineering
+Member of E-JUST Robotics Club
+Member of CPC E-Just Club
+
+──────────────
+EXPERIENCE
+──────────────
+Shanghai International Sister Cities Youth Camp 2022
+Selected to present Egypt in this international camp
+Active camper and made a lot of friendships with Chinese and non-Chinese people, especially
+from Europe
+Nov 2021 - Present
+Volunteer member in Borg El-Arab Youth center
+Active member always seeking to take care of people and help them
+Participated in organizing many events planned by the governorate.
+Professional Football Player | Mar 2016 - Feb 2022
+Played for 6 consecutive years as a starting defender for Borg El-Arab team in addition to
+being the captain of the team
+Participated in the educational administration league of schools as the leader of my school
+team.
+selected for the football team of Borg El-Arab educational administration
+InnovEgypt Program (45 training hours)
+Conducted market research to identify emerging trends and opportunities for business
+development.
+Collaborated with cross-functional teams to streamline project workflows and enhance
+operational efficiencies.
+
+────────────────
+CERTIFICATES
+────────────────
+Cisco Networking Academy® Get Connected course
+Identify different types of computer systems, internal components and external devices.
+Understand the structure of the directories in Microsoft Windows, and how to work with files
+and folders using a text editor.
+Identify common problems and implement simple solutions for hardware, software and
+networks
+AITB Python Certificate (20 training hours)
+Completed Introduction to Python training
+National Telecommunication Institute (NTI) Python for Data Analysis (75 training hours)
+Assisted in maintaining databases, ensuring accuracy and consistency of information across
+systems.
+Automated data processing tasks, improving efficiency and reducing manual errors in reporting.
+Shift Up Program – Artificial Intelligence (RiskRice)
+Developed AI models to enhance data processing efficiency and accuracy.
+
+──────────────────────────
+ADDITIONAL INFORMATION
+──────────────────────────
+Technical Skills: Project Management, Problem Solving, Programming,
+Languages: Arabic, English, German, Italian
+Awards/Activities: Third place in IPM Math Egyptian competition for mental math
+Awarded the ideal student in 2018,2019 (preparatory stage)
+Awarded the ideal student in 2020,2021,2022 (secondary stage)","{""name"": ""ADNAN AHMED"", ""job_title"": """", ""email"": ""adnanalmaraghy777@gmail.com"", ""phone_number"": ""+201274477638"", ""location"": ""New Borg El-Arab city, Alexandria"", ""summary"": ""Motivated Engineering Student with a passion for learning and hands-on experience. Eager to apply academic knowledge in real-world settings through volunteering and internships. Enthusiastic about traveling and connecting with diverse people to broaden perspectives and develop professional skills. Committed to personal growth and making meaningful contributions to projects and teams."", ""technical_skills"": [""Project Management"", ""Problem Solving"", ""Programming""], ""soft_skills"": [], ""experience"": [{""company_name"": ""Shanghai International Sister Cities Youth Camp 2022"", ""title"": """", ""duration"": """", ""description"": ""Selected to present Egypt in this international camp Active camper and made a lot of friendships with Chinese and non-Chinese people, especially from Europe""}, {""company_name"": ""Borg El-Arab Youth center"", ""title"": ""Volunteer member"", ""duration"": ""Nov 2021 - Present"", ""description"": ""Active member always seeking to take care of people and help them Participated in organizing many events planned by the governorate.""}, {""company_name"": """", ""title"": ""Professional Football Player"", ""duration"": ""Mar 2016 - Feb 2022"", ""description"": ""Played for 6 consecutive years as a starting defender for Borg El-Arab team in addition to being the captain of the team Participated in the educational administration league of schools as the leader of my school team. selected for the football team of Borg El-Arab educational administration""}, {""company_name"": ""InnovEgypt Program"", ""title"": """", ""duration"": """", ""description"": ""Conducted market research to identify emerging trends and opportunities for business development. Collaborated with cross-functional teams to streamline project workflows and enhance operational efficiencies.""}], ""education"": [{""university_name"": ""Hassan Abbas Helmy Language School"", ""degree"": ""Thanaweya Amma Diploma"", ""specialization"": ""Mathematics Section"", ""graduation_date"": ""Sep 2020 Aug 2023"", ""graduation_status"": ""Graduated"", ""GPA"": ""79.39%"", ""coursework"": []}, {""university_name"": ""Egypt-Japan University of science and technology"", ""degree"": ""Bachelor of Engineering and Applied Sciences"", ""specialization"": ""Computer Science Engineering"", ""graduation_date"": ""Oct 2023- Present"", ""graduation_status"": """", ""GPA"": """", ""coursework"": []}], ""trainings_courses"": [{""institution"": ""Cisco Networking Academy®"", ""title"": ""Get Connected course"", ""description"": ""Identify different types of computer systems, internal components and external devices. Understand the structure of the directories in Microsoft Windows, and how to work with files and folders using a text editor. Identify common problems and implement simple solutions for hardware, software and networks""}, {""institution"": ""AITB"", ""title"": ""Python Certificate (20 training hours)"", ""description"": ""Completed Introduction to Python training""}, {""institution"": ""National Telecommunication Institute (NTI)"", ""title"": ""Python for Data Analysis (75 training hours)"", ""description"": ""Assisted in maintaining databases, ensuring accuracy and consistency of information across systems. Automated data processing tasks, improving efficiency and reducing manual errors in reporting.""}, {""institution"": ""RiskRice"", ""title"": ""Shift Up Program - Artificial Intelligence"", ""description"": ""Developed Al models to enhance data processing efficiency and accuracy.""}], ""certifications"": [], ""projects"": [], ""languages"": [""Arabic"", ""English"", ""German"", ""Italian""], ""linkedin"": ""www.linkedin.com/in/adnan-ahmed-4a6278328"", ""github"": """"}",2,"·4th ranked student among the school mathematics section stdents Oct 2023 - Present Bachelor of Engineering and Applied Sciences, Egypt-Japan University of science and technology Computer Science Engineering Member of E-JUST Robotics Club Member of CPC E-Just Club
+
+ADDITIONAL INFORMATION Technical Skills: Project Management, Problem Solving, Programming, Languages: Arabic, English, German, Italian Awards/Activities: Third place in IPM Math Egyptian competition for mental math Awarded the ideal student in 2018,2019 (preparatory stage) Awarded the ideal student in 2020,2021,2022 (secondary stage)"
+8,"Ahmed Abdelaziz Elshahawy
+Backend Developer | .NET Developer
+Egypt, Cairo | 01555048280 | AhmedSahahawy59@gmail.com | www.linkedin.com/in/ahmedshahawy-2980301a6 | Leet Code :- https://leetcode.com/u/leeter5/ | GitHub :-
+https://github.com/AhmedSheeha | Military Service : Exempted
+
+───────────
+SUMMARY
+───────────
+Junior Backend Developer | .NET Specialist | Problem Solver
+Enthusiastic and detail-oriented, with expertise in .NET, OOP, and design patterns. Skilled in
+problem-solving and creating scalable solutions, I’m a quick-learning, self-motivated team
+player committed to growth in software development.
+
+──────────
+SKILLS
+──────────
+Programming Languages:- C++, JavaScript, and C#.
+Backend Technologies :- LINQ, Entity Framework, Restfull API, .NET Core, MVC, Identity, Jwt,
+and SignalR. Databases:- MS SQL server.
+Frontend Technologies:- HTML, CSS, and Bootstrap.
+Software Skills:- Object Oriented Programming, Algorithms, Data Structures, Design Patterns,
+SOLID, Problem Solving, and Clean Code.
+Tools :- Git & GitHub.
+Soft Skills:- Communication, Teamwork and Collaboration, Critical Thinking and Interpersonal
+Intelligence.
+
+────────────
+PROJECTS
+────────────
+Store API(GitHub:- https://github.com/AhmedSheeha/Store):-
+• Ecommerce API Enables Customers To make orders And even to Adjust it Later.
+• Allows the Admin to Add, remove, and Update the products under different Categories.
+As there is Authorization layer to restrict normal users.
+• Tools:- ASP.NET Core API– SQL Server – Entity Frame work – LINQ – JWT - Microsoft
+Identity .
+• Design Patterns:- Generic Repository – Specific Repository – Unite Of Work –
+Dependency Injection – DTOs – CQRS – Clean Architecture - Mediator.
+Clinic Management system API(Github:- https://github.com/AhmedSheeha/clinic):-
+• A system To manage A clink Efficiently, allows user or patient to have an account and to
+have his/her history with The Clinic.
+
+• allows the patient to view the Schedule for Each Doctor at the Clinic, and gives him the
+Ability to create an appointment at any specific time the doctors are available.
+• allows doctor to create their schedule and when they are Available so the patients can
+know.
+• Doctors can close the appointment and make Attendance then write the diagnosis in
+the Patient History.
+• Tools:- ASP.NET Core API– SQL Server – Entity Frame work – LINQ – JWT - Microsoft
+Identity .
+• Design Patterns:- Generic Repository – Specific Repository – Unite Of Work –
+Dependency Injection – DTOs.
+School Management API(g
+ithub:- https://github.com/AhmedSheeha/School
+• School Application To Manage All the Affairs Related to the School Students , the
+Teachers, and the Departments.
+Library Management System(Github:- https://github.com/AhmedSheeha/LibrarySystem):-
+• Perfectly Manages The Library to add, delete, update and Borrow the borrow the books.
+allows administrators to manage books in the Library.
+• Tools:- ASP.NET Core MVC – SQL Server – Entity Frame work – LINQ .
+Dependency Injection.
+• Used the Model Views to Transfer the Data between the Controllers and the Views.
+ERP System (MVC)(Github:- https://github.com/AhmedSheeha/ERP):-
+• A system For a Store to manage their Products (Add, Delete, Update)and and Also to
+mange their Employes .
+• Authorization For every action related to the products Information and Employee
+Information so only Admin Who Can Change The data.
+• Also Customers Can View The products.
+• Tools:- ASP.NET Core MVC – SQL Server – Entity Frame work – LINQ – JWT, Identity .
+Dependency Injection - DTO.
+• Security:- Maintained Via Authorization and Authentication.
+
+─────────────
+LANGUAGES
+─────────────
+• Arabic:- Native.
+• English :- Fluent Speaker – C1.","{""name"": ""Ahmed Abdelaziz Elshahawy"", ""job_title"": ""Backend Developer | .NET Developer"", ""email"": ""AhmedSahahawy59@gmail.com"", ""phone_number"": ""01555048280"", ""location"": ""Egypt, Cairo"", ""summary"": ""Junior Backend Developer | .NET Specialist | Problem Solver Enthusiastic and detail-oriented, with expertise in .NET, OOP, and design patterns. Skilled in problem-solving and creating scalable solutions, I’m a quick-learning, self-motivated team player committed to growth in software development."", ""technical_skills"": [""C++"", ""JavaScript"", ""C#"", ""LINQ"", ""Entity Framework"", ""Restfull API"", "".NET Core"", ""MVC"", ""Identity"", ""Jwt"", ""SignalR"", ""MS SQL server"", ""HTML"", ""CSS"", ""Bootstrap"", ""Object Oriented Programming"", ""Algorithms"", ""Data Structures"", ""Design Patterns"", ""SOLID"", ""Problem Solving"", ""Clean Code"", ""Git"", ""GitHub""], ""soft_skills"": [""Communication"", ""Teamwork and Collaboration"", ""Critical Thinking and Interpersonal Intelligence""], ""experience"": [], ""education"": [], ""trainings_courses"": [], ""certifications"": [], ""projects"": [{""project_name"": ""Store API"", ""description"": ""Ecommerce API Enables Customers To make orders And even to Adjust it Later. Allows the Admin to Add, remove, and Update the products under different Categories. As there is Authorization layer to restrict normal users. Design Patterns:- Generic Repository – Specific Repository – Unite Of Work – Dependency Injection – DTOs – CQRS – Clean Architecture - Mediator."", ""tools"": [""ASP.NET Core API"", ""SQL Server"", ""Entity Frame work"", ""LINQ"", ""JWT"", ""Microsoft Identity""], ""duration"": """", ""link"": ""https://github.com/AhmedSheeha/Store""}, {""project_name"": ""Clinic Management system API"", ""description"": ""A system To manage A clink Efficiently, allows user or patient to have an account and to have his/her history with The Clinic. allows the patient to view the Schedule for Each Doctor at the Clinic, and gives him the Ability to create an appointment at any specific time the doctors are available. allows doctor to create their schedule and when they are Available so the patients can know. Doctors can close the appointment and make Attendance then write the diagnosis in the Patient History. Design Patterns:- Generic Repository – Specific Repository – Unite Of Work – Dependency Injection – DTOs."", ""tools"": [""ASP.NET Core API"", ""SQL Server"", ""Entity Frame work"", ""LINQ"", ""JWT"", ""Microsoft Identity""], ""duration"": """", ""link"": ""https://github.com/AhmedSheeha/clinic""}, {""project_name"": ""School Management API"", ""description"": ""School Application To Manage All the Affairs Related to the School Students , the Teachers, and the Departments."", ""tools"": [], ""duration"": """", ""link"": ""https://github.com/AhmedSheeha/School""}, {""project_name"": ""Library Management System"", ""description"": ""Perfectly Manages The Library to add, delete, update and Borrow the borrow the books. allows administrators to manage books in the Library. Design Patterns:- Generic Repository – Specific Repository – Unite Of Work – Dependency Injection. Used the Model Views to Transfer the Data between the Controllers and the Views."", ""tools"": [""ASP.NET Core MVC"", ""SQL Server"", ""Entity Frame work"", ""LINQ""], ""duration"": """", ""link"": ""https://github.com/AhmedSheeha/Library-System""}, {""project_name"": ""ERP System (MVC)"", ""description"": ""A system For a Store to manage their Products (Add, Delete, Update)and and Also to mange their Employes . Authorization For every action related to the products Information and Employee Information so only Admin Who Can Change The data. Also Customers Can View The products. Design Patterns:- Generic Repository – Specific Repository – Unite Of Work – Dependency Injection - DTO. Security:- Maintained Via Authorization and Authentication."", ""tools"": [""ASP.NET Core MVC"", ""SQL Server"", ""Entity Frame work"", ""LINQ"", ""JWT"", ""Identity""], ""duration"": """", ""link"": ""https://github.com/AhmedSheeha/ERP""}], ""languages"": [""Arabic:- Native."", ""English :- Fluent Speaker – C1.""], ""linkedin"": ""www.linkedin.com/in/ahmed-shahawy-2980301a6"", ""github"": ""https://github.com/AhmedSheeha""}",2,"Ahmed Abdelaziz Elshahawy Backend Developer | .NET Developer Egypt, Cairo | 01555048280 | AhmedSahahawy59@gmail.com | www.linkedin.com/in/ahmedshahawy-2980301a6 | Leet Code :- https://leetcode.com/u/leeter5/ | GitHub :- https://github.com/AhmedSheeha | Military Service : Exempted
+
+Programming Languages:- C++, JavaScript, and C#. Backend Technologies :- LINQ, Entity Framework, Restfull API, .NET Core, MVC, Identity, Jwt, and SignalR. Databases:- MS SQL server. Frontend Technologies:- HTML, CSS, and Bootstrap. Software Skills:- Object Oriented Programming, Algorithms, Data Structures, Design Patterns,"
+9,"Ahmed Elsayed
+[Cairo, Egypt][+20 106-204-2584][a_elsayed_f@icloud.com][GitHub][LinkedIn]
+
+────────────────────────
+PROFESSIONAL SUMMARY
+────────────────────────
+Backend Developer specialized in .NET, experienced in building scalable APIs and backend
+systems using C#, ASP.NET Core, EF Core, and SQL Server. Strong problem-solver with clean
+coding practices and a focus on performance, reliability, and delivering high-quality solutions.
+
+──────────
+SKILLS
+──────────
+.NET, ASP.NET Core, EF Core, C#, SQL Server, REST API development, LINQ, Clean Architecture.
+Strong in OOP, Data Structures & Algorithms, Problem Solving, Agile.
+Proficient with Git, Postman, and basic web technologies (HTML, CSS, JavaScript).
+
+───────────────────────────
+PROFESSIONAL EXPERIENCE
+───────────────────────────
+Backend Developer – Off-shoreUp Remote Contract (USA) | 3-month contract
+Developed a landing website and CRM system in a fully remote setup.
+Backend Developer – Self-Employed
+● Built and launched an e-commerce platform (“Commerca”) using .NET, including product
+management, orders, payments, and admin dashboard.
+● Customized and deployed the system for multiple clients, handling full development,
+delivery, and maintenance.
+Educations & Certificates
+Bachelor’s degree in Computer Science from Faculty of Computer Science
+Misr International University — 2020 - 2024 GPA: 3.1
+Backend Web Development (.NET)
+Route Learning 2024-2025
+Completed a comprehensive backend development program covering C#, ASP.NET Core, EF
+Core, SQL Server, and API development.
+
+──────────────────────────────
+EXTRACURRICULAR ACTIVITIES
+──────────────────────────────
+IT Member – MUN & Arab League (2022–2023): Built internal portals for attendance,
+complaints, and HR interviews using PHP, HTML, CSS, JS, AJAX.
+Project Manager – MUN & Arab League (2023–Present): Leading project planning and
+team coordination.","{""name"": ""Ahmed Elsayed"", ""job_title"": ""Backend Developer"", ""email"": ""a_elsayed_f@icloud.com"", ""phone_number"": ""+20 106-204-2584"", ""location"": ""Cairo, Egypt"", ""summary"": ""Backend Developer specialized in .NET, experienced in building scalable APIs and backend systems using C#, ASP.NET Core, EF Core, and SQL Server. Strong problem-solver with clean coding practices and a focus on performance, reliability, and delivering high-quality solutions."", ""technical_skills"": ["".NET"", ""ASP.NET Core"", ""EF Core"", ""C#"", ""SQL Server"", ""REST API development"", ""LINQ"", ""Clean Architecture"", ""OOP"", ""Data Structures & Algorithms"", ""Problem Solving"", ""Agile"", ""Git"", ""Postman"", ""HTML"", ""CSS"", ""JavaScript""], ""soft_skills"": [], ""experience"": [{""company_name"": ""Off-shoreUp Remote Contract (USA)"", ""title"": ""Backend Developer"", ""duration"": """", ""description"": ""Developed a landing website and CRM system in a fully remote setup.""}, {""company_name"": ""Self-Employed"", ""title"": ""Backend Developer"", ""duration"": ""3-month contract"", ""description"": ""Built and launched an e-commerce platform (\""Commerca\"") using.NET, including product management, orders, payments, and admin dashboard. Customized and deployed the system for multiple clients, handling full development, delivery, and maintenance.""}, {""company_name"": ""MUN & Arab League"", ""title"": ""IT Member"", ""duration"": ""2022-2023"", ""description"": ""Built internal portals for attendance, complaints, and HR interviews using PHP, HTML, CSS, JS, AJAX.""}, {""company_name"": ""MUN & Arab League"", ""title"": ""Project Manager"", ""duration"": ""2023-Present"", ""description"": ""Leading project planning and team coordination.""}], ""education"": [{""university_name"": ""Misr International University"", ""degree"": ""Bachelor's degree in Computer Science"", ""specialization"": ""Faculty of Computer Science"", ""graduation_date"": ""2020-2024"", ""graduation_status"": ""Graduated"", ""GPA"": ""3.1"", ""coursework"": []}], ""trainings_courses"": [{""institution"": ""Route Learning"", ""title"": ""Backend Web Development (.NET) 2024-2025"", ""description"": ""Completed a comprehensive backend development program covering C#, ASP.NET Core, EF Core, SQL Server, and API development.""}], ""certifications"": [], ""projects"": [], ""languages"": [], ""linkedin"": """", ""github"": """"}",0,
+10,"Ahmed K haled Moham mad
+Maadi Grand City Compound, Maadi, Cairo – Egypt
++201033716962
+AhmedKhaled6444@gmail.com
+LinkedIn - Portfolio
+
+─────────────
+OBJECTIVE
+─────────────
+• To secure a challenging position in a reputable organization to expand my learnings, knowledge, and skills.
+Secure a responsible career opportunity to fully utilize my training and skills, while making a significant
+contribution to the success of the company.
+
+──────────────────────
+WORKING EXPERIENCE
+──────────────────────
+Fab.com
+Cairo Egypt (Remote)
+• Graphic Designer (Freelancer) | 2024-PRESENT
+
+ADEEF – France
+Cairo Egypt (Remote) | 2025-2026
+• Software Engineer (Freelancer)
+
+─────────────
+EDUCATION
+─────────────
+
+2020-2025
+Bachelor of Engineering - Computer Science Major
+Egyptian Chinese University - Cairo, Egypt
+• Graduate Student - Software Engineer [Grade: Very Good]
+
+───────────────────
+COMPUTER SKILLS
+───────────────────
+
+─────────────
+LANGUAGES
+─────────────
+• Proficient with React, React Native, Java, Typescript
+• Good with c++, c#, python, sql
+• Familiar with node js
+Software
+• Visual Studio Code
+• Android Studio
+• Database: SQL server and MySQL server
+• Platforms: windows, Linux
+• Frameworks: React Js, Node Js
+
+────────────────
+TECHNOLOGIES
+────────────────
+• Web: React, Next.js, TypeScript, Redux / Zustand, HTML5, CSS3, SASS, Styled-Components, Webpack
+• Mobile: React Native, Expo, React Navigation, native modules
+• Backend & APIs: Node.js, JWT, WebSockets
+• Databases: MySQL, SQLite
+• Tools & Practices: Git, GitHub/GitLab, Agile/Scrum, Jira, Figma (basic)
+
+────────────
+PROJECTS
+────────────
+• Creating a full flutter application, an EV charging station finder that utilized
+2025
+Google Maps API, and Firebase Authentication for my Graduation Project
+https://github.com/Medo6444/ev-charging-station-finder
+• Creating and deploying an android app, an offline Habit Tracker using centered | 2025-2026
+around privacy, using SQLite, and React Native Expo on Google Play
+• Creating and deploying a complete WebPortal, utilizing JWT Tokens,
+GoCardles API, DocuSign API, and MySQL for the French company
+
+─────────────
+ADEEF CO.
+─────────────
+ADEEF.org
+
+─────────────
+LANGUAGES
+─────────────
+• Arabic Native Language
+• English Speak fluently, read and write with high proficiency
+• Japanese beginner in reading and writing
+
+──────────────
+REFERENCES
+──────────────
+• References upon request.","{""name"": ""Ahmed Khaled Mohammad"", ""job_title"": """", ""email"": ""AhmedKhaled6444@gmail.com"", ""phone_number"": ""+201033716962"", ""location"": ""Maadi Grand City Compound, Maadi, Cairo - Egypt"", ""summary"": ""To secure a challenging position in a reputable organization to expand my learnings, knowledge, and skills. Secure a responsible career opportunity to fully utilize my training and skills, while making a significant contribution to the success of the company."", ""technical_skills"": [""React"", ""React Native"", ""Java"", ""Typescript"", ""c++"", ""c#"", ""python"", ""sql"", ""node js"", ""Visual Studio Code"", ""Android Studio"", ""SQL server"", ""MySQL server"", ""windows"", ""Linux"", ""React Js"", ""Node Js"", ""Next.js"", ""Redux / Zustand"", ""HTML5"", ""CSS3"", ""SASS"", ""Styled-Components"", ""Webpack"", ""Expo"", ""React Navigation"", ""native modules"", ""JWT"", ""WebSockets"", ""MySQL"", ""SQLite"", ""Git"", ""GitHub/GitLab"", ""Agile/Scrum"", ""Jira"", ""Figma (basic)""], ""soft_skills"": [], ""experience"": [{""company_name"": ""Fab.com"", ""title"": ""Graphic Designer (Freelancer)"", ""duration"": ""2024-PRESENT"", ""description"": """"}, {""company_name"": ""ADEEF - France"", ""title"": ""Software Engineer (Freelancer)"", ""duration"": ""2025-2026"", ""description"": """"}], ""education"": [{""university_name"": ""Egyptian Chinese University - Cairo, Egypt"", ""degree"": ""Bachelor of Engineering"", ""specialization"": ""Computer Science Major"", ""graduation_date"": ""2020-2025"", ""graduation_status"": ""Graduated"", ""GPA"": ""Very Good"", ""coursework"": []}], ""trainings_courses"": [], ""certifications"": [], ""projects"": [{""project_name"": ""EV charging station finder"", ""description"": ""Creating a full flutter application, an EV charging station finder that utilized Google Maps API, and Firebase Authentication for my Graduation Project"", ""tools"": [""flutter"", ""Google Maps API"", ""Firebase Authentication""], ""duration"": ""2025"", ""link"": ""https://github.com/Medo6444/ev-charging-station-finder""}, {""project_name"": ""offline Habit Tracker"", ""description"": ""Creating and deploying an android app, an offline Habit Tracker using centered around privacy, using SQLite, and React Native Expo on Google Play"", ""tools"": [""android"", ""SQLite"", ""React Native Expo""], ""duration"": ""2025-2026"", ""link"": """"}, {""project_name"": ""WebPortal"", ""description"": ""Creating and deploying a complete WebPortal, utilizing JWT Tokens, GoCardles API, DocuSign API, and MySQL for the French company ADEEF Co."", ""tools"": [""JWT Tokens"", ""GoCardles API"", ""DocuSign API"", ""MySQL""], ""duration"": ""2025-2026"", ""link"": ""ADEEF.org""}], ""languages"": [""Arabic Native Language"", ""English Speak fluently, read and write with high proficiency"", ""Japanese beginner in reading and writing""], ""linkedin"": """", ""github"": """"}",8,"WORKING EXPERIENCE Fab.com Cairo Egypt (Remote)
+
+• Graduate Student - Software Engineer [Grade: Very Good]
+
+• Familiar with node js Software
+
+• Platforms: windows, Linux
+
+• Frameworks: React Js, Node Js
+
+• Backend & APIs: Node.js, JWT, WebSockets
+
+• Databases: MySQL, SQLite
+
+• References upon request."
+11,"IT graduate with practical experience in networking, Windows Server, and Active Directory. Solid
+understanding of system administration and network troubleshooting. Seeking an entry-level
+position in IT Support, IT Infrastructure, or System Administration .
+
+Programming Languages:
+Python, Java , JavaScript , SQL
+Networking:
+CCNA ,Vlan , Routing , MCSA / Active
+Directory
+
+2025
+Nasr City
+
+2021 – 2025
+
+Network Configuration
+Designed and configured a small network using Cisco Packet Tracer.
+Set up VLANs and inter-VLAN routing on switches and routers.
+Assigned IP addresses and tested network connectivity using ping and traceroute.
+Demonstrated practical networking skills and understanding of network protocols.
+React E-commerce Website
+Ahmed Maher
+
+Junior IT Infrastructure Engineer
+ahmed.maher1862003@gmail.com 01006690838 Cairo , Egypt
+
+linkedin.com/in/ahmed-maher-645b95249
+
+────────────────────────
+PROFESSIONAL SUMMARY
+────────────────────────
+
+────────────────────
+TECHNICAL SKILLS
+────────────────────
+
+Web Development:
+React, HTML/CSS, JavaScript
+Operating Systems
+Windows Server, Linux (Ubuntu –
+fundamentals, users, permissions)
+
+───────────────────────────
+PROFESSIONAL EXPERIENCE
+───────────────────────────
+Intern at Intercom Enterprises – IBM SW Automation Tools (BPM)
+Built and modeled business process applications.
+Used Workflow Center and Process Designer tools.
+Applied gateways, timers, and business data flow.
+Designed and customized user interfaces (coaches).
+
+─────────────
+EDUCATION
+─────────────
+
+Faculty of Computer and Information,
+The Egyptian E-Learning University - EELU
+Information Technology department
+
+────────────
+PROJECTS
+────────────
+
+Developed a responsive e-commerce website using React, HTML, CSS, and JavaScript.
+Integrated REST APIs to fetch products and handle user interactions.
+Implemented product listing, shopping cart, and checkout functionality.
+Demonstrated skills in React development, state management, API integration, and
+responsive design.
+
+2022
+Nasr City, Egypt
+
+Communication: Clear technical communication, active listening, technical writing
+Collaboration: Teamwork, conflict resolution, interpersonal skills
+Critical Thinking: Analytical thinking, problem-solving, decision-making under pressure
+Adaptability: Flexible, quick learner, multitasking
+
+2023
+
+───────────
+COURSES
+───────────
+
+Cisco Certified Network Associate (CCNA) Course, Eng Ahmed Nabil
+Strong understanding of networking principles and protocols.
+Practical experience with Cisco switches and routers.
+Ability to design, implement, and troubleshoot network
+infrastructures.
+Knowledge of network security practices and implementation.
+
+Soft Skills
+
+──────────────
+ACTIVITIES
+──────────────
+
+Member in Org Team in Compiler Community
+This is a volunteer community that helps students and provides events
+and training so that they are familiar with the market and help them in
+college.","{""name"": ""Ahmed Maher"", ""job_title"": ""Junior IT Infrastructure Engineer"", ""email"": ""ahmed.maher1862003@gmail.com"", ""phone_number"": ""01006690838"", ""location"": ""Cairo, Egypt"", ""summary"": ""IT graduate with practical experience in networking, Windows Server, and Active Directory. Solid understanding of system administration and network troubleshooting. Seeking an entry-level position in IT Support, IT Infrastructure, or System Administration."", ""technical_skills"": [""Python"", ""Java"", ""JavaScript"", ""SQL"", ""CCNA"", ""Vlan"", ""Routing"", ""MCSA / Active Directory"", ""React"", ""HTML/CSS"", ""Windows Server"", ""Linux (Ubuntu fundamentals, users, permissions)""], ""soft_skills"": [""Communication"", ""Collaboration"", ""Critical Thinking"", ""Adaptability""], ""experience"": [{""company_name"": ""Intercom Enterprises"", ""title"": ""Intern - IBM SW Automation Tools (BPM)"", ""duration"": """", ""description"": ""Built and modeled business process applications. Used Workflow Center and Process Designer tools. Applied gateways, timers, and business data flow. Designed and customized user interfaces (coaches).""}], ""education"": [{""university_name"": ""The Egyptian E-Learning University - EELU"", ""degree"": ""Faculty of Computer and Information"", ""specialization"": ""Information Technology department"", ""graduation_date"": ""2021-2025"", ""graduation_status"": ""Graduated"", ""GPA"": """", ""coursework"": []}], ""trainings_courses"": [{""institution"": ""Eng Ahmed Nabil"", ""title"": ""Cisco Certified Network Associate (CCNA) Course"", ""description"": ""Strong understanding of networking principles and protocols. Practical experience with Cisco switches and routers. Ability to design, implement, and troubleshoot network infrastructures. Knowledge of network security practices and implementation.""}], ""certifications"": [], ""projects"": [{""project_name"": ""Network Configuration"", ""description"": ""Designed and configured a small network using Cisco Packet Tracer. Set up VLANs and inter-VLAN routing on switches and routers. Assigned IP addresses and tested network connectivity using ping and traceroute. Demonstrated practical networking skills and understanding of network protocols."", ""tools"": [""Cisco Packet Tracer""], ""duration"": """", ""link"": """"}, {""project_name"": ""React E-commerce Website"", ""description"": ""Developed a responsive e-commerce website using React, HTML, CSS, and JavaScript. Integrated REST APIs to fetch products and handle user interactions. Implemented product listing, shopping cart, and checkout functionality. Demonstrated skills in React development, state management, API integration, and responsive design."", ""tools"": [""React"", ""HTML"", ""CSS"", ""JavaScript"", ""REST APIs""], ""duration"": """", ""link"": """"}], ""languages"": [], ""linkedin"": ""linkedin.com/in/ahmed-maher-645b95249"", ""github"": """"}",4,"2025 Nasr City
+
+2022 Nasr City, Egypt
+
+Communication: Clear technical communication, active listening, technical writing Collaboration: Teamwork, conflict resolution, interpersonal skills Critical Thinking: Analytical thinking, problem-solving, decision-making under pressure Adaptability: Flexible, quick learner, multitasking
+
+Member in Org Team in Compiler Community This is a volunteer community that helps students and provides events and training so that they are familiar with the market and help them in college."
+12,"───────────────────────
+AHMED SALAH MANSOUR
+───────────────────────
+
+Cairo, Egypt | 01111924496 | ahmedsalah66848@gmail.com | LinkedIn | GitHub
+
+───────────
+SUMMARY
+───────────
+Motivated Computer Science graduate specializing in Backend & AI Engineering with expertise in
+scalable backend systems using Laravel, Spring Boot, and microservices. Skilled in database
+optimization, AI/ML model deployment, and Docker-based environments. Strong knowledge in deep
+learning, computer vision, and NLP architectures.
+
+─────────────
+EDUCATION
+─────────────
+BSc in Computer Science — Ain Shams University (09/2020 – 06/2025), Cairo, Egypt
+Specialization: Artificial Intelligence & Machine Learning
+Graduation Project: Molecular Generation & Optimization using REINVENT + Quantum Computing
+(A+)
+
+────────────────────
+TECHNICAL SKILLS
+────────────────────
+Backend Technologies: Laravel, Spring Boot, RESTful APIs, Microservices, Docker, Message Queue
+(Redis, RabbitMQ).
+Databases: MySQL (Schema Design & Optimization).
+AI & Machine Learning: Python, TensorFlow, PyTorch, Scikit-learn, Keras, MLflow, DVC.
+Deep Learning / CV / NLP: CNN, RNN, Transformers, YOLO, Mask R-CNN, ViT, DETR.
+Frontend: HTML, CSS, JavaScript.
+Version Control: Git, GitHub.
+CI/CD & Deployment: Docker Compose.
+Authentication & Security: JWT, OAuth2, API security (rate limiting, validation, encryption).
+Caching & Optimization: Redis caching, API performance tuning, query optimization.
+Testing: Unit Testing (PHPUnit / JUnit).
+Problem Solving: Strong DSA understanding (advanced) • Specialist Problem Solver with 300+ solved
+on Codeforces.
+
+───────────────────────────
+PROFESSIONAL EXPERIENCE
+───────────────────────────
+Dayra — Backend Intern (Jul 2022 – Oct 2022) — Hybrid
+Worked on production-grade financial microservices including interest accrual calculations, invoicing
+pipelines, and Egyptian Tax Authority integration. Implemented secure RESTful APIs with validation
+layers, encryption, rate limiting, and structured error handling. Developed idempotent transaction
+workflows using UUID keys, race-condition protections, and composite constraints to prevent
+duplication. Built automated cron financial pipelines, retry mechanisms, circuit-breaker patterns,
+dead-letter queue handling, and monitoring dashboards ensuring fault-tolerant backend performance.
+
+────────────
+PROJECTS
+────────────
+Molecular Generation & Optimization using REINVENT + Quantum Computing:
+Developed an end-to-end molecular generation pipeline using a customized REINVENT model with
+domain-specific scoring functions. Integrated quantum evaluation modules and delivered a complete
+training, validation, and analysis workflow.
+Customer Billing & Loan Service — Dayra:
+Developed backend logic for billing and loan operations, designed optimized schemas, secured APIs,
+and migrated processes into background pipelines using queues and scheduled jobs.
+
+──────────────────────────
+COURSES & ACHIEVEMENTS
+──────────────────────────
+• Internship Certification — Dayra (Backend Engineering)
+• Backend Certification — Cybers (PHP, Laravel)
+• Codeforces Specialist — Competitive Programming
+• Certified Full Stack Developer (PHP, Laravel, MySQL)
+• HackerRank: Software Engineer Intern, SQL, Python, Java
+
+─────────────
+LANGUAGES
+─────────────
+Arabic — Native
+English — Fluent
+
+SOFT SKILLS
+Strong analytical and problem-solving mindset, effective communication, teamwork (Agile/Scrum),
+adaptability.","{""name"": ""AHMED SALAH MANSOUR"", ""job_title"": """", ""email"": ""ahmedsalah66848@gmail.com"", ""phone_number"": ""01111924496"", ""location"": ""Cairo, Egypt"", ""summary"": ""Motivated Computer Science graduate specializing in Backend & Al Engineering with expertise in scalable backend systems using Laravel, Spring Boot, and microservices. Skilled in database optimization, AI/ML model deployment, and Docker-based environments. Strong knowledge in deep learning, computer vision, and NLP architectures."", ""technical_skills"": [""Laravel"", ""Spring Boot"", ""RESTful APIs"", ""Microservices"", ""Docker"", ""Message Queue (Redis, RabbitMQ)"", ""MySQL"", ""Python"", ""TensorFlow"", ""PyTorch"", ""Scikit-learn"", ""Keras"", ""MLflow"", ""DVC"", ""CNN"", ""RNN"", ""Transformers"", ""YOLO"", ""Mask R-CNN"", ""VIT"", ""DETR"", ""HTML"", ""CSS"", ""JavaScript"", ""Git"", ""GitHub"", ""Docker Compose"", ""JWT"", ""OAuth2"", ""API security"", ""Redis caching"", ""API performance tuning"", ""query optimization"", ""Unit Testing (PHPUnit / JUnit)""], ""soft_skills"": [""Strong analytical and problem-solving mindset"", ""effective communication"", ""teamwork (Agile/Scrum)"", ""adaptability""], ""experience"": [{""company_name"": ""Dayra"", ""title"": ""Backend Intern"", ""duration"": ""Jul 2022-Oct 2022"", ""description"": ""Worked on production-grade financial microservices including interest accrual calculations, invoicing pipelines, and Egyptian Tax Authority integration. Implemented secure RESTful APIs with validation layers, encryption, rate limiting, and structured error handling. Developed idempotent transaction workflows using UUID keys, race-condition protections, and composite constraints to prevent duplication. Built automated cron financial pipelines, retry mechanisms, circuit-breaker patterns, dead-letter queue handling, and monitoring dashboards ensuring fault-tolerant backend performance.""}], ""education"": [{""university_name"": ""Ain Shams University"", ""degree"": ""BSc in Computer Science"", ""specialization"": ""Specialization: Artificial Intelligence & Machine Learning"", ""graduation_date"": ""09/2020-06/2025"", ""graduation_status"": ""Graduated"", ""GPA"": """", ""coursework"": []}], ""trainings_courses"": [], ""certifications"": [""Internship Certification - Dayra (Backend Engineering)"", ""Backend Certification Cybers (PHP, Laravel)"", ""Codeforces Specialist - Competitive Programming"", ""Certified Full Stack Developer (PHP, Laravel, MySQL)"", ""HackerRank: Software Engineer Intern, SQL, Python, Java""], ""projects"": [{""project_name"": ""Molecular Generation & Optimization using REINVENT + Quantum Computing"", ""description"": ""Developed an end-to-end molecular generation pipeline using a customized REINVENT model with domain-specific scoring functions. Integrated quantum evaluation modules and delivered a complete training, validation, and analysis workflow."", ""tools"": [], ""duration"": """", ""link"": """"}, {""project_name"": ""Customer Billing & Loan Service"", ""description"": ""Developed backend logic for billing and loan operations, designed optimized schemas, secured APIs, and migrated processes into background pipelines using queues and scheduled jobs."", ""tools"": [], ""duration"": """", ""link"": """"}], ""languages"": [""Arabic Native"", ""English Fluent""], ""linkedin"": """", ""github"": """"}",0,
+13,"Ahmed Eid
+Front End Developer
+Cairo, Egypt | +201028692006 | ahmed3000eid@gmail.com
+github.com/ahmedeid944 | linkedin.com/in/ahmedeid
+
+─────────────
+EDUCATION
+─────────────
+El Shorouk Academy | Cairo, Egypt
+Faculty of computer science | Sep 2023 - Present
+
+───────────────────
+WORK EXPERIENCE
+───────────────────
+Frontend Intern — Route Academy
+( June 2024 – Jan 2025 )
+● Developed and optimized responsive web interfaces using HTML, CSS, JavaScript, and React.js.
+● Worked on multiple projects, including a personal portfolio website that showcased skills in DOM
+● Gained practical experience in version control using Git & GitHub and teamwork in agile
+environments.
+
+────────────
+PROJECTS
+────────────
+Movie App Platform – React, Redux, Tailwind CSS, Vite
+ Developed a responsive movie browsing application using React and Vite for fast performance
+and modular structure.
+ Integrated TMDB API to fetch real-time movie data including posters, ratings, and cast.
+ Styled with Tailwind CSS for fast, clean, consistent, and modern UI design.
+ Deployed on Vercel for seamless access and optimized performance.
+Weather App – HTML, CSS, Bootstrap, JavaScript (ES6+)
+ Built a responsive weather application with real-time data fetching.
+ Used JavaScript (ES6+) for API integration and dynamic UI updates.
+ Styled with CSS & Bootstrap for clean design and mobile responsiveness.
+
+────────────────────
+TECHNICAL SKILLS
+────────────────────
+● ReactJS, Typescript
+● HTML5, CSS, JavaScript, Jest, MySQL, PostgreSQL, Git, Unix
+
+────────────────
+CERTIFICATES
+────────────────
+● Route Acadmey | june 2024 - jan 2025
+Extra-curricular activities
+Creativa Competition | Jun 2025 - Jul 2025
+● Worked on an AI-powered camera project focusing on intelligent monitoring.
+● Contributed to a smart bus management solution aimed at improving efficiency and
+organization
+
+─────────────
+LANGUAGES
+─────────────
+● English (fluent)","{""name"": ""Ahmed Eid"", ""job_title"": ""Front End Developer"", ""email"": ""ahmed3000eid@gmail.com"", ""phone_number"": ""+201028692006"", ""location"": ""Cairo, Egypt"", ""summary"": """", ""technical_skills"": [""ReactJS"", ""Typescript"", ""HTML5"", ""CSS"", ""JavaScript"", ""Jest"", ""MySQL"", ""PostgreSQL"", ""Git"", ""Unix""], ""soft_skills"": [], ""experience"": [{""company_name"": ""Route Academy"", ""title"": ""Frontend Intern"", ""duration"": ""(June 2024 - Jan 2025)"", ""description"": ""Developed and optimized responsive web interfaces using HTML, CSS, JavaScript, and React.js. Worked on multiple projects, including a personal portfolio website that showcased skills in DOM Gained practical experience in version control using Git & GitHub and teamwork in agile environments.""}], ""education"": [{""university_name"": ""El Shorouk Academy"", ""degree"": """", ""specialization"": ""Faculty of computer science"", ""graduation_date"": ""Sep 2023 - Present"", ""graduation_status"": """", ""GPA"": """", ""coursework"": []}], ""trainings_courses"": [], ""certifications"": [""Route Acadmey june 2024-jan 2025""], ""projects"": [{""project_name"": ""Movie App Platform"", ""description"": ""Developed a responsive movie browsing application using React and Vite for fast performance and modular structure. Integrated TMDB API to fetch real-time movie data including posters, ratings, and cast. Styled with Tailwind CSS for fast, clean, consistent, and modern Ul design. Deployed on Vercel for seamless access and optimized performance."", ""tools"": [""React"", ""Redux"", ""Tailwind CSS"", ""Vite""], ""duration"": """", ""link"": """"}, {""project_name"": ""Weather App"", ""description"": ""Built a responsive weather application with real-time data fetching. Used JavaScript (ES6+) for API integration and dynamic Ul updates. Styled with CSS & Bootstrap for clean design and mobile responsiveness."", ""tools"": [""HTML"", ""CSS"", ""Bootstrap"", ""JavaScript (ES6+)""], ""duration"": """", ""link"": """"}, {""project_name"": ""Creativa Competition"", ""description"": ""Worked on an Al-powered camera project focusing on intelligent monitoring. Contributed to a smart bus management solution aimed at improving efficiency and organization"", ""tools"": [], ""duration"": ""Jun 2025 - Jul 2025"", ""link"": """"}], ""languages"": [""English (fluent)""], ""linkedin"": ""linkedin.com/in/ahmedeid"", ""github"": ""github.com/ahmedeid944""}",0,
+14,"Akram Tarek El Raey
+
+Phone: +20 (102) 697-1925| Email: akramelraey@gmail.com |Cairo, Kobry El Qobba
+
+─────────────
+EDUCATION
+─────────────
+Misr International University (MIU), Cairo
+• Bachelor of Business Administration (Major: Business Intelligence), Expected to Graduate in 2027
+
+──────────────
+EXPERIENCE
+──────────────
+Career 180 – Event Coordinator (August 2025 – December 2025)
+• Screened, shortlisted, and interviewed event organizer candidates through in-person and phone
+interviews.
+• Coordinated training sessions and site visits for IRC and IAP 2025, ensuring team readiness and
+compliance with event standards.
+• Supported organizer evaluation and performance monitoring.
+• Planned and executed major events including Intellect Conference 2025, Banking & Fintech Summit
+2025, Her Mark Expo, and CFYE.
+• Managed operations for Nahdit Misr events, overseeing organizer coordination and on-ground logistics.
+New Game – Logistics Intern (January 2025 – April 2025)
+• Added products to Amazon and Noon platforms.
+• Trained as a game master, guiding customers during event gameplay.
+Mersal Foundation – PR and Marketing Intern (August 2021 – September 2021)
+• Created and optimized Facebook Ads to enhance outreach.
+• Uploaded and updated new products on the organization’s website.
+
+──────────────────────────────
+EXTRACURRICULAR ACTIVITIES
+──────────────────────────────
+Cairo International Book Fair 55 – Volunteer (January – February 2024)
+• Managed audience entry and directed them to designated areas.
+• Awarded “Best Volunteer” ( عوطتم لضفأ).
+TEDx Manarat Al Farouk – PR & Logistics Member (November 2021 – March 2022)
+• Organized college and uniform offers.
+• Coordinated stage setup and logistics.
+MARJ3 Ambassador (Now Emonovo) (May 2020 – February 2021)
+• Achieved top performance scores and exceeded ambassador targets.
+• Negotiated school partnership with MARJ3 and suggested certification incentives.
+Courses & Technical Skills
+Autodesk 3DS MAX – 2024
+SAMSUNG Innovation Campus – Coding & Programming (Oct – Dec 2021)
+• Algorithms, Arduino, C, Scratch, Data Structures
+Python Fundamentals – Egyptian Information System Institute (July 2019)
+• Basic Python syntax, collections, language components","{""name"": ""Akram Tarek El Raey"", ""job_title"": """", ""email"": ""akramelraey@gmail.com"", ""phone_number"": ""+20 (102) 697-1925"", ""location"": ""Cairo, Kobry El Qobba"", ""summary"": """", ""technical_skills"": [""Autodesk 3DS MAX"", ""Algorithms"", ""Arduino"", ""C"", ""Scratch"", ""Data Structures"", ""Python""], ""soft_skills"": [], ""experience"": [{""company_name"": ""Career 180"", ""title"": ""Event Coordinator"", ""duration"": ""August 2025 - December 2025"", ""description"": ""Screened, shortlisted, and interviewed event organizer candidates through in-person and phone interviews. Coordinated training sessions and site visits for IRC and IAP 2025, ensuring team readiness and compliance with event standards. Supported organizer evaluation and performance monitoring. Planned and executed major events including Intellect Conference 2025, Banking & Fintech Summit 2025, Her Mark Expo, and CFYE. Managed operations for Nahdit Misr events, overseeing organizer coordination and on-ground logistics.""}, {""company_name"": ""New Game"", ""title"": ""Logistics Intern"", ""duration"": ""January 2025 - April 2025"", ""description"": ""Added products to Amazon and Noon platforms. Trained as a game master, guiding customers during event gameplay.""}, {""company_name"": ""Mersal Foundation"", ""title"": ""PR and Marketing Intern"", ""duration"": ""August 2021-September 2021"", ""description"": ""Created and optimized Facebook Ads to enhance outreach. Uploaded and updated new products on the organization's website.""}, {""company_name"": ""Cairo International Book Fair 55"", ""title"": ""Volunteer"", ""duration"": ""January - February 2024"", ""description"": ""Managed audience entry and directed them to designated areas. Awarded \""Best Volunteer\""""}, {""company_name"": ""TEDx Manarat Al Farouk"", ""title"": ""PR & Logistics Member"", ""duration"": ""November 2021 - March 2022"", ""description"": ""Organized college and uniform offers. Coordinated stage setup and logistics.""}, {""company_name"": ""MARJ3 (Now Emonovo)"", ""title"": ""Ambassador"", ""duration"": ""May 2020-February 2021"", ""description"": ""Achieved top performance scores and exceeded ambassador targets. Negotiated school partnership with MARJ3 and suggested certification incentives.""}], ""education"": [{""university_name"": ""Misr International University (MIU), Cairo"", ""degree"": ""Bachelor of Business Administration"", ""specialization"": ""Major: Business Intelligence"", ""graduation_date"": ""2027"", ""graduation_status"": ""Expected"", ""GPA"": """", ""coursework"": []}], ""trainings_courses"": [{""institution"": ""SAMSUNG Innovation Campus"", ""title"": ""Coding & Programming"", ""description"": ""Algorithms, Arduino, C, Scratch, Data Structures""}, {""institution"": ""Egyptian Information System Institute"", ""title"": ""Python Fundamentals"", ""description"": ""Basic Python syntax, collections, language components""}], ""certifications"": [], ""projects"": [], ""languages"": [], ""linkedin"": """", ""github"": """"}",0,
+15,"| S | E
+
+───────────────────────────────
+ALI MOHAMED OFTWARE NGINEER
+───────────────────────────────
+alimohamedalielaqad23@gmail.com | (+20) 1270672087 | Cairo, Egypt |linkedin/ali-mohamed-020b9a24b|
+github/alimohamedelaqad
+
+───────────────────────────
+PROFESSIONAL EXPERIENCE
+───────────────────────────
+Alaqad automotive, Cairo, Egypt | Mar 2021 – Present
+SWE / IT
+● I built from scratch e-commerce responsive website project by full-stack that can help customer to book his
+fav car , know it’s price and it’s Features and Specification , He can identify the installment programs and
+calculate them through installment calculator ,also a comparison table for cars that to make him know the
+best car
+● Setup security cameras and computers devices in company with connected it with server , internet and
+troubleshoot all types of problems related to hardware or software.
+● I responsible for Collecting and organizing database in company as cars, employee salaries and electronic
+invoices
+Emdad for archeticture and engineer, Maadi, Egypt | Mar 2022 – Nov 2023
+Network Engineer
+● IT Hardware Support
+● Desktop Application Support
+● Install, upgrade, and provide support for Windows client operating systems and macOS. configuring and
+troubleshooting Office 365 services, Monitored and Managed Backups and Scheduled Tasks
+● Managing firewalls to enforce network security policies, control access, and protect against
+
+─────────────
+EDUCATION
+─────────────
+
+Digital Egypt pioneers initiative – DEPI , cairo, Egypt | Nov 2025 – Present
+Full stack .Net Web development
+Route academy, Nasr city, Egypt | feb 2025 – Present
+Diploma, full-stack development (React.js - Node.js)
+Information Technology Institute, Cairo , Egypt | Jul 2025 – Aug 2025
+
+──────────────────────────
+MEAN STACK DEVELOPMENT
+──────────────────────────
+Sector B5, Smart Village , Egypt | Jul 2025 – Aug 2025
+IOT workshop
+Sprints, Cairo , Egypt | May 2025 – Jun 2025
+SprintUp - Web Development Fundamentals
+National Telecommunication Institute, New capital , Egypt | Apr 2025 – Jun 2025
+Huawei Egyptian Talents Academy - AI
+Arab open University, Cairo , Egypt | Oct 2020 – Jul 2024
+Bachelor’s degree in computer science and information technology
+
+──────────────────────
+SKILLS & LANGUAGES
+──────────────────────
+● Technical Skills : html, CSS, bootstrap, Figma, tailwind, typescript, jQuery, Fast Api, Django, Node.js,
+.NET, Express.js, React.js, Next.js, Angular, Java, Python, C++,C#, JavaScript, SQL, MongoDB,
+PostgreSQL, SQLserver, Firebase, git, GitHub,Docker .
+● Soft Skills : Communication, Problem Solving, Time management, Critical thinking, Attention to details
+● Languages : Arabic(native), English(fluent)","{""name"": ""ALI MOHAMED"", ""job_title"": ""SOFTWARE ENGINEER"", ""email"": ""alimohamedalielaqad23@gmail.com"", ""phone_number"": ""(+20) 1270672087"", ""location"": ""Cairo, Egypt"", ""summary"": """", ""technical_skills"": [""html"", ""CSS"", ""bootstrap"", ""Figma"", ""tailwind"", ""typescript"", ""jQuery"", ""Fast Api"", ""Django"", ""Node.js"", ""NET"", ""Express.js"", ""React.js"", ""Next.js"", ""Angular"", ""Java"", ""Python"", ""C++"", ""C#"", ""JavaScript"", ""SQL"", ""MongoDB"", ""PostgreSQL"", ""SQLserver"", ""Firebase"", ""git"", ""GitHub"", ""Docker""], ""soft_skills"": [""Communication"", ""Problem Solving"", ""Time management"", ""Critical thinking"", ""Attention to details""], ""experience"": [{""company_name"": ""Alaqad automotive"", ""title"": ""SWE/IT"", ""duration"": ""Mar 2021- Present"", ""description"": ""I built from scratch e-commerce responsive website project by full-stack that can help customer to book his fav car, know it's price and it's Features and Specification, He can identify the installment programs and calculate them through installment calculator, also a comparison table for cars that to make him know the best car • Setup security cameras and computers devices in company with connected it with server, internet and troubleshoot all types of problems related to hardware or software. I responsible for Collecting and organizing database in company as cars, employee salaries and electronic invoices""}, {""company_name"": ""Emdad for archeticture and engineer"", ""title"": ""Network Engineer"", ""duration"": ""Mar 2022-Nov 2023"", ""description"": ""Install, upgrade, and provide support for Windows client operating systems and macOS. configuring and troubleshooting Office 365 services, Monitored and Managed Backups and Scheduled Tasks • Managing firewalls to enforce network security policies, control access, and protect against""}], ""education"": [{""university_name"": ""Arab open University, Cairo, Egypt"", ""degree"": ""Bachelor's degree in computer science and information technology"", ""specialization"": """", ""graduation_date"": ""Oct 2020-Jul 2024"", ""graduation_status"": ""Graduated"", ""GPA"": """", ""coursework"": []}], ""trainings_courses"": [{""institution"": ""Digital Egypt pioneers initiative - DEPI, cairo, Egypt"", ""title"": ""Full stack.Net Web development"", ""description"": """"}, {""institution"": ""Route academy, Nasr city, Egypt"", ""title"": ""Diploma, full-stack development (React.js - Node.js)"", ""description"": """"}, {""institution"": ""Information Technology Institute, Cairo, Egypt"", ""title"": ""MEAN STACK DEVELOPMENT"", ""description"": """"}, {""institution"": ""Sector B5, Smart Village, Egypt"", ""title"": ""IOT workshop"", ""description"": """"}, {""institution"": ""Sprints, Cairo, Egypt"", ""title"": ""SprintUp - Web Development Fundamentals"", ""description"": """"}, {""institution"": ""National Telecommunication Institute, New capital, Egypt"", ""title"": ""Huawei Egyptian Talents Academy - AI"", ""description"": """"}], ""certifications"": [], ""projects"": [], ""languages"": [""Arabic(native)"", ""English(fluent)""], ""linkedin"": ""linkedin/ali-mohamed-020b9a24b"", ""github"": ""github/alimohamedelaqad""}",1,"MEAN STACK DEVELOPMENT Sector B5, Smart Village , Egypt | Jul 2025 – Aug 2025 IOT workshop Sprints, Cairo , Egypt | May 2025 – Jun 2025 SprintUp - Web Development Fundamentals National Telecommunication Institute, New capital , Egypt | Apr 2025 – Jun 2025 Huawei Egyptian Talents Academy - AI Arab open University, Cairo , Egypt | Oct 2020 – Jul 2024 Bachelor’s degree in computer science and information technology"
+16,"Almohanad Ahmed Shaaban
+• +201062717061 • 6th of October, Giza, EG • almohanad.ahmed2026@gmail.com
+
+• LinkedIn: Al-Mohanad Ahmed • GitHub: mohanad20-s
+
+Flutter Developer
+
+────────────────────────
+PROFESSIONAL SUMMARY
+────────────────────────
+Experienced Flutter Developer with a solid foundation in Dart and cross-platform mobile
+development. Proven expertise in building high-performance, scalable applications using
+Clean Architecture and SOLID principles. A proactive problem-solver with extensive
+hands-on experience gained from ITI and DEPI intensive training, specializing in
+responsive UI/UX, state management, and seamless API integration.
+
+───────────────────────────────────
+TECHNICAL EXPERIENCE & TRAINING
+───────────────────────────────────
+Flutter Development Intern | ITI (Information Technology Institute) Winter Training
+| Jan 2026 – Feb 2026
+• Performance Optimization: Developed complex UIs with custom animations,
+ensuring a consistent 60 FPS rendering speed and smooth user transitions.
+• Data Architecture: Integrated Hive and SQLite for local persistence, resulting in
+a 40% increase in data retrieval speed and enabling robust offline functionality.
+• State Management & Lifecycle: Managed complex application states using
+Bloc and Provider, reducing memory leaks by 15% through precise widget
+lifecycle management.
+• Modular Programming: Applied OOD patterns (Singleton, Command) to build
+reusable components, decreasing code redundancy by 25% across multiple
+training projects.
+Mobile Application Development (Flutter) Intern | DEPI | May 2024 – Nov 2024
+• Production-Ready Engineering: Engineered scalable Flutter applications,
+optimizing widget trees to reduce initial app load time by 20%.
+• Backend Efficiency: Optimized data flow using Dio and RESTful APIs,
+implementing advanced JSON parsing that reduced API response handling time
+by 15%.
+• Scalable Authentication: Integrated secure Firebase Authentication and
+Firestore, supporting real-time data sync for concurrent users with minimal
+latency.
+
+• Agile Collaboration: Managed codebases via Git/GitHub in a team
+environment, achieving 100% conflict-free integration through strategic branch
+management.
+
+──────────────────────
+TECHNICAL PROJECTS
+──────────────────────
+Food Delivery Application | View on GitHub
+• Engineered a full-featured cross-platform app emphasizing Responsive Design to
+ensure UI consistency across various screen sizes.
+• Implemented real-time UI updates and a customized Favorites system to
+enhance user personalization and engagement.
+• Utilized Clean Architecture to ensure strict separation of concerns and high code
+maintainability.
+News & Weather Integration App (ITI Practice)
+• Optimized data fetching by consuming RESTful APIs using the Dio package for
+real-time updates.
+• Applied analytical thinking to streamline user experience by handling complex
+JSON parsing and robust error handling.
+
+────────────────────
+TECHNICAL SKILLS
+────────────────────
+• Languages & Frameworks: Flutter, Dart.
+• Software Design: SOLID Principles, Clean Architecture, Design Patterns.
+• State Management: Provider, Bloc/Cubit, Stateful Widget Lifecycle.
+• Database & Backend: Firebase, REST APIs, Hive, SQLite, JSON Serialization.
+• Tools: Git, GitHub, Android Studio, VS Code, Postman.
+
+─────────────
+EDUCATION
+─────────────
+Bachelor of Computer Science | Thebes Academy, Egypt
+Expected Graduation: June 2026
+
+CORE COMPETENCIES
+• Technical Problem Solving: Strong debugging and troubleshooting capabilities in
+complex Flutter environments.
+• Collaborative Development: Experienced in working within technical teams and
+maintaining clear project documentation.
+• Continuous Learning: Rapidly adapting to new frameworks and evolving industry
+best practices to deliver modern mobile solutions.","{""name"": ""Almohanad Ahmed Shaaban"", ""job_title"": ""Flutter Developer"", ""email"": ""almohanad.ahmed2026@gmail.com"", ""phone_number"": ""+201062717061"", ""location"": ""6th of October, Giza, EG"", ""summary"": ""Experienced Flutter Developer with a solid foundation in Dart and cross-platform mobile development. Proven expertise in building high-performance, scalable applications using Clean Architecture and SOLID principles. A proactive problem-solver with extensive hands-on experience gained from ITI and DEPI intensive training, specializing in responsive UI/UX, state management, and seamless API integration."", ""technical_skills"": [""Flutter"", ""Dart"", ""SOLID Principles"", ""Clean Architecture"", ""Design Patterns"", ""Provider"", ""Bloc/Cubit"", ""Stateful Widget Lifecycle"", ""Firebase"", ""REST APIs"", ""Hive"", ""SQLite"", ""JSON Serialization"", ""Git"", ""GitHub"", ""Android Studio"", ""VS Code"", ""Postman""], ""soft_skills"": [], ""experience"": [{""company_name"": ""ITI (Information Technology Institute)"", ""title"": ""Flutter Development Intern"", ""duration"": ""Jan 2026-Feb 2026"", ""description"": ""Performance Optimization: Developed complex Uls with custom animations, ensuring a consistent 60 FPS rendering speed and smooth user transitions. Data Architecture: Integrated Hive and SQLite for local persistence, resulting in a 40% increase in data retrieval speed and enabling robust offline functionality. State Management & Lifecycle: Managed complex application states using Bloc and Provider, reducing memory leaks by 15% through precise widget lifecycle management. Modular Programming: Applied OOD patterns (Singleton, Command) to build reusable components, decreasing code redundancy by 25% across multiple training projects.""}, {""company_name"": ""DEPI"", ""title"": ""Mobile Application Development (Flutter) Intern"", ""duration"": ""May 2024 Nov 2024"", ""description"": ""Production-Ready Engineering: Engineered scalable Flutter applications, optimizing widget trees to reduce initial app load time by 20%. Backend Efficiency: Optimized data flow using Dio and RESTful APIs, implementing advanced JSON parsing that reduced API response handling time by 15%. Scalable Authentication: Integrated secure Firebase Authentication and Firestore, supporting real-time data sync for concurrent users with minimal latency. Agile Collaboration: Managed codebases via Git/GitHub in a team environment, achieving 100% conflict-free integration through strategic branch management.""}], ""education"": [{""university_name"": ""Thebes Academy, Egypt"", ""degree"": ""Bachelor of Computer Science"", ""specialization"": """", ""graduation_date"": ""June 2026"", ""graduation_status"": ""Expected"", ""GPA"": """", ""coursework"": []}], ""trainings_courses"": [], ""certifications"": [], ""projects"": [{""project_name"": ""Food Delivery Application"", ""description"": ""Engineered a full-featured cross-platform app emphasizing Responsive Design to ensure Ul consistency across various screen sizes. Implemented real-time Ul updates and a customized Favorites system to enhance user personalization and engagement. Utilized Clean Architecture to ensure strict separation of concerns and high code maintainability."", ""tools"": [], ""duration"": """", ""link"": """"}, {""project_name"": ""News & Weather Integration App (ITI Practice)"", ""description"": ""Optimized data fetching by consuming RESTful APIs using the Dio package for real-time updates. Applied analytical thinking to streamline user experience by handling complex JSON parsing and robust error handling."", ""tools"": [], ""duration"": """", ""link"": """"}], ""languages"": [], ""linkedin"": ""Al-Mohanad Ahmed"", ""github"": ""mohanad20-s""}",5,"• Languages & Frameworks: Flutter, Dart.
+
+• Software Design: SOLID Principles, Clean Architecture, Design Patterns.
+
+• Technical Problem Solving: Strong debugging and troubleshooting capabilities in complex Flutter environments.
+
+• Collaborative Development: Experienced in working within technical teams and maintaining clear project documentation.
+
+• Continuous Learning: Rapidly adapting to new frameworks and evolving industry best practices to deliver modern mobile solutions."
+17,"Andrew Nabil Karam
+Business Informatics student at the German International University
+andrewnabil@outlook.com 01220005707 Cairo, Egypt https://www.linkedin.com/in/andrew-nabil-4487911b7/
+
+───────────────────
+PERSONAL SKILLS
+───────────────────
+
+──────────────
+BACKGROUND
+──────────────
+▪ Problem solving
+Third-year Business Informatics student at the German International
+▪ Analytical thinking
+University (GIU) with a strong foundation in data management, analytics,
+and information systems. Passionate about applying technology to solve ▪ Public speaking
+business challenges and seeking opportunities to gain hands-on experience ▪ Team player
+▪ Time Management
+with innovative solutions.
+▪ Detail Oriented
+▪ Multitasker
+
+─────────────
+EDUCATION
+─────────────
+▪ Adaptive
+Bachelor of Science in Business Informatics (Expected
+2027)
+
+────────────────────
+TECHNICAL SKILLS
+────────────────────
+German International University (GIU) | Sep 2023 – Present
+▪ Microsoft Office
+- Relevant Coursework: Data Analytics, Enterprise Resource Planning, AWS Cloud
+▪ Microsoft Access
+Computing, Data Structures, Python and SQL.
+▪ Machine Learning Fundamentals
+Cumulative GPA: 1 (German Grading System) ▪ Python and Java
+▪ Java Script
+High School Diploma
+▪ HTML and XML
+▪ Power BI
+Saint Fatima Language School Nasr City | 2023
+▪ SQL
+83.7%
+▪ R Studios
+▪ SAP S/4HANA
+
+───────────────────
+WORK EXPERIENCE
+───────────────────
+▪ Sap Siganvio and Appgyver
+Reporting and Advanced Analytics Summer Intern
+
+─────────────
+LANGUAGES
+─────────────
+Henkel GBS+ | July 2025 – September 2025
+Achievements / Tasks
+▪ English
+▪ Full Professional Proficiency
+•Built and maintained Power BI dashboards for foreign stakeholders,
+integrating front- and back-end development. | ▪ Arabic
+•Produced monthly financial reports and updated dashboards for
+cross-regional teams.
+•Assisted in automation projects and completed in-person Power BI | ▪ French
+training.
+▪ Above Average Proficiency
+▪ German (A2)
+
+──────────────────────────────
+EXTRACURRICULAR ACTIVITIES
+──────────────────────────────
+
+──────────
+AWARDS
+──────────
+▪ Participated in the ACQUIN Accreditation Meeting for GIU’s Faculty of
+Economics and Business Administration (2024)
+• Represented the Faculty of Business Informatics. | ▪ Excellence Awards for Academic
+▪ Attended the President of Germany's Speech at the GIU (2024) | Achievement:
+• Gained insights into international relations and leadership
+Ranked 4 th at the GIU (Winter 2023)
+perspectives.
+Ranked 3 rd at the GIU (Spring 2024)
+• Enhanced understanding of global political and economic
+Ranked 4 th at the GIU (Winter 2024)
+landscapes.
+Ranked 5th at the GIU (Spring 2025)
+▪ Ushered in GIU’s graduation ceremony in the Cap & Gown Team (2024).
+▪ Ushered in GIU’s graduation ceremony as a team leader for the Cap & ▪ DAAD scholarship Award for Academic
+excellence (2025)
+Gown Team (2025).","{""name"": ""Andrew Nabil Karam"", ""job_title"": ""Business Informatics student at the German International University"", ""email"": ""andrewnabil@outlook.com"", ""phone_number"": ""01220005707"", ""location"": ""Cairo, Egypt"", ""summary"": ""Third-year Business Informatics student at the German International University (GIU) with a strong foundation in data management, analytics, and information systems. Passionate about applying technology to solve business challenges and seeking opportunities to gain hands-on experience with innovative solutions."", ""technical_skills"": [""Microsoft Office"", ""Microsoft Access"", ""Machine Learning Fundamentals"", ""Python and Java"", ""Java Script"", ""HTML and XML"", ""Power BI"", ""SQL"", ""R Studios"", ""SAP S/4HANA"", ""Sap Siganvio and Appgyver""], ""soft_skills"": [""Problem solving"", ""Analytical thinking"", ""Public speaking"", ""Team player"", ""Time Management"", ""Detail Oriented"", ""Multitasker"", ""Adaptive""], ""experience"": [{""company_name"": ""Henkel GBS+"", ""title"": ""Reporting and Advanced Analytics Summer Intern"", ""duration"": ""July 2025-September 2025"", ""description"": ""Built and maintained Power BI dashboards for foreign stakeholders, integrating front- and back-end development. Produced monthly financial reports and updated dashboards for cross-regional teams. Assisted in automation projects and completed in-person Power BI training.""}], ""education"": [{""university_name"": ""German International University (GIU)"", ""degree"": ""Bachelor of Science in Business Informatics"", ""specialization"": """", ""graduation_date"": ""2027"", ""graduation_status"": ""Expected"", ""GPA"": ""1 (German Grading System)"", ""coursework"": [""Data Analytics"", ""Enterprise Resource Planning"", ""AWS Cloud Computing"", ""Data Structures"", ""Python and SQL""]}, {""university_name"": ""Saint Fatima Language School Nasr City"", ""degree"": ""High School Diploma"", ""specialization"": """", ""graduation_date"": ""2023"", ""graduation_status"": ""Graduated"", ""GPA"": ""83.7%"", ""coursework"": []}], ""trainings_courses"": [], ""certifications"": [""Excellence Awards for Academic Achievement: Ranked 4th at the GIU (Winter 2023), Ranked 3rd at the GIU (Spring 2024), Ranked 4th at the GIU (Winter 2024), Ranked 5th at the GIU (Spring 2025)"", ""DAAD scholarship Award for Academic excellence (2025)""], ""projects"": [], ""languages"": [""English Full Professional Proficiency"", ""Arabic Full Professional Proficiency"", ""French Above Average Proficiency"", ""German (A2)""], ""linkedin"": ""https://www.linkedin.com/in/andrew-nabil-448791167/"", ""github"": """"}",4,"AWARDS ▪ Participated in the ACQUIN Accreditation Meeting for GIU’s Faculty of Economics and Business Administration (2024)
+
+• Represented the Faculty of Business Informatics. | ▪ Excellence Awards for Academic ▪ Attended the President of Germany's Speech at the GIU (2024) | Achievement:
+
+• Gained insights into international relations and leadership Ranked 4 th at the GIU (Winter 2023) perspectives. Ranked 3 rd at the GIU (Spring 2024)
+
+• Enhanced understanding of global political and economic Ranked 4 th at the GIU (Winter 2024) landscapes. Ranked 5th at the GIU (Spring 2025) ▪ Ushered in GIU’s graduation ceremony in the Cap & Gown Team (2024). ▪ Ushered in GIU’s graduation ceremony as a team leader for the Cap & ▪ DAAD scholarship Award for Academic excellence (2025) Gown Team (2025)."
+18,"Bashar Abdel-Sattar El-Samahy
+
+Systems Admin/DevOps
+
+basharelsamahy7@gmail.com +201093267362 El Husseiniya, Al-Sharqia Bashar El-Samahy
+Bashar-samahy Bashar Abdel-Sattar El-Samahy
+
+───────────
+PROFILE
+───────────
+Systems Admin/DevOps proficient in managing Windows/Linux servers, cloud infrastructure, and automation solutions. Skilled in
+cloud platforms, containerization, and CI/CD tools, with a strong focus on optimizing workflows, enhancing system reliability, and
+enabling smooth deployments. A collaborative team player committed to contributing to scalable and efficient IT environments.
+Experience & Internships
+DevOps Instructor – ( part-time ) | 09/2025 – Present | Dokki - Giza
+Instant
+A DevOps Instructor teaches students the core DevOps tools and practices, delivers hands-on labs, and guides learners in building
+skills in automation, cloud, CI/CD, Linux, and containerization to prepare them for real industry workflows.
+Technical Support Specialist – ( full-time ) | 12/2024 – 2/2025 | Nasr City - Cairo
+Telecom Egypt Company
+responsible for diagnosing and troubleshooting software, hardware, and network issues to ensure smooth operation of telecom
+services.
+provide technical assistance to customers, configure systems, manage network setups, and follow up to resolve problems
+efficiently, ensuring high customer satisfaction and service reliability.
+
+─────────────
+EDUCATION
+─────────────
+Systems Administration/DevOps Trainee | 03/2025 – 07/2025
+Information Technology Institute – ITI (Intensive Code Camps) | Damanhur City, Al Beheira Governorate
+
+Bachelor of Computers and Informatics. | 09/2019 – 07/2023
+Faculty of Computers and Informatics, Zagazig University | Zagazig City, Ash Sharqiyah Governorate
+Grade: Good
+
+────────────
+PROJECTS
+────────────
+Comprehensive User & Service Management on Windows Server
+• Designed and deployed a multi-domain Windows Server infrastructure with Active Directory, DNS, FTP, and automated software
+deployment, ensuring high availability and centralized management. Implemented group policies, backup solutions, and security
+measures to optimize performance and safeguard network resources.
+Comprehensive Enterprise Linux Deployment Project
+• Designed and deployed a full enterprise Linux environment for a mid-sized company using Red Hat. Implemented secure user/group
+management, LVM-based storage, access controls, SELinux, and automated backups. Configured internal web services, firewall
+rules, SSH hardening, and recovery procedures as part of system administration tasks.
+User Management System – Bash script (GitHub)
+• This Bash script provides a simple, menu-driven interface for Linux system administrators to manage user accounts and groups
+efficiently. It allows adding, deleting, listing, and searching for users, changing passwords, and creating backups of user data.
+Secure Web App on AWS (Terraform) (GitHub)
+• Designed and deployed a public proxy/private backend architecture on AWS using Terraform, enforcing security best practices.
+Implemented multi-AZ VPC, ALB, Auto Scaling, and isolated RDS with fine-grained access controls. Achieved infrastructure-ascode reproducibility with modular Terraform and remote state management.
+• Key Stack: AWS (EC2, VPC, ALB, RDS, S3) | Terraform | Linux | SSH
+
+────────────────
+CERTIFICATES
+────────────────
+RHCSA - Red Hat Certified System Administrator | HCCDA-Tech Essentials (HWENDCTEDA897617)
+AWS Certified Cloud Practitioner | HCCDP-Cloud Migration (HWENDCCCDP778800)
+
+────────────────────
+TECHNICAL SKILLS
+────────────────────
+Cloud Platforms | CI/CD Tools
+AWS and Huawei Cloud | Jenkins and GitHub Actions
+Containerization & Orchestration | Infrastructure as Code (IaC)
+Docker, Kubernetes, OpenShift and Helm | Terraform and Ansible
+Scripting & Programming | Version Control
+Python, Bash, Data Structures and Algorithms | Git and GitHub.
+Monitoring | Operating Systems
+Prometheus, Grafana | Linux (Ubuntu, RedHat), Windows Server and VMware vSphere
+Databases Formatting
+MySQL, PostgreSQL and MongoDB | YAML and JSON
+Others
+NGINX, Apache.
+
+─────────────
+LANGUAGES
+─────────────
+Arabic — Native/Bilingual | English — Proficient","{""name"": ""Bashar Abdel-Sattar El-Samahy"", ""job_title"": ""Systems Admin/DevOps"", ""email"": ""basharelsamahy7@gmail.com"", ""phone_number"": ""+201093267362"", ""location"": ""El Husseiniya, Al-Sharqia"", ""summary"": ""Systems Admin/DevOps proficient in managing Windows/Linux servers, cloud infrastructure, and automation solutions. Skilled in cloud platforms, containerization, and CI/CD tools, with a strong focus on optimizing workflows, enhancing system reliability, and enabling smooth deployments. A collaborative team player committed to contributing to scalable and efficient IT environments."", ""technical_skills"": [""AWS"", ""Huawei Cloud"", ""Jenkins"", ""GitHub Actions"", ""Docker"", ""Kubernetes"", ""OpenShift"", ""Helm"", ""Terraform"", ""Ansible"", ""Git"", ""GitHub"", ""Python"", ""Bash"", ""Data Structures and Algorithms"", ""Prometheus"", ""Grafana"", ""Linux (Ubuntu, RedHat)"", ""Windows Server"", ""VMware vSphere"", ""MySQL"", ""PostgreSQL"", ""MongoDB"", ""YAML"", ""JSON"", ""NGINX"", ""Apache""], ""soft_skills"": [], ""experience"": [{""company_name"": ""Instant"", ""title"": ""DevOps Instructor - (part-time)"", ""duration"": ""09/2025-Present"", ""description"": ""A DevOps Instructor teaches students the core DevOps tools and practices, delivers hands-on labs, and guides learners in building skills in automation, cloud, CI/CD, Linux, and containerization to prepare them for real industry workflows.""}, {""company_name"": ""Telecom Egypt Company"", ""title"": ""Technical Support Specialist - (full-time)"", ""duration"": ""12/2024-2/2025"", ""description"": ""responsible for diagnosing and troubleshooting software, hardware, and network issues to ensure smooth operation of telecom services. provide technical assistance to customers, configure systems, manage network setups, and follow up to resolve problems efficiently, ensuring high customer satisfaction and service reliability.""}], ""education"": [{""university_name"": ""Information Technology Institute - ITI (Intensive Code Camps)"", ""degree"": ""Systems Administration/DevOps Trainee"", ""specialization"": """", ""graduation_date"": ""03/2025-07/2025"", ""graduation_status"": ""Graduated"", ""GPA"": """", ""coursework"": []}, {""university_name"": ""Faculty of Computers and Informatics, Zagazig University"", ""degree"": ""Bachelor of Computers and Informatics."", ""specialization"": """", ""graduation_date"": ""09/2019-07/2023"", ""graduation_status"": ""Graduated"", ""GPA"": ""Grade: Good"", ""coursework"": []}], ""trainings_courses"": [], ""certifications"": [""RHCSA-Red Hat Certified System Administrator"", ""AWS Certified Cloud Practitioner"", ""HCCDA-Tech Essentials (HWENDCTEDA897617)"", ""HCCDP-Cloud Migration (HWENDCCCDP778800)""], ""projects"": [{""project_name"": ""Comprehensive User & Service Management on Windows Server"", ""description"": ""Designed and deployed a multi-domain Windows Server infrastructure with Active Directory, DNS, FTP, and automated software deployment, ensuring high availability and centralized management. Implemented group policies, backup solutions, and security measures to optimize performance and safeguard network resources."", ""tools"": [], ""duration"": """", ""link"": """"}, {""project_name"": ""Comprehensive Enterprise Linux Deployment Project"", ""description"": ""Designed and deployed a full enterprise Linux environment for a mid-sized company using Red Hat. Implemented secure user/group management, LVM-based storage, access controls, SELinux, and automated backups. Configured internal web services, firewall rules, SSH hardening, and recovery procedures as part of system administration tasks."", ""tools"": [], ""duration"": """", ""link"": """"}, {""project_name"": ""User Management System - Bash script"", ""description"": ""This Bash script provides a simple, menu-driven interface for Linux system administrators to manage user accounts and groups efficiently. It allows adding, deleting, listing, and searching for users, changing passwords, and creating backups of user data."", ""tools"": [], ""duration"": """", ""link"": """"}, {""project_name"": ""Secure Web App on AWS (Terraform)"", ""description"": ""Designed and deployed a public proxy/private backend architecture on AWS using Terraform, enforcing security best practices. Implemented multi-AZ VPC, ALB, Auto Scaling, and isolated RDS with fine-grained access controls. Achieved infrastructure-as-code reproducibility with modular Terraform and remote state management."", ""tools"": [""AWS (EC2, VPC, ALB, RDS, S3)"", ""Terraform"", ""Linux"", ""SSH""], ""duration"": """", ""link"": """"}], ""languages"": [""Arabic Native/Bilingual"", ""English Proficient""], ""linkedin"": ""Bashar El-Samahy"", ""github"": ""Bashar-samahy""}",2,"Technical Support Specialist – ( full-time ) | 12/2024 – 2/2025 | Nasr City - Cairo
+
+Systems Administration/DevOps Trainee | 03/2025 – 07/2025 Information Technology Institute – ITI (Intensive Code Camps) | Damanhur City, Al Beheira Governorate"
+19,"──────────────────────
+BASMALA ABDELHAMED
+──────────────────────
+
+Giza, Egypt · 01030152439
+Basmalaayman201@gmail.com · linkedln·
+
+A motivated and detail-oriented individual with a strong foundation in Python, JavaScript, and data
+analysis. My technical expertise, combined with problem-solving and critical-thinking skills, enables me to
+analyze complex datasets and provide actionable insights to drive business optimization. With a passion
+for leveraging technology to enhance decision-making, I aim to contribute to innovative and dynamic
+environments.
+
+──────────────
+EXPERIENCE
+──────────────
+AUGUST 2025
+
+────────────────────────────
+IT INTERN, ORA DEVELOPER
+────────────────────────────
+• Supported IT infrastructure management to maintain seamless daily operations.
+• Addressed user issues through technical support within ticketing frameworks.
+• Facilitated troubleshooting of connectivity issues related to networking activities.
+• Contributed to cybersecurity efforts by monitoring and reporting security
+AUGUST 2024
+
+───────────────────────────────────────────────
+INTERN, COMMERCIAL INTERNATIONAL BANK (CIB)
+───────────────────────────────────────────────
+• Completed a remote internship with exposure to corporate banking and supporting the
+credit and risk management teams.
+• Assisted in preparing financial reports, reviewing loan applications, and performing
+financial statement audits.
+JULY 2024
+
+────────────────────────────────────────────
+BPO INTERN, NATIONAL BANK OF EGYPT (NBE)
+────────────────────────────────────────────
+• was selected among Top Performance interns during 2024 out of 1000 interns for
+exceptional contributions to the BPO (Business Process optimization) department.
+• Participated in workshops on financial analysis, risk management
+0CTOBER 2023-MARCH 2024
+
+─────────────────────────────────────────────────────
+INTERNATIONAL ACCOUNT ADVISOR , VODAFONE UK(VOIS)
+─────────────────────────────────────────────────────
+• Provide customer service to Vodafone UK customers via inbound calls, resolving issues
+efficiently.
+• Manage customer accounts, ensure accurate billing, and assist other departments in
+handling complex customer cases.
+• Stay up-to-date with Vodafone products and services to deliver exceptional service and
+resolve complaints.
+
+─────────────
+EDUCATION
+─────────────
+SEPTEMBER 2022-JUNE 2026
+
+────────────────────────────────────────────────────────
+BUSINESS INFORMATION SYSTEM (BIS), HELWAN UNIVERSITY
+────────────────────────────────────────────────────────
+
+GRADUATED 2021
+
+──────────────────────────────────────
+IGCSE DIPLOMA, DUBAI CARMEL SCHOOL
+──────────────────────────────────────
+
+──────────
+SKILLS
+──────────
+• Python programming and data visualization • Javascript development
+• Data analysis tools: Excel, SQL, Power BI, | • Problem-solving and critical thinking
+Tableau | • Communication and presentation skills
+• Public speaking | • Team collaboration and leadership
+• Microsoft Office proficiency | • Languages: Arabic(native) , English C1
+
+────────────────
+VOLUNTEERING
+────────────────
+MAY 2022 ,FAZZA INTERNATIONAL BADMINTON CHAMPIONSHIP
+- Collaborated with the media team and Dubai TV channel for event coverage.
+FEBRUARY 2022 ,DUBAI 2022 WORLD ARCHERY PARA CHAMPIONSHIPS
+-Responsible for data entry and providing access to individuals on the technical committee.
+FEBRUARY 2022 ,GULF FOOD FESTIVAL WITH DUBAI MUNICIPALITY
+-Led a team responsible for shipping food products from the festival to charities in less fortunate
+countries
+FEBRUARY 2022 ,2022 WORLD CUP QUALIFIERS IN UAE
+- Permitted entry for fans and validated tickets.
+DECEMBER 2021 ,EXPO 2020 DUBAI
+-Helped lead a tour of the Russian Pavilion and managed exhibition demonstrations.
+
+───────────
+COURSES
+───────────
+• Al & Machine Learning Foundation - Sprints
+• DEPI Data Analysis Program - MCIT Egypt
+• Excel and Power Bi for data analysis - CLS and Microsoft
+• Python and Data Visualization -sprints and Microsoft
+
+2","{""name"": ""BASMALA ABDELHAMED"", ""job_title"": """", ""email"": ""Basmalaayman201@gmail.com"", ""phone_number"": ""01030152439"", ""location"": ""Giza, Egypt"", ""summary"": ""A motivated and detail-oriented individual with a strong foundation in Python, JavaScript, and data analysis. My technical expertise, combined with problem-solving and critical-thinking skills, enables me to analyze complex datasets and provide actionable insights to drive business optimization. With a passion for leveraging technology to enhance decision-making, I aim to contribute to innovative and dynamic environments."", ""technical_skills"": [""Python programming and data visualization"", ""Data analysis tools: Excel, SQL, Power BI, Tableau"", ""Microsoft Office proficiency"", ""Javascript development""], ""soft_skills"": [""Public speaking"", ""Problem-solving and critical thinking"", ""Communication and presentation skills"", ""Team collaboration and leadership""], ""experience"": [{""company_name"": ""ORA DEVELOPER"", ""title"": ""IT INTERN"", ""duration"": ""AUGUST 2025"", ""description"": ""Supported IT infrastructure management to maintain seamless daily operations. Addressed user issues through technical support within ticketing frameworks. Facilitated troubleshooting of connectivity issues related to networking activities. Contributed to cybersecurity efforts by monitoring and reporting security""}, {""company_name"": ""COMMERCIAL INTERNATIONAL BANK (CIB)"", ""title"": ""INTERN"", ""duration"": ""AUGUST 2024"", ""description"": ""Completed a remote internship with exposure to corporate banking and supporting the credit and risk management teams. Assisted in preparing financial reports, reviewing loan applications, and performing financial statement audits.""}, {""company_name"": ""NATIONAL BANK OF EGYPT (NBE)"", ""title"": ""ΒΡΟ INTERN"", ""duration"": ""JULY 2024"", ""description"": ""was selected among Top Performance interns during 2024 out of 1000 interns for exceptional contributions to the BPO (Business Process optimization) department. Participated in workshops on financial analysis, risk management""}, {""company_name"": ""VODAFONE UK(VOIS)"", ""title"": ""INTERNATIONAL ACCOUNT ADVISOR"", ""duration"": ""OCTOBER 2023-MARCH 2024"", ""description"": ""Provide customer service to Vodafone UK customers via inbound calls, resolving issues efficiently. Manage customer accounts, ensure accurate billing, and assist other departments in handling complex customer cases. Stay up-to-date with Vodafone products and services to deliver exceptional service and resolve complaints.""}], ""education"": [{""university_name"": ""HELWAN UNIVERSITY"", ""degree"": ""BUSINESS INFORMATION SYSTEM (BIS)"", ""specialization"": """", ""graduation_date"": ""SEPTEMBER 2022-JUNE 2026"", ""graduation_status"": ""Expected"", ""GPA"": """", ""coursework"": []}, {""university_name"": ""DUBAI CARMEL SCHOOL"", ""degree"": ""IGCSE DIPLOMA"", ""specialization"": """", ""graduation_date"": ""2021"", ""graduation_status"": ""Graduated"", ""GPA"": """", ""coursework"": []}], ""trainings_courses"": [{""institution"": ""Sprints"", ""title"": ""Al & Machine Learning Foundation"", ""description"": """"}, {""institution"": ""MCIT Egypt"", ""title"": ""DEPI Data Analysis Program"", ""description"": """"}, {""institution"": ""CLS and Microsoft"", ""title"": ""Excel and Power Bi for data analysis"", ""description"": """"}, {""institution"": ""sprints and Microsoft"", ""title"": ""Python and Data Visualization"", ""description"": """"}], ""certifications"": [], ""projects"": [], ""languages"": [""Arabic(native)"", ""English C1""], ""linkedin"": ""linkedin."", ""github"": """"}",7,"VOLUNTEERING MAY 2022 ,FAZZA INTERNATIONAL BADMINTON CHAMPIONSHIP
+
+- Collaborated with the media team and Dubai TV channel for event coverage. FEBRUARY 2022 ,DUBAI 2022 WORLD ARCHERY PARA CHAMPIONSHIPS
+
+-Responsible for data entry and providing access to individuals on the technical committee.
+
+FEBRUARY 2022 ,GULF FOOD FESTIVAL WITH DUBAI MUNICIPALITY
+
+-Led a team responsible for shipping food products from the festival to charities in less fortunate countries FEBRUARY 2022 ,2022 WORLD CUP QUALIFIERS IN UAE
+
+- Permitted entry for fans and validated tickets. DECEMBER 2021 ,EXPO 2020 DUBAI
+
+-Helped lead a tour of the Russian Pavilion and managed exhibition demonstrations."
+20,"Bassel Islam
+
+bassel.islam@gmail.com 01100459564 Cairo, Egypt LinkedIn/BasselIslam
+github.com/bassel-islam
+
+───────────
+PROFILE
+───────────
+Motivated Computer Science graduate eager to apply my programming expertise and contribute to
+impactful software development projects in a professional environment.
+
+─────────────
+EDUCATION
+─────────────
+Bachelor of Computer and Information Science
+10/2021 – 07/2025
+Ain Shams University— Faculty of Computer and Information
+Cairo,Egypt
+Sciences.
+Graduate
+Overall GPA: 3.4 (B+) – With Honors
+Thanaweya-Amma 2021
+Liberty Language school
+
+──────────
+SKILLS
+──────────
+Languages — Java, Python, C++,C , Kotlin, JavaScript, TypeScript, HTML, Scala
+Backend Technologies — Spring Boot, Hibernate, REST APIs
+Databases — PostgreSQL, SQL, Oracle, MySQL
+Tools — Git, GitHub, Postman, Jira
+Testing — Selenium
+Methodologies — Agile (Scrum)
+Networking — Networking Fundamentals (TCP/IP, DNS, DHCP, Subnetting), Windows Server (Active
+Directory, Group Policy, DNS, DHCP)
+
+─────────────
+LANGUAGES
+─────────────
+Arabic — Native | English — Proficient
+German — Conversational
+
+────────────
+PROJECTS
+────────────
+Quiz-App Backend
+2025
+Developed a RESTful backend using Spring Boot with a layered architecture
+• (Controller, Service, Repository).
+Built CRUD APIs to manage quizzes and user data efficiently.
+Integrated database access using Spring Data JPA and Hibernate, ensuring
+• reliable data management.
+E-Commerce Backend
+Designed RESTful backend supporting product and order management.
+Implemented CRUD APIs and database integration, improving data handling
+• and system reliability.
+
+Optimized backend queries for smoother handling of multiple requests.
+Job-App Backend
+2025
+Created RESTful backend for managing job posts with Spring Boot.
+Implemented CRUD operations with PostgreSQL via Hibernate ORM for
+• consistent data storage.
+Enhanced backend performance and maintainability through layered
+• architecture.
+Shop Management System (Java & JavaFX)
+Developed a full point-of-sale and inventory management system with Java
+• and JavaFX.
+Implemented product management, sales processing, barcode search, and
+• invoice generation.
+Designed a relational database with H2 and integrated it using Hibernate
+• ORM.
+Enhanced usability with a responsive UI with search and update operations.
+Brain Tumor Classification and Segmentation (Graduation
+07/2024 – 06/2025
+Project)
+Developed a deep learning model to classify and segment brain tumors from
+• MRI scans.
+Applied CNN and U-Net architectures using Python and medical imaging
+• datasets.
+Movie Sentiment Analysis AI Model
+2024
+Built an AI model to analyze and classify sentiment in movie reviews.
+Used natural language processing (NLP) techniques with Python and machine
+• learning libraries.
+FCIS Operating system
+2023
+Operating system memory management.
+Implementing kernel heap and user heap functions using C.
+
+───────────
+COURSES
+───────────
+Java Spring Framework, Spring Boot, Spring AI - Gen AI
+10/2025 – 12/2025
+Strong foundation in Core Java, OOP, JDBC, and building enterprise-level
+• applications using Spring Boot, Spring MVC/REST, Spring Data JPA, Spring
+Security, and AOP.
+Hands-on experience with back-end development, Docker containerization,
+• microservices basics, and integrating Generative AI using Spring AI.
+AWS Cloud Practitioner Essentials
+09/2025
+Completed AWS Cloud Practitioner Essentials with strong knowledge of AWS
+• core services, global infrastructure, security, IAM, and the shared
+responsibility model.
+Gained understanding of cloud economics, cost optimization, migration
+• strategies, edge services, and the AWS Well Architected Framework.
+Developing mobile applications using Android
+07/2024
+ITI
+Kotlin Programming Language.
+Android Development with Kotlin.
+A hands-on Project: Recipe App: A user-friendly platform for discovering and
+• saving your favorite recipes.","{""name"": ""Bassel Islam"", ""job_title"": """", ""email"": ""bassel.islam@gmail.com"", ""phone_number"": ""01100459564"", ""location"": ""Cairo, Egypt"", ""summary"": ""Motivated Computer Science graduate eager to apply my programming expertise and contribute to impactful software development projects in a professional environment."", ""technical_skills"": [""Java"", ""Python"", ""C++"", ""C"", ""Kotlin"", ""JavaScript"", ""TypeScript"", ""HTML"", ""Scala"", ""Spring Boot"", ""Hibernate"", ""REST APIs"", ""PostgreSQL"", ""SQL"", ""Oracle"", ""MySQL"", ""Git"", ""GitHub"", ""Postman"", ""Jira"", ""Selenium"", ""Agile (Scrum)"", ""Networking Fundamentals (TCP/IP, DNS, DHCP, Subnetting)"", ""Windows Server (Active Directory, Group Policy, DNS, DHCP)""], ""soft_skills"": [], ""experience"": [], ""education"": [{""university_name"": ""Ain Shams University- Faculty of Computer and Information Sciences."", ""degree"": ""Bachelor of Computer and Information Science"", ""specialization"": """", ""graduation_date"": ""10/2021-07/2025"", ""graduation_status"": ""Graduated"", ""GPA"": ""3.4 (B+) - With Honors"", ""coursework"": []}, {""university_name"": ""Liberty Language school"", ""degree"": ""Thanaweya-Amma"", ""specialization"": """", ""graduation_date"": ""2021"", ""graduation_status"": ""Graduated"", ""GPA"": """", ""coursework"": []}], ""trainings_courses"": [{""institution"": """", ""title"": ""Java Spring Framework, Spring Boot, Spring Al - Gen Al"", ""description"": ""Strong foundation in Core Java, OOP, JDBC, and building enterprise-level applications using Spring Boot, Spring MVC/REST, Spring Data JPA, Spring Security, and AOP. Hands-on experience with back-end development, Docker containerization, microservices basics, and integrating Generative Al using Spring Al.""}, {""institution"": """", ""title"": ""AWS Cloud Practitioner Essentials"", ""description"": ""Completed AWS Cloud Practitioner Essentials with strong knowledge of AWS core services, global infrastructure, security, IAM, and the shared responsibility model. Gained understanding of cloud economics, cost optimization, migration strategies, edge services, and the AWS Well Architected Framework.""}, {""institution"": ""ITI"", ""title"": ""Developing mobile applications using Android"", ""description"": ""Kotlin Programming Language. Android Development with Kotlin. A hands-on Project: Recipe App: A user-friendly platform for discovering and saving your favorite recipes.""}], ""certifications"": [], ""projects"": [{""project_name"": ""Quiz-App Backend"", ""description"": ""Developed a RESTful backend using Spring Boot with a layered architecture (Controller, Service, Repository). Built CRUD APIs to manage quizzes and user data efficiently. Integrated database access using Spring Data JPA and Hibernate, ensuring reliable data management."", ""tools"": [""Spring Boot"", ""Spring Data JPA"", ""Hibernate""], ""duration"": ""2025"", ""link"": """"}, {""project_name"": ""E-Commerce Backend"", ""description"": ""Designed RESTful backend supporting product and order management. Implemented CRUD APIs and database integration, improving data handling and system reliability. Optimized backend queries for smoother handling of multiple requests."", ""tools"": [], ""duration"": ""2025"", ""link"": """"}, {""project_name"": ""Job-App Backend"", ""description"": ""Created RESTful backend for managing job posts with Spring Boot. Implemented CRUD operations with PostgreSQL via Hibernate ORM for consistent data storage. Enhanced backend performance and maintainability through layered architecture."", ""tools"": [""Spring Boot"", ""PostgreSQL"", ""Hibernate ORM""], ""duration"": ""2025"", ""link"": """"}, {""project_name"": ""Shop Management System (Java & JavaFX)"", ""description"": ""Developed a full point-of-sale and inventory management system with Java and JavaFX. Implemented product management, sales processing, barcode search, and invoice generation. Designed a relational database with H2 and integrated it using Hibernate ORM. Enhanced usability with a responsive Ul with search and update operations."", ""tools"": [""Java"", ""JavaFX"", ""H2"", ""Hibernate ORM""], ""duration"": ""2025"", ""link"": """"}, {""project_name"": ""Brain Tumor Classification and Segmentation (Graduation Project)"", ""description"": ""Developed a deep learning model to classify and segment brain tumors from MRI scans. Applied CNN and U-Net architectures using Python and medical imaging datasets."", ""tools"": [""CNN"", ""U-Net"", ""Python""], ""duration"": ""07/2024-06/2025"", ""link"": """"}, {""project_name"": ""Movie Sentiment Analysis Al Model"", ""description"": ""Built an Al model to analyze and classify sentiment in movie reviews. Used natural language processing (NLP) techniques with Python and machine learning libraries."", ""tools"": [""Python""], ""duration"": ""2024"", ""link"": """"}, {""project_name"": ""FCIS Operating system"", ""description"": ""Operating system memory management. Implementing kernel heap and user heap functions using C."", ""tools"": [""C""], ""duration"": ""2023"", ""link"": """"}], ""languages"": [""Arabic Native"", ""German - Conversational"", ""English Proficient""], ""linkedin"": ""LinkedIn/Bassellslam"", ""github"": ""github.com/bassel-islam""}",0,

@@ -37,6 +37,7 @@ python run_phase2.py "CVs/Mohamed Saber.pdf" \
 python run_phase2.py "CVs/Mohamed Saber.pdf" \
   --parser-payload parser_payload.json \
   --optimizer-payload optimizer_payload.json \
+  --mode coverage \
   --milestone 2 \
   --output phase2_results.jsonl
 ```
