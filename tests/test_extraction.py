@@ -38,6 +38,107 @@ def test_normalize_blocks_merges_multiline_bullet() -> None:
     assert normalized[0].source_block_ids == ["raw-1-0", "raw-1-1"]
 
 
+def test_normalize_blocks_merges_deeply_indented_bullet_continuation() -> None:
+    raw_blocks = [
+        RawTextBlock(
+            block_id="raw-1-0",
+            text="• Technical Problem Solving: Strong debugging and troubleshooting capabilities in",
+            page_number=1,
+            bbox=(72.0, 100.0, 410.0, 114.0),
+        ),
+        RawTextBlock(
+            block_id="raw-1-1",
+            text="complex Flutter environments.",
+            page_number=1,
+            bbox=(118.0, 116.0, 320.0, 130.0),
+        ),
+        RawTextBlock(
+            block_id="raw-1-2",
+            text="• Collaborative Development: Worked well across teams.",
+            page_number=1,
+            bbox=(72.0, 142.0, 340.0, 156.0),
+        ),
+    ]
+
+    normalized = normalize_blocks(raw_blocks)
+
+    assert len(normalized) == 2
+    assert normalized[0].text == (
+        "• Technical Problem Solving: Strong debugging and troubleshooting capabilities in "
+        "complex Flutter environments."
+    )
+    assert normalized[1].text == "• Collaborative Development: Worked well across teams."
+
+
+def test_normalize_blocks_merges_certification_bullet_with_parenthetical_tail() -> None:
+    raw_blocks = [
+        RawTextBlock(
+            block_id="raw-1-0",
+            text="• AWS Certified Solutions Architect",
+            page_number=1,
+            bbox=(72.0, 100.0, 270.0, 114.0),
+        ),
+        RawTextBlock(
+            block_id="raw-1-1",
+            text="(Associate) - SAA-C03",
+            page_number=1,
+            bbox=(102.0, 116.0, 250.0, 130.0),
+        ),
+    ]
+
+    normalized = normalize_blocks(raw_blocks)
+
+    assert len(normalized) == 1
+    assert normalized[0].text == "• AWS Certified Solutions Architect (Associate) - SAA-C03"
+
+
+def test_normalize_blocks_merges_volunteering_bullet_with_uppercase_tail() -> None:
+    raw_blocks = [
+        RawTextBlock(
+            block_id="raw-1-0",
+            text="• Helped lead a tour of the Russian Pavilion and managed",
+            page_number=1,
+            bbox=(72.0, 100.0, 360.0, 114.0),
+        ),
+        RawTextBlock(
+            block_id="raw-1-1",
+            text="Exhibition demonstrations for visitors.",
+            page_number=1,
+            bbox=(108.0, 116.0, 330.0, 130.0),
+        ),
+    ]
+
+    normalized = normalize_blocks(raw_blocks)
+
+    assert len(normalized) == 1
+    assert normalized[0].text == (
+        "• Helped lead a tour of the Russian Pavilion and managed "
+        "Exhibition demonstrations for visitors."
+    )
+
+
+def test_normalize_blocks_merges_course_bullet_with_wrapped_provider_line() -> None:
+    raw_blocks = [
+        RawTextBlock(
+            block_id="raw-1-0",
+            text="• Explore Emerging Tech",
+            page_number=1,
+            bbox=(72.0, 100.0, 220.0, 114.0),
+        ),
+        RawTextBlock(
+            block_id="raw-1-1",
+            text="IBM SkillsBuild",
+            page_number=1,
+            bbox=(110.0, 116.0, 210.0, 130.0),
+        ),
+    ]
+
+    normalized = normalize_blocks(raw_blocks)
+
+    assert len(normalized) == 1
+    assert normalized[0].text == "• Explore Emerging Tech IBM SkillsBuild"
+
+
 def test_normalize_blocks_merges_continuation_lines_by_alignment() -> None:
     raw_blocks = [
         RawTextBlock(

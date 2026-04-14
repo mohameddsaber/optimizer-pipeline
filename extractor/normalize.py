@@ -123,10 +123,10 @@ def _should_merge(group: List[RawTextBlock], next_block: RawTextBlock) -> bool:
     vertical_gap = next_y0 - prev_y1
     same_column = abs(next_x0 - prev_x0) <= 8
     similar_width = abs((next_x1 - next_x0) - (prev_x1 - prev_x0)) <= 80
-    indented_continuation = next_x0 >= prev_x0 and (next_x0 - prev_x0) <= 28
+    indented_continuation = next_x0 >= prev_x0 and (next_x0 - prev_x0) <= 48
 
     if _is_bullet_start(previous.text):
-        return vertical_gap <= 20 and (same_column or indented_continuation)
+        return _looks_like_bullet_continuation(previous, next_block, vertical_gap, same_column, indented_continuation)
 
     if _looks_like_section_heading(previous.text):
         return False
@@ -221,6 +221,35 @@ def _is_textual_continuation(previous_text: str, next_text: str) -> bool:
     if _is_bullet_start(previous):
         return True
     return not _ends_with_hard_stop(previous) and current[:1].islower()
+
+
+def _looks_like_bullet_continuation(
+    previous: RawTextBlock,
+    next_block: RawTextBlock,
+    vertical_gap: float,
+    same_column: bool,
+    indented_continuation: bool,
+) -> bool:
+    previous_text = normalize_text(previous.text)
+    next_text = normalize_text(next_block.text)
+    if not previous_text or not next_text or _is_bullet_start(next_text):
+        return False
+    if vertical_gap > 28:
+        return False
+    if not (same_column or indented_continuation):
+        return False
+    if _looks_like_standalone_section_heading(next_text):
+        return False
+
+    next_lead = next_text[:1]
+    if next_lead.islower() or next_lead.isdigit() or next_lead in {"(", "[", "/", "&"}:
+        return True
+    if not _ends_with_hard_stop(previous_text):
+        return True
+
+    # Wrapped bullet lines often continue with a capitalized noun phrase after a
+    # hard line break, especially in certifications and competency statements.
+    return len(next_text.split()) <= 14
 
 
 def _ends_with_hard_stop(text: str) -> bool:
