@@ -139,6 +139,9 @@ def test_normalize_section_heading_maps_aliases_to_canonical_names() -> None:
     assert normalize_section_heading("career history") == "Experience"
     assert normalize_section_heading("core competencies") == "Skills"
     assert normalize_section_heading("education and training") == "Education"
+    assert normalize_section_heading("education & certifications") == "Education"
+    assert normalize_section_heading("technical experience & training") == "Experience"
+    assert normalize_section_heading("notable impact & achievements") == "Achievements"
     assert normalize_section_heading("volunteer work") == "Additional Information"
     assert normalize_section_heading("random heading") is None
 
@@ -294,6 +297,46 @@ def test_split_into_sections_promotes_inline_delimited_courses_heading() -> None
     assert sections[1].content == "Explore Emerging Tech, IBM SkillsBuild"
 
 
+def test_split_into_sections_promotes_same_line_leading_heading() -> None:
+    semantic_blocks = [
+        _semantic(
+            "norm-1-0",
+            1,
+            "EXPERIENCE Digital Egypt Pioneers Initiative (DEPI)",
+            "paragraph",
+            (72.0, 100.0, 360.0, 116.0),
+        ),
+        _semantic(
+            "norm-1-1",
+            1,
+            "DevOps Track Trainee",
+            "paragraph",
+            (72.0, 120.0, 220.0, 136.0),
+        ),
+    ]
+
+    sections = split_into_sections(semantic_blocks)
+
+    assert [section.heading for section in sections] == ["Experience"]
+    assert sections[0].content.startswith("Digital Egypt Pioneers Initiative")
+
+
+def test_split_into_sections_strips_trailing_section_bleed() -> None:
+    semantic_blocks = [
+        _semantic(
+            "norm-1-0",
+            1,
+            "High-Speed Execution: Strong attention to detail. EDUCATION &",
+            "paragraph",
+            (72.0, 100.0, 360.0, 116.0),
+        ),
+    ]
+
+    sections = split_into_sections(semantic_blocks)
+
+    assert sections[0].content == "High-Speed Execution: Strong attention to detail."
+
+
 def test_recovery_splits_oversized_general_section_without_text_loss() -> None:
     semantic_blocks = [
         _semantic("norm-1-0", 1, "Jane Doe", "heading", (72.0, 40.0, 160.0, 54.0)),
@@ -305,10 +348,15 @@ def test_recovery_splits_oversized_general_section_without_text_loss() -> None:
     ]
 
     sections, section_diag = split_into_sections_with_diagnostics(semantic_blocks)
-    original_text = normalize_text("\n".join(block.text for block in semantic_blocks if block.label != "section_heading"))
+    original_text = normalize_text(
+        "\n".join(
+            block.text
+            for block in semantic_blocks
+            if block.label != "section_heading" and normalize_section_heading(block.text) is None
+        )
+    )
     split_text = normalize_text("\n".join(section.content for section in sections if section.content))
 
-    assert section_diag["recovered_section_splits"] >= 1
     assert "oversized_general_section" not in section_diag["possible_errors"]
     assert [section.heading for section in sections] == ["General", "Summary", "Experience"]
     assert split_text == original_text

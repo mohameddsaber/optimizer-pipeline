@@ -59,11 +59,20 @@ _SECTION_ALIASES = {
     "activities": "Additional Information",
     "extracurricular activities": "Additional Information",
     "volunteer work": "Additional Information",
+    "education & certifications": "Education",
+    "education and certifications": "Education",
+    "technical experience & training": "Experience",
+    "technical experience and training": "Experience",
+    "notable impact & achievements": "Achievements",
+    "notable impact and achievements": "Achievements",
 }
 _PUNCT_TRAIL_RE = re.compile(r"[:\-–|]+$")
 _SENTENCE_END_RE = re.compile(r"[.!?]$")
 _HEADER_CANONICALS = {"Header", "General"}
 _UPPERCASE_TOKEN_RE = re.compile(r"^[A-Z][A-Z\s/&-]{2,}$")
+_BLEED_TOKEN_RE = re.compile(
+    r"(?i)\b(?:education|certifications|technical skills|skills|languages|courses|experience|projects|achievements|summary)\s*&\s*$"
+)
 
 
 def normalize_section_heading(text: str) -> Optional[str]:
@@ -160,7 +169,7 @@ def _initial_split(semantic_blocks: List[SemanticBlock]) -> Tuple[List[RawSectio
     def flush() -> None:
         if not current_blocks:
             return
-        text_blocks = [block.text for block in current_blocks if block.label != "section_heading"]
+        text_blocks = [_strip_trailing_section_bleed(block.text) for block in current_blocks if block.label != "section_heading"]
         content = normalize_text("\n".join(text_blocks))
         if not content and current_heading == "General":
             return
@@ -395,13 +404,21 @@ def _section_key(section: RawSection) -> str:
 
 def _extract_leading_embedded_heading(text: str) -> Tuple[Optional[str], str]:
     normalized = normalize_text(text)
-    if "\n" not in normalized:
-        return None, normalized
-    first_line, remainder = normalized.split("\n", 1)
+    if "\n" in normalized:
+        first_line, remainder = normalized.split("\n", 1)
+    else:
+        first_line, remainder = normalized, ""
     canonical = normalize_section_heading(first_line)
-    if canonical is None:
-        return None, normalized
-    return canonical, normalize_text(remainder)
+    if canonical is not None:
+        return canonical, normalize_text(remainder)
+
+    same_line_canonical, same_line_remainder = _extract_same_line_leading_heading(first_line)
+    if same_line_canonical is not None:
+        if remainder:
+            same_line_remainder = normalize_text("\n".join(part for part in [same_line_remainder, remainder] if part))
+        return same_line_canonical, same_line_remainder
+
+    return None, normalized
 
 
 def _extract_trailing_embedded_heading(text: str) -> Tuple[Optional[str], str]:
@@ -427,6 +444,17 @@ def _extract_trailing_embedded_heading(text: str) -> Tuple[Optional[str], str]:
 
 def _looks_like_embedded_heading_token(text: str) -> bool:
     return bool(_UPPERCASE_TOKEN_RE.match(text.strip())) or text.strip().endswith(":")
+
+
+def _extract_same_line_leading_heading(text: str) -> Tuple[Optional[str], str]:
+    normalized = normalize_text(text)
+    lowered = _normalize_heading_text(normalized)
+    for alias_text in sorted(_SECTION_ALIASES.keys(), key=len, reverse=True):
+        if lowered.startswith(alias_text + " "):
+            remainder = normalize_text(normalized[len(alias_text):].lstrip(" |:-–"))
+            if remainder:
+                return _SECTION_ALIASES[alias_text], remainder
+    return None, ""
 
 
 def _clone_block_with_text(block: SemanticBlock, text: str) -> SemanticBlock:
@@ -479,3 +507,9 @@ def _extract_heading_from_segment(segment: str) -> Tuple[Optional[str], str, str
             return _SECTION_ALIASES[alias_text], before, ""
 
     return None, "", ""
+
+
+def _strip_trailing_section_bleed(text: str) -> str:
+    normalized = normalize_text(text)
+    cleaned = _BLEED_TOKEN_RE.sub("", normalized).rstrip(" -–|")
+    return normalize_text(cleaned)

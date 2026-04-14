@@ -19,12 +19,16 @@ class Phase2Input(BaseModel):
     uncategorized_text: str = ""
     contact_candidates: Dict[str, List[str]] = Field(default_factory=dict)
     skill_candidates: List[str] = Field(default_factory=list)
+    soft_skill_candidates: List[str] = Field(default_factory=list)
     language_candidates: List[str] = Field(default_factory=list)
     experience_candidates: List[Dict[str, Any]] = Field(default_factory=list)
     project_candidates: List[Dict[str, Any]] = Field(default_factory=list)
     education_candidates: List[Dict[str, Any]] = Field(default_factory=list)
     certification_candidates: List[str] = Field(default_factory=list)
     training_candidates: List[Dict[str, Any]] = Field(default_factory=list)
+    achievement_candidates: List[str] = Field(default_factory=list)
+    activity_candidates: List[str] = Field(default_factory=list)
+    publication_candidates: List[str] = Field(default_factory=list)
     diagnostics_flags: List[str] = Field(default_factory=list)
     source_metadata: Dict[str, Any] = Field(default_factory=dict)
 

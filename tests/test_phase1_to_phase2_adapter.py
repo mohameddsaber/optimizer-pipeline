@@ -151,6 +151,50 @@ def test_adapter_extracts_training_candidates_from_additional_information() -> N
     assert phase2.certification_candidates == ["CCNA"]
 
 
+def test_adapter_extracts_explicit_supplemental_candidate_pools() -> None:
+    phase1 = _build_phase1_output(
+        sections=[
+            RawSection(
+                heading="Achievements",
+                content=(
+                    "Publication (AC 2025): Smart Tourism Meets AI: A Multimodal Assistant.\n\n"
+                    "Pioneer Tech Influencer: First Egyptian creator to technically dissect social media algorithms."
+                ),
+                source_pages=[1],
+                block_ids=["a1"],
+            ),
+            RawSection(
+                heading="Skills",
+                content=(
+                    "CORE COMPETENCIES\n"
+                    "• Collaborative Development: Experienced in working within technical teams.\n"
+                    "VOLUNTEERING\n"
+                    "• Helped lead a tour of the Russian Pavilion and managed exhibition demonstrations."
+                ),
+                source_pages=[1],
+                block_ids=["s1"],
+            ),
+        ],
+        semantic_blocks=[
+            _semantic("a1", "paragraph", "Publication (AC 2025): Smart Tourism Meets AI: A Multimodal Assistant.\n\nPioneer Tech Influencer: First Egyptian creator to technically dissect social media algorithms."),
+            _semantic("s1", "paragraph", "CORE COMPETENCIES\n• Collaborative Development: Experienced in working within technical teams.\nVOLUNTEERING\n• Helped lead a tour of the Russian Pavilion and managed exhibition demonstrations."),
+        ],
+    )
+
+    phase2 = build_phase2_input(phase1)
+
+    assert phase2.publication_candidates == ["Smart Tourism Meets AI: A Multimodal Assistant."]
+    assert phase2.achievement_candidates == [
+        "Pioneer Tech Influencer: First Egyptian creator to technically dissect social media algorithms."
+    ]
+    assert phase2.activity_candidates == [
+        "Helped lead a tour of the Russian Pavilion and managed exhibition demonstrations."
+    ]
+    assert phase2.soft_skill_candidates == [
+        "Collaborative Development: Experienced in working within technical teams."
+    ]
+
+
 def test_adapter_maps_diagnostics_flags_without_geometry_leakage() -> None:
     phase1 = _build_phase1_output(
         sections=[RawSection(heading="General", content="Uncategorized content", source_pages=[1], block_ids=["g1"])],

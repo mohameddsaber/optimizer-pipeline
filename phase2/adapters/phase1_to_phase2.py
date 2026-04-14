@@ -30,6 +30,11 @@ _LANGUAGE_WORDS = {
     "japanese",
     "russian",
 }
+_SUPPLEMENTAL_BULLET_SPLIT_RE = re.compile(r"(?:^|\n)\s*[•●▪·-]\s*", re.MULTILINE)
+_SUPPLEMENTAL_SECTION_PREFIX_RE = re.compile(
+    r"^(?:awards?|achievements?|accomplishments?|honors?|honours?|publications?|activities|volunteer(?:ing| work)?)\s*:\s*",
+    re.IGNORECASE,
+)
 _SECTION_NAME_ALIASES = {
     "header": "Header",
     "contact": "Header",
@@ -92,6 +97,7 @@ def build_phase2_input(phase1_output: Phase1Output) -> Phase2Input:
     canonical_sections, uncategorized_text, section_block_map = merge_section_texts(phase1)
     contact_candidates = extract_contact_candidates(phase1, canonical_sections, uncategorized_text)
     skill_candidates = extract_skill_candidates(phase1, canonical_sections, section_block_map)
+    soft_skill_candidates = extract_soft_skill_candidates(canonical_sections)
     language_candidates = extract_language_candidates(phase1, canonical_sections)
     experience_candidates = build_lightweight_entry_candidates(
         "Experience", canonical_sections, section_block_map
@@ -104,6 +110,7 @@ def build_phase2_input(phase1_output: Phase1Output) -> Phase2Input:
     )
     training_candidates = extract_training_candidates(canonical_sections, section_block_map)
     certification_candidates = _extract_certification_candidates(canonical_sections)
+    achievement_candidates, activity_candidates, publication_candidates = extract_supplemental_candidates(canonical_sections)
     diagnostics_flags = _map_diagnostics_flags(phase1, uncategorized_text, canonical_sections)
     source_metadata = _build_source_metadata(phase1)
 
@@ -114,12 +121,16 @@ def build_phase2_input(phase1_output: Phase1Output) -> Phase2Input:
         uncategorized_text=uncategorized_text,
         contact_candidates=contact_candidates,
         skill_candidates=skill_candidates,
+        soft_skill_candidates=soft_skill_candidates,
         language_candidates=language_candidates,
         experience_candidates=experience_candidates,
         project_candidates=project_candidates,
         education_candidates=education_candidates,
         certification_candidates=certification_candidates,
         training_candidates=training_candidates,
+        achievement_candidates=achievement_candidates,
+        activity_candidates=activity_candidates,
+        publication_candidates=publication_candidates,
         diagnostics_flags=diagnostics_flags,
         source_metadata=source_metadata,
     )
@@ -275,6 +286,54 @@ def extract_language_candidates(
     return _dedupe_preserve_order(candidates)
 
 
+def extract_soft_skill_candidates(canonical_sections: Dict[str, str]) -> List[str]:
+    """Extract competency-style candidate lines from Skills content."""
+
+    skills_text = canonical_sections.get("Skills", "")
+    if not skills_text:
+        return []
+
+    normalized = skills_text.replace("\r\n", "\n").replace("\r", "\n")
+    parts = [part.strip() for part in _SUPPLEMENTAL_BULLET_SPLIT_RE.split(normalized) if part.strip()]
+    if len(parts) <= 1:
+        parts = [part.strip() for part in normalized.splitlines() if part.strip()]
+
+    candidates: List[str] = []
+    for part in parts:
+        inline_parts = [segment.strip() for segment in re.split(r"\s+[•●▪·]\s+", part) if segment.strip()] or [part]
+        for inline_part in inline_parts:
+            candidate = _trim_embedded_section_label_tail(_clean_supplemental_chunk(inline_part))
+            if candidate and _looks_like_soft_skill_candidate(candidate):
+                candidates.append(candidate)
+    return _dedupe_preserve_order(candidates)
+
+
+def extract_supplemental_candidates(canonical_sections: Dict[str, str]) -> Tuple[List[str], List[str], List[str]]:
+    """Extract achievement, activity, and publication candidates from source sections."""
+
+    chunks = _extract_supplemental_chunks(canonical_sections)
+    achievements: List[str] = []
+    activities: List[str] = []
+    publications: List[str] = []
+
+    for chunk in chunks:
+        cleaned = chunk["cleaned"]
+        source_section = chunk["source_section"]
+        kind = _classify_supplemental_chunk(chunk["raw"], source_section)
+        if kind == "publications":
+            publications.append(cleaned)
+        elif kind == "activities":
+            activities.append(cleaned)
+        elif kind == "achievements":
+            achievements.append(cleaned)
+
+    return (
+        _dedupe_preserve_order(achievements),
+        _dedupe_preserve_order(activities),
+        _dedupe_preserve_order(publications),
+    )
+
+
 def build_lightweight_entry_candidates(
     source_section: str,
     canonical_sections: Dict[str, str],
@@ -404,6 +463,185 @@ def _extract_certification_candidates(canonical_sections: Dict[str, str]) -> Lis
             if candidate and candidate.lower() != "udemy" and not _looks_like_training_candidate(candidate):
                 candidates.append(candidate)
     return _dedupe_preserve_order(candidates)
+
+
+def _extract_supplemental_chunks(canonical_sections: Dict[str, str]) -> List[Dict[str, str]]:
+    texts: List[Tuple[str, str]] = []
+    direct_chunks: List[Dict[str, str]] = []
+    achievements = canonical_sections.get("Achievements", "")
+    additional_information = canonical_sections.get("Additional Information", "")
+    education = canonical_sections.get("Education", "")
+    skills = canonical_sections.get("Skills", "")
+    if achievements:
+        texts.append(("Achievements", achievements))
+    if additional_information:
+        texts.append(("Additional Information", additional_information))
+    if _looks_like_supplemental_education(education):
+        direct_chunks.extend(_extract_publication_chunks(education))
+    direct_chunks.extend(_extract_volunteering_chunks(skills))
+
+    chunks: List[Dict[str, str]] = []
+    for source_section, text in texts:
+        normalized = text.replace("\r\n", "\n").replace("\r", "\n").strip()
+        if not normalized:
+            continue
+        parts = [part.strip() for part in _SUPPLEMENTAL_BULLET_SPLIT_RE.split(normalized) if part.strip()]
+        if len(parts) <= 1:
+            parts = [part.strip() for part in re.split(r"\n\s*\n", normalized) if part.strip()]
+        for part in parts:
+            cleaned = _clean_supplemental_chunk(part)
+            if cleaned:
+                chunks.append({"raw": normalize_text(part), "cleaned": cleaned, "source_section": source_section})
+    chunks.extend(direct_chunks)
+    return _dedupe_chunk_payloads(chunks)
+
+
+def _clean_supplemental_chunk(text: str) -> str:
+    normalized = normalize_text(text)
+    normalized = re.sub(r"^[•●▪·-]\s*", "", normalized)
+    normalized = _SUPPLEMENTAL_SECTION_PREFIX_RE.sub("", normalized).strip(" ,;|")
+    normalized = re.sub(r"^publication(?:\s*\([^)]*\))?\s*:\s*", "", normalized, flags=re.IGNORECASE)
+    normalized = re.sub(
+        r"\s+(?:EDUCATION|CERTIFICATIONS|TECHNICAL SKILLS|SKILLS|LANGUAGES|COURSES|EXPERIENCE|PROJECTS)\s*&\s*$",
+        "",
+        normalized,
+        flags=re.IGNORECASE,
+    ).strip(" ,;|")
+    if not normalized or len(normalized.split()) < 3:
+        return ""
+    return normalized
+
+
+def _looks_like_soft_skill_candidate(text: str) -> bool:
+    lowered = text.lower()
+    if ":" not in text:
+        return False
+    prefix = lowered.split(":", 1)[0].strip()
+    return prefix in {
+        "technical problem solving",
+        "collaborative development",
+        "continuous learning",
+        "personal traits",
+        "communication",
+        "leadership",
+        "teamwork",
+        "problem solving",
+        "problem-solving",
+        "adaptability",
+        "critical thinking",
+        "time management",
+    }
+
+
+def _trim_embedded_section_label_tail(text: str) -> str:
+    lines = [normalize_text(line) for line in text.splitlines() if normalize_text(line)]
+    if not lines:
+        return ""
+    kept: List[str] = []
+    for line in lines:
+        lowered = line.lower().strip(" :")
+        if lowered in {"volunteering", "volunteer work", "activities", "languages", "technical skills", "skills"}:
+            break
+        kept.append(line)
+    return normalize_text(" ".join(kept))
+
+
+def _looks_like_supplemental_education(text: str) -> bool:
+    lowered = normalize_text(text).lower()
+    return any(token in lowered for token in ("publication", "thesis", "bachelor thesis", "capstone"))
+
+
+def _extract_publication_chunks(text: str) -> List[Dict[str, str]]:
+    chunks: List[Dict[str, str]] = []
+    for line in text.replace("\r\n", "\n").replace("\r", "\n").splitlines():
+        normalized = normalize_text(line)
+        if not normalized:
+            continue
+        if _classify_supplemental_chunk(normalized, "Education") != "publications":
+            continue
+        cleaned = _clean_supplemental_chunk(normalized)
+        if cleaned:
+            chunks.append({"raw": normalized, "cleaned": cleaned, "source_section": "Education"})
+    return chunks
+
+
+def _extract_volunteering_chunks(text: str) -> List[Dict[str, str]]:
+    normalized = text.replace("\r\n", "\n").replace("\r", "\n")
+    match = re.search(r"(?is)\b(?:volunteering|volunteer(?:ing)? activities?)\b\s*(.*)$", normalized)
+    if not match:
+        return []
+
+    tail = match.group(1).strip()
+    lines = [normalize_text(line) for line in tail.splitlines() if normalize_text(line)]
+    chunks: List[Dict[str, str]] = []
+    pending_context = ""
+    for line in lines:
+        if re.match(r"(?i)^(?:[A-Z]+\s+\d{4}|\d{4}|[A-Z][A-Za-z]+\s+\d{4}|[A-Z][A-Za-z]+\s+\d{4}\s*,)", line):
+            pending_context = line
+            continue
+        if not re.match(r"^[\-•●▪·]", line) and _classify_supplemental_chunk(line, "Skills") != "activities":
+            continue
+        raw = "{0} {1}".format(pending_context, line).strip() if pending_context else line
+        cleaned = _clean_supplemental_chunk(line)
+        if cleaned:
+            chunks.append({"raw": normalize_text(raw), "cleaned": cleaned, "source_section": "Skills"})
+    return chunks
+
+
+def _classify_supplemental_chunk(text: str, source_section: str = "") -> Optional[str]:
+    lowered = text.lower()
+    if any(token in lowered for token in {"publication", "paper", "journal", "conference", "peer-reviewed", "accepted at"}):
+        return "publications"
+    if any(
+        token in lowered
+        for token in {
+            "activity",
+            "activities",
+            "extracurricular",
+            "committee",
+            "org team",
+            "technical committee",
+            "pavilion",
+            "exhibition",
+            "ushered",
+            "member in org team",
+            "member of",
+            "helped lead",
+            "responsible for data entry",
+        }
+    ):
+        return "activities"
+    if normalize_text(source_section).lower() == "achievements":
+        return "achievements"
+    if any(
+        token in lowered
+        for token in {
+            "achievement",
+            "accomplishment",
+            "founded",
+            "founded and led",
+            "led a volunteer team",
+            "organized",
+            "represented",
+            "member",
+            "participated",
+            "initiative",
+        }
+    ):
+        return "achievements"
+    return None
+
+
+def _dedupe_chunk_payloads(values: List[Dict[str, str]]) -> List[Dict[str, str]]:
+    seen = set()
+    deduped: List[Dict[str, str]] = []
+    for value in values:
+        key = normalize_text(value["cleaned"]).lower()
+        if not key or key in seen:
+            continue
+        seen.add(key)
+        deduped.append(value)
+    return deduped
 
 
 def _map_diagnostics_flags(
