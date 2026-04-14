@@ -16,6 +16,7 @@ from phase2.reconciliation.grouped import (
 from phase2.reconciliation.lists import (
     recover_certifications,
     recover_languages,
+    recover_soft_skills,
     recover_technical_skills,
 )
 from phase2.reconciliation.supplemental import recover_supplemental_content
@@ -32,6 +33,7 @@ def reconcile_phase2_coverage_mode(
     audit = CoverageAudit()
 
     data["technical_skills"], technical_audit = recover_technical_skills(phase2_input, parser_payload, optimizer_payload)
+    data["soft_skills"], soft_skills_audit = recover_soft_skills(phase2_input, parser_payload, optimizer_payload)
     data["languages"], languages_audit = recover_languages(phase2_input, parser_payload, optimizer_payload)
     data["certifications"], certifications_audit = recover_certifications(phase2_input, parser_payload, optimizer_payload)
     data["experience"], experience_audit = recover_experience(phase2_input, parser_payload, optimizer_payload)
@@ -49,6 +51,7 @@ def reconcile_phase2_coverage_mode(
     data["publications"] = supplemental_data["publications"]
 
     _merge_audit(audit, technical_audit)
+    _merge_audit(audit, soft_skills_audit)
     _merge_audit(audit, languages_audit)
     _merge_audit(audit, certifications_audit)
     _merge_audit(audit, experience_audit)

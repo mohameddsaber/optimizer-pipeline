@@ -1,59 +1,68 @@
-"""Tests for grouped grounding behavior."""
+"""Tests for grouped coverage recovery behavior."""
 
 from contracts.phase2_input import Phase2Input
 from phase2.reconciliation.grouped import (
-    reconcile_experience,
-    reconcile_projects,
-    reconcile_education,
+    recover_education,
+    recover_experience,
+    recover_projects,
 )
 
 
-def test_grounded_optimizer_project_augmentation_is_accepted() -> None:
+def test_optimizer_project_base_is_preserved_while_source_can_patch_missing_fields() -> None:
     phase2 = _phase2(
-        project_candidates=[{"text": "Tellix | CV optimizer platform | 2024", "source_section": "Projects", "hints": {"dates": ["2024"]}}],
-        full_text="Tellix CV optimizer platform 2024",
+        project_candidates=[{"text": "Tellix | CV optimizer platform | 2024", "source_section": "Projects", "hints": {"dates": ["2024"]}}]
     )
-    parser_payload = {"projects": [{"name": "Tellix", "description": "CV optimizer platform", "date_range": "2024"}]}
-    optimizer_payload = {"projects": [{"name": "Tellix", "description": "CV optimizer platform with FastAPI backend", "date_range": "2024"}]}
+    optimizer_payload = {"projects": [{"project_name": "Tellix", "description": "", "tools": [], "duration": "2024", "link": ""}]}
 
-    reconciled = reconcile_projects(phase2, parser_payload, optimizer_payload)
+    values, audit = recover_projects(phase2, {}, optimizer_payload)
 
-    assert reconciled.value[0].description.endswith("FastAPI backend")
-    assert any("accepted grounded optimizer augmentation" in note for note in reconciled.value[0].notes)
-
-
-def test_optimizer_only_fake_project_is_rejected() -> None:
-    phase2 = _phase2(project_candidates=[], full_text="")
-
-    reconciled = reconcile_projects(phase2, {}, {"projects": [{"name": "Secret Project", "description": "Top secret"}]})
-
-    assert reconciled.value == []
-    assert any("rejected optimizer-only projects entry" in note for note in reconciled.notes)
+    assert values[0]["project_name"] == "Tellix"
+    assert values[0]["description"] != ""
+    assert "projects.description" in audit["recovered_fields"]
 
 
-def test_parser_missed_but_candidate_grounded_experience_is_recoverable() -> None:
+def test_optimizer_only_project_is_preserved_in_coverage_mode() -> None:
+    phase2 = _phase2(project_candidates=[])
+
+    values, audit = recover_projects(phase2, {}, {"projects": [{"project_name": "Secret Project", "description": "Top secret", "tools": [], "duration": "", "link": ""}]})
+
+    assert len(values) == 1
+    assert values[0]["project_name"] == "Secret Project"
+    assert audit["recovered_items"] == []
+
+
+def test_candidate_backed_experience_is_recoverable() -> None:
     phase2 = _phase2(
-        experience_candidates=[{"text": "Backend Engineer | Acme | 2023 - 2024", "source_section": "Experience", "hints": {"dates": ["2023", "2024"]}}],
-        full_text="Backend Engineer Acme 2023 2024",
+        experience_candidates=[{"text": "Backend Engineer | Acme | 2023 - 2024", "source_section": "Experience", "hints": {"dates": ["2023", "2024"]}}]
     )
 
-    reconciled = reconcile_experience(phase2, {}, {})
+    values, _ = recover_experience(phase2, {}, {})
 
-    assert len(reconciled.value) == 1
-    assert reconciled.value[0].organization == "acme"
+    assert len(values) == 1
+    assert values[0]["company_name"] == "Acme"
 
 
-def test_over_specific_ungrounded_education_detail_is_not_accepted_blindly() -> None:
+def test_existing_education_value_is_not_overwritten_when_present() -> None:
     phase2 = _phase2(
-        education_candidates=[{"text": "BSc Computer Science | Ain Shams University | 2022 - 2026", "source_section": "Education", "hints": {"dates": ["2022", "2026"]}}],
-        full_text="Ain Shams University 2022 2026",
+        education_candidates=[{"text": "BSc Computer Science | Ain Shams University | 2022 - 2026\nGPA: 3.4", "source_section": "Education", "hints": {"dates": ["2022", "2026"]}}]
     )
-    optimizer_payload = {"education": [{"degree": "BSc Computer Science", "institution": "Ain Shams University, Faculty of Engineering, Department X", "date_range": "2022 - 2026"}]}
+    optimizer_payload = {
+        "education": [
+            {
+                "university_name": "Ain Shams University",
+                "degree": "BSc Computer Science",
+                "specialization": "",
+                "graduation_date": "2022 - 2026",
+                "graduation_status": "",
+                "GPA": "3.2",
+                "coursework": [],
+            }
+        ]
+    }
 
-    reconciled = reconcile_education(phase2, {}, optimizer_payload)
+    values, _ = recover_education(phase2, {}, optimizer_payload)
 
-    assert len(reconciled.value) == 1
-    assert "department x" not in (reconciled.value[0].institution or "").lower()
+    assert values[0]["GPA"] == "3.2"
 
 
 def _phase2(**overrides) -> Phase2Input:

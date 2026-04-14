@@ -90,6 +90,67 @@ def test_adapter_extracts_languages_and_skills_from_delimited_lines() -> None:
     assert phase2.language_candidates == ["English", "Arabic"]
 
 
+def test_adapter_skills_do_not_absorb_languages_or_certifications() -> None:
+    phase1 = _build_phase1_output(
+        sections=[
+            RawSection(heading="Skills", content="Python | SQL | Docker", source_pages=[1], block_ids=["s1"]),
+            RawSection(
+                heading="Additional Information",
+                content="Languages: English, Arabic\nCertifications: CCNA | Udemy Web Developer Bootcamp",
+                source_pages=[1],
+                block_ids=["a1"],
+            ),
+        ],
+        semantic_blocks=[
+            _semantic("s1", "skills_line", "Python | SQL | Docker"),
+            _semantic("a1", "skills_line", "Languages: English, Arabic | Certifications: CCNA | Udemy Web Developer Bootcamp"),
+        ],
+    )
+
+    phase2 = build_phase2_input(phase1)
+
+    assert phase2.skill_candidates == ["Python", "SQL", "Docker"]
+
+
+def test_adapter_projects_drop_non_project_subsections() -> None:
+    phase1 = _build_phase1_output(
+        sections=[RawSection(heading="Projects", content="ignored", source_pages=[1], block_ids=["p1", "p2", "p3", "p4"])],
+        semantic_blocks=[
+            _semantic("p1", "heading", "Tellix"),
+            _semantic("p2", "paragraph", "CV optimization platform"),
+            _semantic("p3", "heading", "ENGINEERING PRACTICES"),
+            _semantic("p4", "paragraph", "Agile methodology and SCRUM-based development"),
+        ],
+    )
+
+    phase2 = build_phase2_input(phase1)
+
+    assert len(phase2.project_candidates) == 1
+    assert phase2.project_candidates[0]["text"].startswith("Tellix")
+
+
+def test_adapter_extracts_training_candidates_from_additional_information() -> None:
+    phase1 = _build_phase1_output(
+        sections=[
+            RawSection(
+                heading="Additional Information",
+                content="Certifications: CCNA | Udemy\nWeb Developer Bootcamp | Udemy Spring Boot Course",
+                source_pages=[1],
+                block_ids=["a1"],
+            )
+        ],
+        semantic_blocks=[_semantic("a1", "paragraph", "Certifications: CCNA | Udemy\nWeb Developer Bootcamp | Udemy Spring Boot Course")],
+    )
+
+    phase2 = build_phase2_input(phase1)
+
+    assert [candidate["text"] for candidate in phase2.training_candidates] == [
+        "Udemy Web Developer Bootcamp",
+        "Udemy Spring Boot Course",
+    ]
+    assert phase2.certification_candidates == ["CCNA"]
+
+
 def test_adapter_maps_diagnostics_flags_without_geometry_leakage() -> None:
     phase1 = _build_phase1_output(
         sections=[RawSection(heading="General", content="Uncategorized content", source_pages=[1], block_ids=["g1"])],
