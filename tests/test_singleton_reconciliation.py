@@ -1,80 +1,54 @@
-"""Tests for singleton reconciliation."""
+"""Tests for coverage-mode singleton preservation and trivial recovery."""
 
 from contracts.phase2_input import Phase2Input
-from phase2.reconciliation.finalize import reconcile_phase2_milestone1
-from phase2.reconciliation.singletons import (
-    reconcile_email,
-    reconcile_linkedin,
-    reconcile_location,
-    reconcile_phone_number,
-)
+from phase2.reconciliation.finalize import reconcile_phase2_coverage_mode
 
 
-def test_parser_email_beats_missing_optimizer() -> None:
+def test_optimizer_base_is_preserved_for_simple_singletons() -> None:
     phase2 = _build_phase2_input()
+    optimizer_payload = {
+        "name": "Jane Doe",
+        "email": "jane@example.com",
+        "phone_number": "+201000000000",
+        "location": "Cairo, Egypt",
+    }
 
-    reconciled = reconcile_email(phase2, {"email": "jane@example.com"}, {})
+    validated = reconcile_phase2_coverage_mode(phase2, {}, optimizer_payload)
 
-    assert reconciled.value == "jane@example.com"
-    assert reconciled.source == "parser"
-
-
-def test_phase2_phone_candidate_beats_malformed_parser_phone() -> None:
-    phase2 = _build_phase2_input(contact_candidates={"phone": ["+20 100 000 0000"]})
-
-    reconciled = reconcile_phone_number(phase2, {"phone_number": "abc"}, {})
-
-    assert reconciled.value == "+20 100 000 0000"
-    assert reconciled.source == "phase2_input"
+    assert validated.data["name"] == "Jane Doe"
+    assert validated.data["email"] == "jane@example.com"
+    assert validated.data["phone_number"] == "+201000000000"
+    assert validated.data["location"] == "Cairo, Egypt"
 
 
-def test_grounded_optimizer_linkedin_is_accepted_if_parser_missing() -> None:
+def test_linkedin_and_github_are_trivially_recovered_when_missing() -> None:
     phase2 = _build_phase2_input(
-        full_text="linkedin.com/in/jane-doe",
-        contact_candidates={"linkedin": ["linkedin.com/in/jane-doe"]},
-    )
-
-    reconciled = reconcile_linkedin(phase2, {}, {"linkedin": "linkedin.com/in/jane-doe"})
-
-    assert reconciled.value == "linkedin.com/in/jane-doe"
-    assert reconciled.grounded is True
-
-
-def test_over_specific_optimizer_location_is_rejected_if_not_grounded() -> None:
-    phase2 = _build_phase2_input(contact_candidates={"location": ["Cairo, Egypt"]})
-
-    reconciled = reconcile_location(phase2, {}, {"location": "Nasr City, Cairo, Egypt"})
-
-    assert reconciled.value == "Cairo, Egypt"
-    assert "rejected ungrounded or over-specific optimizer location" not in reconciled.notes
-
-
-def test_milestone1_end_to_end_skills_and_location_notes() -> None:
-    phase2 = _build_phase2_input(
-        full_text="Jane Doe\nCairo, Egypt\nPython | SQL | Docker\nlinkedin.com/in/jane",
-        canonical_sections={"Skills": "Python | SQL | Docker"},
-        uncategorized_text="Jane Doe\nCairo, Egypt",
         contact_candidates={
-            "name": ["Jane Doe"],
-            "location": ["Cairo, Egypt"],
             "linkedin": ["linkedin.com/in/jane"],
-            "email": [],
-            "phone": [],
-            "github": [],
-        },
-        skill_candidates=["Python", "SQL", "Docker"],
-        diagnostics_flags=["fallback_used"],
+            "github": ["github.com/jane"],
+        }
     )
-    parser_payload = {"name": "Jane Doe", "location": "Cairo, Egypt", "technical_skills": ["Python", "SQL"]}
-    optimizer_payload = {"technical_skills": ["Docker", "Cobol"], "location": "Nasr City, Cairo, Egypt"}
 
-    validated = reconcile_phase2_milestone1(phase2, parser_payload, optimizer_payload)
+    validated = reconcile_phase2_coverage_mode(phase2, {}, {"name": "Jane Doe"})
 
-    assert validated.location.value == "Cairo, Egypt"
-    assert validated.location.source in {"parser", "phase2_input"}
-    assert validated.technical_skills.value == ["Python", "SQL", "Docker"]
-    assert validated.technical_skills.source == "merged"
-    assert any("rejected ungrounded optimizer value: Cobol" in note for note in validated.technical_skills.notes)
+    assert validated.data["linkedin"] == "linkedin.com/in/jane"
+    assert validated.data["github"] == "github.com/jane"
+    assert "linkedin" in validated.audit.recovered_fields
+    assert "github" in validated.audit.recovered_fields
+
+
+def test_trivial_social_recovery_ignores_header_noise() -> None:
+    phase2 = _build_phase2_input(
+        contact_candidates={
+            "linkedin": ["Jane Doe | LinkedIn | GitHub", "linkedin.com/in/jane"],
+            "github": ["Jane Doe | LinkedIn | GitHub", "github.com/jane"],
+        }
+    )
+
+    validated = reconcile_phase2_coverage_mode(phase2, {}, {"name": "Jane Doe"})
+
+    assert validated.data["linkedin"] == "linkedin.com/in/jane"
+    assert validated.data["github"] == "github.com/jane"
 
 
 def _build_phase2_input(**overrides) -> Phase2Input:

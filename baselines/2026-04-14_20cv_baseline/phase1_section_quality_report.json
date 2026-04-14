@@ -1,0 +1,278 @@
+{
+  "generated_at": "2026-04-14T02:20:30.076814",
+  "source_parser_payload": "data/parser_payload.jsonl",
+  "source_optimizer_payload": "data/optimizer_payload.jsonl",
+  "total_files": 20,
+  "weak_files": 1,
+  "weak_file_details": [
+    {
+      "cv_id": "15",
+      "file_path": "CVs/ali - Resume[1].pdf",
+      "score": 38,
+      "reasons": [
+        {
+          "code": "collapsed_sections",
+          "severity": "high",
+          "metric": 1
+        },
+        {
+          "code": "document_collapsed_into_general",
+          "severity": "high",
+          "metric": true
+        },
+        {
+          "code": "oversized_general_section",
+          "severity": "medium",
+          "metric": 1.0
+        }
+      ]
+    }
+  ],
+  "section_frequency": {
+    "General": 20,
+    "Skills": 19,
+    "Education": 15,
+    "Summary": 13,
+    "Projects": 12,
+    "Experience": 11,
+    "Languages": 11,
+    "Courses": 7,
+    "Additional Information": 7,
+    "Achievements": 4,
+    "Certifications": 4
+  },
+  "possible_error_frequency": {
+    "heading_candidates_found_inside_general": 2,
+    "document_collapsed_into_general": 1,
+    "oversized_general_section": 1
+  },
+  "rows": [
+    {
+      "cv_id": "1",
+      "file_path": "CVs/Mohamed_Nasser_(CV).pdf",
+      "section_count": 8,
+      "general_block_ratio": 0.11764705882352941,
+      "possible_errors": [],
+      "audit_weak": false,
+      "audit_score": 100,
+      "fallback_used": false,
+      "recovered_section_splits": 0
+    },
+    {
+      "cv_id": "2",
+      "file_path": "CVs/Abdelrahman-Khaled.pdf",
+      "section_count": 7,
+      "general_block_ratio": 0.14285714285714285,
+      "possible_errors": [],
+      "audit_weak": false,
+      "audit_score": 100,
+      "fallback_used": false,
+      "recovered_section_splits": 0
+    },
+    {
+      "cv_id": "3",
+      "file_path": "CVs/abdelrahman_cv.pdf",
+      "section_count": 6,
+      "general_block_ratio": 0.13636363636363635,
+      "possible_errors": [],
+      "audit_weak": false,
+      "audit_score": 100,
+      "fallback_used": false,
+      "recovered_section_splits": 0
+    },
+    {
+      "cv_id": "4",
+      "file_path": "CVs/Abdelrahman_Zakzouk_Cv.pdf",
+      "section_count": 5,
+      "general_block_ratio": 0.07142857142857142,
+      "possible_errors": [],
+      "audit_weak": false,
+      "audit_score": 100,
+      "fallback_used": false,
+      "recovered_section_splits": 0
+    },
+    {
+      "cv_id": "5",
+      "file_path": "CVs/ABDULRAHMAN MAHMOUDALI MOHAMED-compressed (1).pdf",
+      "section_count": 7,
+      "general_block_ratio": 0.08,
+      "possible_errors": [
+        "heading_candidates_found_inside_general"
+      ],
+      "audit_weak": false,
+      "audit_score": 88,
+      "fallback_used": false,
+      "recovered_section_splits": 0
+    },
+    {
+      "cv_id": "6",
+      "file_path": "CVs/adel_elnimr_it.pdf",
+      "section_count": 3,
+      "general_block_ratio": 0.2727272727272727,
+      "possible_errors": [],
+      "audit_weak": false,
+      "audit_score": 100,
+      "fallback_used": false,
+      "recovered_section_splits": 0
+    },
+    {
+      "cv_id": "7",
+      "file_path": "CVs/Adnan CV2.pdf",
+      "section_count": 6,
+      "general_block_ratio": 0.15384615384615385,
+      "possible_errors": [],
+      "audit_weak": false,
+      "audit_score": 100,
+      "fallback_used": false,
+      "recovered_section_splits": 0
+    },
+    {
+      "cv_id": "8",
+      "file_path": "CVs/Ahmed Abdelaziz Elshahawy.pdf",
+      "section_count": 5,
+      "general_block_ratio": 0.08,
+      "possible_errors": [],
+      "audit_weak": false,
+      "audit_score": 100,
+      "fallback_used": false,
+      "recovered_section_splits": 0
+    },
+    {
+      "cv_id": "9",
+      "file_path": "CVs/Ahmed Elsayed - Resume.docx.pdf",
+      "section_count": 5,
+      "general_block_ratio": 0.07142857142857142,
+      "possible_errors": [],
+      "audit_weak": false,
+      "audit_score": 100,
+      "fallback_used": false,
+      "recovered_section_splits": 0
+    },
+    {
+      "cv_id": "10",
+      "file_path": "CVs/Ahmed Khaled Mohammad -CV.pdf",
+      "section_count": 8,
+      "general_block_ratio": 0.0625,
+      "possible_errors": [],
+      "audit_weak": false,
+      "audit_score": 100,
+      "fallback_used": false,
+      "recovered_section_splits": 0
+    },
+    {
+      "cv_id": "11",
+      "file_path": "CVs/Ahmed Maher CV-1.pdf",
+      "section_count": 8,
+      "general_block_ratio": 0.16666666666666666,
+      "possible_errors": [],
+      "audit_weak": false,
+      "audit_score": 100,
+      "fallback_used": false,
+      "recovered_section_splits": 0
+    },
+    {
+      "cv_id": "12",
+      "file_path": "CVs/Ahmed_Salah_CV.pdf",
+      "section_count": 9,
+      "general_block_ratio": 0.11764705882352941,
+      "possible_errors": [],
+      "audit_weak": false,
+      "audit_score": 100,
+      "fallback_used": false,
+      "recovered_section_splits": 0
+    },
+    {
+      "cv_id": "13",
+      "file_path": "CVs/AhmedeidCV.pdf",
+      "section_count": 4,
+      "general_block_ratio": 0.3333333333333333,
+      "possible_errors": [],
+      "audit_weak": false,
+      "audit_score": 100,
+      "fallback_used": false,
+      "recovered_section_splits": 0
+    },
+    {
+      "cv_id": "14",
+      "file_path": "CVs/Akram ELRaey.pdf",
+      "section_count": 5,
+      "general_block_ratio": 0.11764705882352941,
+      "possible_errors": [],
+      "audit_weak": false,
+      "audit_score": 100,
+      "fallback_used": false,
+      "recovered_section_splits": 0
+    },
+    {
+      "cv_id": "15",
+      "file_path": "CVs/ali - Resume[1].pdf",
+      "section_count": 1,
+      "general_block_ratio": 1.0,
+      "possible_errors": [
+        "document_collapsed_into_general",
+        "oversized_general_section"
+      ],
+      "audit_weak": true,
+      "audit_score": 38,
+      "fallback_used": false,
+      "recovered_section_splits": 0
+    },
+    {
+      "cv_id": "16",
+      "file_path": "CVs/Almohanad_Ahmed_CV.pdf",
+      "section_count": 8,
+      "general_block_ratio": 0.21052631578947367,
+      "possible_errors": [],
+      "audit_weak": false,
+      "audit_score": 100,
+      "fallback_used": false,
+      "recovered_section_splits": 0
+    },
+    {
+      "cv_id": "17",
+      "file_path": "CVs/Andrew's CV.pdf",
+      "section_count": 8,
+      "general_block_ratio": 0.1875,
+      "possible_errors": [],
+      "audit_weak": false,
+      "audit_score": 100,
+      "fallback_used": false,
+      "recovered_section_splits": 0
+    },
+    {
+      "cv_id": "18",
+      "file_path": "CVs/Bashar El-Samahy_Resume.pdf",
+      "section_count": 8,
+      "general_block_ratio": 0.15,
+      "possible_errors": [],
+      "audit_weak": false,
+      "audit_score": 100,
+      "fallback_used": false,
+      "recovered_section_splits": 0
+    },
+    {
+      "cv_id": "19",
+      "file_path": "CVs/Basmala ayman abdelhamedd cv.pdf",
+      "section_count": 5,
+      "general_block_ratio": 0.17647058823529413,
+      "possible_errors": [
+        "heading_candidates_found_inside_general"
+      ],
+      "audit_weak": false,
+      "audit_score": 88,
+      "fallback_used": false,
+      "recovered_section_splits": 0
+    },
+    {
+      "cv_id": "20",
+      "file_path": "CVs/Bassel Islam CV.pdf",
+      "section_count": 7,
+      "general_block_ratio": 0.10344827586206896,
+      "possible_errors": [],
+      "audit_weak": false,
+      "audit_score": 100,
+      "fallback_used": false,
+      "recovered_section_splits": 0
+    }
+  ]
+}

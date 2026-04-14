@@ -1,0 +1,866 @@
+{
+  "total_files": 20,
+  "section_count_per_cv": [
+    {
+      "cv_id": "1",
+      "file_path": "CVs/Mohamed_Nasser_(CV).pdf",
+      "section_count": 8
+    },
+    {
+      "cv_id": "2",
+      "file_path": "CVs/Abdelrahman-Khaled.pdf",
+      "section_count": 7
+    },
+    {
+      "cv_id": "3",
+      "file_path": "CVs/abdelrahman_cv.pdf",
+      "section_count": 6
+    },
+    {
+      "cv_id": "4",
+      "file_path": "CVs/Abdelrahman_Zakzouk_Cv.pdf",
+      "section_count": 5
+    },
+    {
+      "cv_id": "5",
+      "file_path": "CVs/ABDULRAHMAN MAHMOUDALI MOHAMED-compressed (1).pdf",
+      "section_count": 7
+    },
+    {
+      "cv_id": "6",
+      "file_path": "CVs/adel_elnimr_it.pdf",
+      "section_count": 3
+    },
+    {
+      "cv_id": "7",
+      "file_path": "CVs/Adnan CV2.pdf",
+      "section_count": 6
+    },
+    {
+      "cv_id": "8",
+      "file_path": "CVs/Ahmed Abdelaziz Elshahawy.pdf",
+      "section_count": 5
+    },
+    {
+      "cv_id": "9",
+      "file_path": "CVs/Ahmed Elsayed - Resume.docx.pdf",
+      "section_count": 5
+    },
+    {
+      "cv_id": "10",
+      "file_path": "CVs/Ahmed Khaled Mohammad -CV.pdf",
+      "section_count": 8
+    },
+    {
+      "cv_id": "11",
+      "file_path": "CVs/Ahmed Maher CV-1.pdf",
+      "section_count": 8
+    },
+    {
+      "cv_id": "12",
+      "file_path": "CVs/Ahmed_Salah_CV.pdf",
+      "section_count": 9
+    },
+    {
+      "cv_id": "13",
+      "file_path": "CVs/AhmedeidCV.pdf",
+      "section_count": 4
+    },
+    {
+      "cv_id": "14",
+      "file_path": "CVs/Akram ELRaey.pdf",
+      "section_count": 5
+    },
+    {
+      "cv_id": "15",
+      "file_path": "CVs/ali - Resume[1].pdf",
+      "section_count": 1
+    },
+    {
+      "cv_id": "16",
+      "file_path": "CVs/Almohanad_Ahmed_CV.pdf",
+      "section_count": 8
+    },
+    {
+      "cv_id": "17",
+      "file_path": "CVs/Andrew's CV.pdf",
+      "section_count": 8
+    },
+    {
+      "cv_id": "18",
+      "file_path": "CVs/Bashar El-Samahy_Resume.pdf",
+      "section_count": 8
+    },
+    {
+      "cv_id": "19",
+      "file_path": "CVs/Basmala ayman abdelhamedd cv.pdf",
+      "section_count": 5
+    },
+    {
+      "cv_id": "20",
+      "file_path": "CVs/Bassel Islam CV.pdf",
+      "section_count": 7
+    }
+  ],
+  "files_with_oversized_general": [
+    {
+      "cv_id": "15",
+      "file_path": "CVs/ali - Resume[1].pdf",
+      "general_block_ratio": 1.0
+    }
+  ],
+  "files_with_section_bleed": [
+    {
+      "cv_id": "5",
+      "file_path": "CVs/ABDULRAHMAN MAHMOUDALI MOHAMED-compressed (1).pdf",
+      "markers": [
+        "Achievements: EDUCATION &",
+        "Certifications: TECHNICAL SKILLS &"
+      ]
+    },
+    {
+      "cv_id": "12",
+      "file_path": "CVs/Ahmed_Salah_CV.pdf",
+      "markers": [
+        "Projects: COURSES &"
+      ]
+    },
+    {
+      "cv_id": "14",
+      "file_path": "CVs/Akram ELRaey.pdf",
+      "markers": [
+        "Additional Information: Courses &"
+      ]
+    }
+  ],
+  "files_with_suspicious_composite_headings": [],
+  "candidate_counts_total": {
+    "projects": 26,
+    "experience": 16,
+    "education": 22,
+    "certifications": 36,
+    "trainings": 14,
+    "achievements": 13,
+    "activities": 5,
+    "publications": 2,
+    "soft_skills": 14
+  },
+  "candidate_counts_per_cv": [
+    {
+      "cv_id": "1",
+      "file_path": "CVs/Mohamed_Nasser_(CV).pdf",
+      "candidate_counts": {
+        "projects": 1,
+        "experience": 1,
+        "education": 1,
+        "certifications": 0,
+        "trainings": 1,
+        "achievements": 0,
+        "activities": 0,
+        "publications": 0,
+        "soft_skills": 0
+      }
+    },
+    {
+      "cv_id": "2",
+      "file_path": "CVs/Abdelrahman-Khaled.pdf",
+      "candidate_counts": {
+        "projects": 4,
+        "experience": 0,
+        "education": 2,
+        "certifications": 0,
+        "trainings": 3,
+        "achievements": 0,
+        "activities": 0,
+        "publications": 0,
+        "soft_skills": 0
+      }
+    },
+    {
+      "cv_id": "3",
+      "file_path": "CVs/abdelrahman_cv.pdf",
+      "candidate_counts": {
+        "projects": 1,
+        "experience": 0,
+        "education": 1,
+        "certifications": 0,
+        "trainings": 0,
+        "achievements": 0,
+        "activities": 0,
+        "publications": 0,
+        "soft_skills": 0
+      }
+    },
+    {
+      "cv_id": "4",
+      "file_path": "CVs/Abdelrahman_Zakzouk_Cv.pdf",
+      "candidate_counts": {
+        "projects": 1,
+        "experience": 0,
+        "education": 1,
+        "certifications": 0,
+        "trainings": 0,
+        "achievements": 0,
+        "activities": 0,
+        "publications": 2,
+        "soft_skills": 0
+      }
+    },
+    {
+      "cv_id": "5",
+      "file_path": "CVs/ABDULRAHMAN MAHMOUDALI MOHAMED-compressed (1).pdf",
+      "candidate_counts": {
+        "projects": 0,
+        "experience": 2,
+        "education": 0,
+        "certifications": 12,
+        "trainings": 0,
+        "achievements": 3,
+        "activities": 0,
+        "publications": 0,
+        "soft_skills": 0
+      }
+    },
+    {
+      "cv_id": "6",
+      "file_path": "CVs/adel_elnimr_it.pdf",
+      "candidate_counts": {
+        "projects": 0,
+        "experience": 0,
+        "education": 1,
+        "certifications": 0,
+        "trainings": 0,
+        "achievements": 0,
+        "activities": 0,
+        "publications": 0,
+        "soft_skills": 0
+      }
+    },
+    {
+      "cv_id": "7",
+      "file_path": "CVs/Adnan CV2.pdf",
+      "candidate_counts": {
+        "projects": 0,
+        "experience": 4,
+        "education": 2,
+        "certifications": 11,
+        "trainings": 0,
+        "achievements": 0,
+        "activities": 0,
+        "publications": 0,
+        "soft_skills": 0
+      }
+    },
+    {
+      "cv_id": "8",
+      "file_path": "CVs/Ahmed Abdelaziz Elshahawy.pdf",
+      "candidate_counts": {
+        "projects": 1,
+        "experience": 0,
+        "education": 0,
+        "certifications": 0,
+        "trainings": 0,
+        "achievements": 0,
+        "activities": 0,
+        "publications": 0,
+        "soft_skills": 0
+      }
+    },
+    {
+      "cv_id": "9",
+      "file_path": "CVs/Ahmed Elsayed - Resume.docx.pdf",
+      "candidate_counts": {
+        "projects": 0,
+        "experience": 2,
+        "education": 0,
+        "certifications": 0,
+        "trainings": 0,
+        "achievements": 0,
+        "activities": 1,
+        "publications": 0,
+        "soft_skills": 0
+      }
+    },
+    {
+      "cv_id": "10",
+      "file_path": "CVs/Ahmed Khaled Mohammad -CV.pdf",
+      "candidate_counts": {
+        "projects": 3,
+        "experience": 1,
+        "education": 2,
+        "certifications": 0,
+        "trainings": 0,
+        "achievements": 0,
+        "activities": 0,
+        "publications": 0,
+        "soft_skills": 0
+      }
+    },
+    {
+      "cv_id": "11",
+      "file_path": "CVs/Ahmed Maher CV-1.pdf",
+      "candidate_counts": {
+        "projects": 1,
+        "experience": 1,
+        "education": 1,
+        "certifications": 0,
+        "trainings": 2,
+        "achievements": 0,
+        "activities": 1,
+        "publications": 0,
+        "soft_skills": 0
+      }
+    },
+    {
+      "cv_id": "12",
+      "file_path": "CVs/Ahmed_Salah_CV.pdf",
+      "candidate_counts": {
+        "projects": 1,
+        "experience": 1,
+        "education": 1,
+        "certifications": 0,
+        "trainings": 0,
+        "achievements": 5,
+        "activities": 0,
+        "publications": 0,
+        "soft_skills": 1
+      }
+    },
+    {
+      "cv_id": "13",
+      "file_path": "CVs/AhmedeidCV.pdf",
+      "candidate_counts": {
+        "projects": 1,
+        "experience": 0,
+        "education": 0,
+        "certifications": 8,
+        "trainings": 0,
+        "achievements": 0,
+        "activities": 0,
+        "publications": 0,
+        "soft_skills": 0
+      }
+    },
+    {
+      "cv_id": "14",
+      "file_path": "CVs/Akram ELRaey.pdf",
+      "candidate_counts": {
+        "projects": 0,
+        "experience": 1,
+        "education": 1,
+        "certifications": 0,
+        "trainings": 0,
+        "achievements": 1,
+        "activities": 1,
+        "publications": 0,
+        "soft_skills": 0
+      }
+    },
+    {
+      "cv_id": "15",
+      "file_path": "CVs/ali - Resume[1].pdf",
+      "candidate_counts": {
+        "projects": 0,
+        "experience": 0,
+        "education": 0,
+        "certifications": 0,
+        "trainings": 0,
+        "achievements": 0,
+        "activities": 0,
+        "publications": 0,
+        "soft_skills": 0
+      }
+    },
+    {
+      "cv_id": "16",
+      "file_path": "CVs/Almohanad_Ahmed_CV.pdf",
+      "candidate_counts": {
+        "projects": 1,
+        "experience": 0,
+        "education": 1,
+        "certifications": 0,
+        "trainings": 2,
+        "achievements": 0,
+        "activities": 0,
+        "publications": 0,
+        "soft_skills": 3
+      }
+    },
+    {
+      "cv_id": "17",
+      "file_path": "CVs/Andrew's CV.pdf",
+      "candidate_counts": {
+        "projects": 0,
+        "experience": 1,
+        "education": 2,
+        "certifications": 0,
+        "trainings": 0,
+        "achievements": 4,
+        "activities": 1,
+        "publications": 0,
+        "soft_skills": 6
+      }
+    },
+    {
+      "cv_id": "18",
+      "file_path": "CVs/Bashar El-Samahy_Resume.pdf",
+      "candidate_counts": {
+        "projects": 1,
+        "experience": 1,
+        "education": 1,
+        "certifications": 5,
+        "trainings": 0,
+        "achievements": 0,
+        "activities": 0,
+        "publications": 0,
+        "soft_skills": 0
+      }
+    },
+    {
+      "cv_id": "19",
+      "file_path": "CVs/Basmala ayman abdelhamedd cv.pdf",
+      "candidate_counts": {
+        "projects": 0,
+        "experience": 1,
+        "education": 2,
+        "certifications": 0,
+        "trainings": 2,
+        "achievements": 0,
+        "activities": 1,
+        "publications": 0,
+        "soft_skills": 4
+      }
+    },
+    {
+      "cv_id": "20",
+      "file_path": "CVs/Bassel Islam CV.pdf",
+      "candidate_counts": {
+        "projects": 10,
+        "experience": 0,
+        "education": 3,
+        "certifications": 0,
+        "trainings": 4,
+        "achievements": 0,
+        "activities": 0,
+        "publications": 0,
+        "soft_skills": 0
+      }
+    }
+  ],
+  "rows": [
+    {
+      "cv_id": "1",
+      "file_path": "CVs/Mohamed_Nasser_(CV).pdf",
+      "section_count": 8,
+      "oversized_general": false,
+      "section_bleed_markers": [],
+      "suspicious_composite_headings": [],
+      "candidate_counts": {
+        "projects": 1,
+        "experience": 1,
+        "education": 1,
+        "certifications": 0,
+        "trainings": 1,
+        "achievements": 0,
+        "activities": 0,
+        "publications": 0,
+        "soft_skills": 0
+      },
+      "possible_errors": []
+    },
+    {
+      "cv_id": "2",
+      "file_path": "CVs/Abdelrahman-Khaled.pdf",
+      "section_count": 7,
+      "oversized_general": false,
+      "section_bleed_markers": [],
+      "suspicious_composite_headings": [],
+      "candidate_counts": {
+        "projects": 4,
+        "experience": 0,
+        "education": 2,
+        "certifications": 0,
+        "trainings": 3,
+        "achievements": 0,
+        "activities": 0,
+        "publications": 0,
+        "soft_skills": 0
+      },
+      "possible_errors": []
+    },
+    {
+      "cv_id": "3",
+      "file_path": "CVs/abdelrahman_cv.pdf",
+      "section_count": 6,
+      "oversized_general": false,
+      "section_bleed_markers": [],
+      "suspicious_composite_headings": [],
+      "candidate_counts": {
+        "projects": 1,
+        "experience": 0,
+        "education": 1,
+        "certifications": 0,
+        "trainings": 0,
+        "achievements": 0,
+        "activities": 0,
+        "publications": 0,
+        "soft_skills": 0
+      },
+      "possible_errors": []
+    },
+    {
+      "cv_id": "4",
+      "file_path": "CVs/Abdelrahman_Zakzouk_Cv.pdf",
+      "section_count": 5,
+      "oversized_general": false,
+      "section_bleed_markers": [],
+      "suspicious_composite_headings": [],
+      "candidate_counts": {
+        "projects": 1,
+        "experience": 0,
+        "education": 1,
+        "certifications": 0,
+        "trainings": 0,
+        "achievements": 0,
+        "activities": 0,
+        "publications": 2,
+        "soft_skills": 0
+      },
+      "possible_errors": []
+    },
+    {
+      "cv_id": "5",
+      "file_path": "CVs/ABDULRAHMAN MAHMOUDALI MOHAMED-compressed (1).pdf",
+      "section_count": 7,
+      "oversized_general": false,
+      "section_bleed_markers": [
+        "Achievements: EDUCATION &",
+        "Certifications: TECHNICAL SKILLS &"
+      ],
+      "suspicious_composite_headings": [],
+      "candidate_counts": {
+        "projects": 0,
+        "experience": 2,
+        "education": 0,
+        "certifications": 12,
+        "trainings": 0,
+        "achievements": 3,
+        "activities": 0,
+        "publications": 0,
+        "soft_skills": 0
+      },
+      "possible_errors": [
+        "heading_candidates_found_inside_general"
+      ]
+    },
+    {
+      "cv_id": "6",
+      "file_path": "CVs/adel_elnimr_it.pdf",
+      "section_count": 3,
+      "oversized_general": false,
+      "section_bleed_markers": [],
+      "suspicious_composite_headings": [],
+      "candidate_counts": {
+        "projects": 0,
+        "experience": 0,
+        "education": 1,
+        "certifications": 0,
+        "trainings": 0,
+        "achievements": 0,
+        "activities": 0,
+        "publications": 0,
+        "soft_skills": 0
+      },
+      "possible_errors": []
+    },
+    {
+      "cv_id": "7",
+      "file_path": "CVs/Adnan CV2.pdf",
+      "section_count": 6,
+      "oversized_general": false,
+      "section_bleed_markers": [],
+      "suspicious_composite_headings": [],
+      "candidate_counts": {
+        "projects": 0,
+        "experience": 4,
+        "education": 2,
+        "certifications": 11,
+        "trainings": 0,
+        "achievements": 0,
+        "activities": 0,
+        "publications": 0,
+        "soft_skills": 0
+      },
+      "possible_errors": []
+    },
+    {
+      "cv_id": "8",
+      "file_path": "CVs/Ahmed Abdelaziz Elshahawy.pdf",
+      "section_count": 5,
+      "oversized_general": false,
+      "section_bleed_markers": [],
+      "suspicious_composite_headings": [],
+      "candidate_counts": {
+        "projects": 1,
+        "experience": 0,
+        "education": 0,
+        "certifications": 0,
+        "trainings": 0,
+        "achievements": 0,
+        "activities": 0,
+        "publications": 0,
+        "soft_skills": 0
+      },
+      "possible_errors": []
+    },
+    {
+      "cv_id": "9",
+      "file_path": "CVs/Ahmed Elsayed - Resume.docx.pdf",
+      "section_count": 5,
+      "oversized_general": false,
+      "section_bleed_markers": [],
+      "suspicious_composite_headings": [],
+      "candidate_counts": {
+        "projects": 0,
+        "experience": 2,
+        "education": 0,
+        "certifications": 0,
+        "trainings": 0,
+        "achievements": 0,
+        "activities": 1,
+        "publications": 0,
+        "soft_skills": 0
+      },
+      "possible_errors": []
+    },
+    {
+      "cv_id": "10",
+      "file_path": "CVs/Ahmed Khaled Mohammad -CV.pdf",
+      "section_count": 8,
+      "oversized_general": false,
+      "section_bleed_markers": [],
+      "suspicious_composite_headings": [],
+      "candidate_counts": {
+        "projects": 3,
+        "experience": 1,
+        "education": 2,
+        "certifications": 0,
+        "trainings": 0,
+        "achievements": 0,
+        "activities": 0,
+        "publications": 0,
+        "soft_skills": 0
+      },
+      "possible_errors": []
+    },
+    {
+      "cv_id": "11",
+      "file_path": "CVs/Ahmed Maher CV-1.pdf",
+      "section_count": 8,
+      "oversized_general": false,
+      "section_bleed_markers": [],
+      "suspicious_composite_headings": [],
+      "candidate_counts": {
+        "projects": 1,
+        "experience": 1,
+        "education": 1,
+        "certifications": 0,
+        "trainings": 2,
+        "achievements": 0,
+        "activities": 1,
+        "publications": 0,
+        "soft_skills": 0
+      },
+      "possible_errors": []
+    },
+    {
+      "cv_id": "12",
+      "file_path": "CVs/Ahmed_Salah_CV.pdf",
+      "section_count": 9,
+      "oversized_general": false,
+      "section_bleed_markers": [
+        "Projects: COURSES &"
+      ],
+      "suspicious_composite_headings": [],
+      "candidate_counts": {
+        "projects": 1,
+        "experience": 1,
+        "education": 1,
+        "certifications": 0,
+        "trainings": 0,
+        "achievements": 5,
+        "activities": 0,
+        "publications": 0,
+        "soft_skills": 1
+      },
+      "possible_errors": []
+    },
+    {
+      "cv_id": "13",
+      "file_path": "CVs/AhmedeidCV.pdf",
+      "section_count": 4,
+      "oversized_general": false,
+      "section_bleed_markers": [],
+      "suspicious_composite_headings": [],
+      "candidate_counts": {
+        "projects": 1,
+        "experience": 0,
+        "education": 0,
+        "certifications": 8,
+        "trainings": 0,
+        "achievements": 0,
+        "activities": 0,
+        "publications": 0,
+        "soft_skills": 0
+      },
+      "possible_errors": []
+    },
+    {
+      "cv_id": "14",
+      "file_path": "CVs/Akram ELRaey.pdf",
+      "section_count": 5,
+      "oversized_general": false,
+      "section_bleed_markers": [
+        "Additional Information: Courses &"
+      ],
+      "suspicious_composite_headings": [],
+      "candidate_counts": {
+        "projects": 0,
+        "experience": 1,
+        "education": 1,
+        "certifications": 0,
+        "trainings": 0,
+        "achievements": 1,
+        "activities": 1,
+        "publications": 0,
+        "soft_skills": 0
+      },
+      "possible_errors": []
+    },
+    {
+      "cv_id": "15",
+      "file_path": "CVs/ali - Resume[1].pdf",
+      "section_count": 1,
+      "oversized_general": true,
+      "section_bleed_markers": [],
+      "suspicious_composite_headings": [],
+      "candidate_counts": {
+        "projects": 0,
+        "experience": 0,
+        "education": 0,
+        "certifications": 0,
+        "trainings": 0,
+        "achievements": 0,
+        "activities": 0,
+        "publications": 0,
+        "soft_skills": 0
+      },
+      "possible_errors": [
+        "document_collapsed_into_general",
+        "oversized_general_section"
+      ]
+    },
+    {
+      "cv_id": "16",
+      "file_path": "CVs/Almohanad_Ahmed_CV.pdf",
+      "section_count": 8,
+      "oversized_general": false,
+      "section_bleed_markers": [],
+      "suspicious_composite_headings": [],
+      "candidate_counts": {
+        "projects": 1,
+        "experience": 0,
+        "education": 1,
+        "certifications": 0,
+        "trainings": 2,
+        "achievements": 0,
+        "activities": 0,
+        "publications": 0,
+        "soft_skills": 3
+      },
+      "possible_errors": []
+    },
+    {
+      "cv_id": "17",
+      "file_path": "CVs/Andrew's CV.pdf",
+      "section_count": 8,
+      "oversized_general": false,
+      "section_bleed_markers": [],
+      "suspicious_composite_headings": [],
+      "candidate_counts": {
+        "projects": 0,
+        "experience": 1,
+        "education": 2,
+        "certifications": 0,
+        "trainings": 0,
+        "achievements": 4,
+        "activities": 1,
+        "publications": 0,
+        "soft_skills": 6
+      },
+      "possible_errors": []
+    },
+    {
+      "cv_id": "18",
+      "file_path": "CVs/Bashar El-Samahy_Resume.pdf",
+      "section_count": 8,
+      "oversized_general": false,
+      "section_bleed_markers": [],
+      "suspicious_composite_headings": [],
+      "candidate_counts": {
+        "projects": 1,
+        "experience": 1,
+        "education": 1,
+        "certifications": 5,
+        "trainings": 0,
+        "achievements": 0,
+        "activities": 0,
+        "publications": 0,
+        "soft_skills": 0
+      },
+      "possible_errors": []
+    },
+    {
+      "cv_id": "19",
+      "file_path": "CVs/Basmala ayman abdelhamedd cv.pdf",
+      "section_count": 5,
+      "oversized_general": false,
+      "section_bleed_markers": [],
+      "suspicious_composite_headings": [],
+      "candidate_counts": {
+        "projects": 0,
+        "experience": 1,
+        "education": 2,
+        "certifications": 0,
+        "trainings": 2,
+        "achievements": 0,
+        "activities": 1,
+        "publications": 0,
+        "soft_skills": 4
+      },
+      "possible_errors": [
+        "heading_candidates_found_inside_general"
+      ]
+    },
+    {
+      "cv_id": "20",
+      "file_path": "CVs/Bassel Islam CV.pdf",
+      "section_count": 7,
+      "oversized_general": false,
+      "section_bleed_markers": [],
+      "suspicious_composite_headings": [],
+      "candidate_counts": {
+        "projects": 10,
+        "experience": 0,
+        "education": 3,
+        "certifications": 0,
+        "trainings": 4,
+        "achievements": 0,
+        "activities": 0,
+        "publications": 0,
+        "soft_skills": 0
+      },
+      "possible_errors": []
+    }
+  ]
+}

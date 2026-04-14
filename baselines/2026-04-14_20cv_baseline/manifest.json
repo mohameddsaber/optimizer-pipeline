@@ -1,0 +1,17 @@
+{
+  "baseline_name": "2026-04-14_20cv_baseline",
+  "created_from": {
+    "parser_payload": "data/parser_payload.jsonl",
+    "optimizer_payload": "data/optimizer_payload.jsonl",
+    "phase2_results": "phase2_results_v15.jsonl",
+    "missed_content_report": "phase2_missed_content_report_v15.json"
+  },
+  "artifacts": {
+    "phase1_extraction_snapshot": "baselines/2026-04-14_20cv_baseline/phase1_extraction_snapshot.jsonl",
+    "phase1_section_quality_report": "baselines/2026-04-14_20cv_baseline/phase1_section_quality_report.json",
+    "phase2_results_snapshot": "baselines/2026-04-14_20cv_baseline/phase2_results_snapshot.jsonl",
+    "phase2_missed_content_report": "baselines/2026-04-14_20cv_baseline/phase2_missed_content_report.json",
+    "parser_payload_snapshot": "baselines/2026-04-14_20cv_baseline/parser_payload_snapshot.jsonl",
+    "optimizer_payload_snapshot": "baselines/2026-04-14_20cv_baseline/optimizer_payload_snapshot.jsonl"
+  }
+}

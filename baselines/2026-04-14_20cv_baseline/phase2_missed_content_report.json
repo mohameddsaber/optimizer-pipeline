@@ -1,0 +1,253 @@
+{
+  "total_rows_with_missed_content": 13,
+  "rows_with_any_recovered_content": 13,
+  "total_missed_chunks": 49,
+  "recovered_chunks": 46,
+  "recovery_rate": 0.939,
+  "rows": [
+    {
+      "cv_id": "3",
+      "file_path": "CVs/abdelrahman_cv.pdf",
+      "status": "matched",
+      "missed_chunks": [
+        "ECPC 2025 Finalist Ranked 98th nationally among competitive programming teams in Egypt. Solved 1000+ algorithmic problems across LeetCode and Codeforces, specializing in Data Structures, Graph Algorithms, and",
+        "Dynamic Programming. Competitive Programming Participant Alextreme and ACM training camps focusing on advanced algorithm design and optimization. Academic Excellence: Achieved 9 A* grades in IGCSE examinations."
+      ],
+      "recovered_chunks": [
+        "ECPC 2025 Finalist Ranked 98th nationally among competitive programming teams in Egypt. Solved 1000+ algorithmic problems across LeetCode and Codeforces, specializing in Data Structures, Graph Algorithms, and",
+        "Dynamic Programming. Competitive Programming Participant Alextreme and ACM training camps focusing on advanced algorithm design and optimization. Academic Excellence: Achieved 9 A* grades in IGCSE examinations."
+      ],
+      "unrecovered_chunks": [],
+      "recovered_ratio": 1.0
+    },
+    {
+      "cv_id": "4",
+      "file_path": "CVs/Abdelrahman_Zakzouk_Cv.pdf",
+      "status": "matched",
+      "missed_chunks": [
+        "• Publication (AC 2025): Smart Tourism Meets AI: A Multimodal Assistant for Exploratory Cultural Engagement. Peer-reviewed short paper accepted at the International Conference on Applied Computing, based on my A+ bachelor thesis."
+      ],
+      "recovered_chunks": [
+        "• Publication (AC 2025): Smart Tourism Meets AI: A Multimodal Assistant for Exploratory Cultural Engagement. Peer-reviewed short paper accepted at the International Conference on Applied Computing, based on my A+ bachelor thesis."
+      ],
+      "unrecovered_chunks": [],
+      "recovered_ratio": 1.0
+    },
+    {
+      "cv_id": "5",
+      "file_path": "CVs/ABDULRAHMAN MAHMOUDALI MOHAMED-compressed (1).pdf",
+      "status": "matched",
+      "missed_chunks": [
+        "Sales & Communication: High-Ticket Sales, Professional Telesales, Call Center Excellence, Consumer Psychology, Strategic Negotiation.",
+        "Digital Finance & Marketing: Cryptocurrency (Bitcoin), Strategic Media Buying, Viral Trend Forecasting, Global Market Tracking.",
+        "Management: Natural Leadership, HR Management, Dropshipping Operations, International Tourism.",
+        "Pioneer Tech Influencer: First Egyptian creator to technically dissect social media algorithms, leveraging deep-rooted insights since the Musical.ly era.",
+        "Multi-Language Developer: Mastered 7 programming languages, enabling versatile architecture across different platforms and OS.",
+        "High-Speed Execution: Professional Ultra-Fast Typing Speed with an obsession for detail and data integrity.",
+        "Personal Traits: Avid Reader, Strategic Thinker, Global Success Tracker."
+      ],
+      "recovered_chunks": [
+        "Sales & Communication: High-Ticket Sales, Professional Telesales, Call Center Excellence, Consumer Psychology, Strategic Negotiation.",
+        "Digital Finance & Marketing: Cryptocurrency (Bitcoin), Strategic Media Buying, Viral Trend Forecasting, Global Market Tracking.",
+        "Management: Natural Leadership, HR Management, Dropshipping Operations, International Tourism.",
+        "Pioneer Tech Influencer: First Egyptian creator to technically dissect social media algorithms, leveraging deep-rooted insights since the Musical.ly era.",
+        "Multi-Language Developer: Mastered 7 programming languages, enabling versatile architecture across different platforms and OS.",
+        "High-Speed Execution: Professional Ultra-Fast Typing Speed with an obsession for detail and data integrity."
+      ],
+      "unrecovered_chunks": [
+        "Personal Traits: Avid Reader, Strategic Thinker, Global Success Tracker."
+      ],
+      "recovered_ratio": 0.857
+    },
+    {
+      "cv_id": "6",
+      "file_path": "CVs/adel_elnimr_it.pdf",
+      "status": "matched",
+      "missed_chunks": [
+        "GPA 2.75 / 4.0 (Good).",
+        "Graduation Project Grade (A+)",
+        "Containers & Orchestration: Docker, Kubernetes, Helm",
+        "Databases: PostgreSql SOFT SKILLS"
+      ],
+      "recovered_chunks": [
+        "GPA 2.75 / 4.0 (Good).",
+        "Graduation Project Grade (A+)",
+        "Containers & Orchestration: Docker, Kubernetes, Helm",
+        "Databases: PostgreSql SOFT SKILLS"
+      ],
+      "unrecovered_chunks": [],
+      "recovered_ratio": 1.0
+    },
+    {
+      "cv_id": "7",
+      "file_path": "CVs/Adnan CV2.pdf",
+      "status": "matched",
+      "missed_chunks": [
+        "·4th ranked student among the school mathematics section stdents Oct 2023 - Present Bachelor of Engineering and Applied Sciences, Egypt-Japan University of science and technology Computer Science Engineering Member of E-JUST Robotics Club Member of CPC E-Just Club",
+        "ADDITIONAL INFORMATION Technical Skills: Project Management, Problem Solving, Programming, Languages: Arabic, English, German, Italian Awards/Activities: Third place in IPM Math Egyptian competition for mental math Awarded the ideal student in 2018,2019 (preparatory stage) Awarded the ideal student in 2020,2021,2022 (secondary stage)"
+      ],
+      "recovered_chunks": [
+        "·4th ranked student among the school mathematics section stdents Oct 2023 - Present Bachelor of Engineering and Applied Sciences, Egypt-Japan University of science and technology Computer Science Engineering Member of E-JUST Robotics Club Member of CPC E-Just Club",
+        "ADDITIONAL INFORMATION Technical Skills: Project Management, Problem Solving, Programming, Languages: Arabic, English, German, Italian Awards/Activities: Third place in IPM Math Egyptian competition for mental math Awarded the ideal student in 2018,2019 (preparatory stage) Awarded the ideal student in 2020,2021,2022 (secondary stage)"
+      ],
+      "unrecovered_chunks": [],
+      "recovered_ratio": 1.0
+    },
+    {
+      "cv_id": "8",
+      "file_path": "CVs/Ahmed Abdelaziz Elshahawy.pdf",
+      "status": "matched",
+      "missed_chunks": [
+        "Ahmed Abdelaziz Elshahawy Backend Developer | .NET Developer Egypt, Cairo | 01555048280 | AhmedSahahawy59@gmail.com | www.linkedin.com/in/ahmedshahawy-2980301a6 | Leet Code :- https://leetcode.com/u/leeter5/ | GitHub :- https://github.com/AhmedSheeha | Military Service : Exempted",
+        "Programming Languages:- C++, JavaScript, and C#. Backend Technologies :- LINQ, Entity Framework, Restfull API, .NET Core, MVC, Identity, Jwt, and SignalR. Databases:- MS SQL server. Frontend Technologies:- HTML, CSS, and Bootstrap. Software Skills:- Object Oriented Programming, Algorithms, Data Structures, Design Patterns,"
+      ],
+      "recovered_chunks": [
+        "Ahmed Abdelaziz Elshahawy Backend Developer | .NET Developer Egypt, Cairo | 01555048280 | AhmedSahahawy59@gmail.com | www.linkedin.com/in/ahmedshahawy-2980301a6 | Leet Code :- https://leetcode.com/u/leeter5/ | GitHub :- https://github.com/AhmedSheeha | Military Service : Exempted",
+        "Programming Languages:- C++, JavaScript, and C#. Backend Technologies :- LINQ, Entity Framework, Restfull API, .NET Core, MVC, Identity, Jwt, and SignalR. Databases:- MS SQL server. Frontend Technologies:- HTML, CSS, and Bootstrap. Software Skills:- Object Oriented Programming, Algorithms, Data Structures, Design Patterns,"
+      ],
+      "unrecovered_chunks": [],
+      "recovered_ratio": 1.0
+    },
+    {
+      "cv_id": "10",
+      "file_path": "CVs/Ahmed Khaled Mohammad -CV.pdf",
+      "status": "matched",
+      "missed_chunks": [
+        "WORKING EXPERIENCE Fab.com Cairo Egypt (Remote)",
+        "Graduate Student - Software Engineer [Grade: Very Good]",
+        "Familiar with node js Software",
+        "Platforms: windows, Linux",
+        "Frameworks: React Js, Node Js",
+        "Backend & APIs: Node.js, JWT, WebSockets",
+        "Databases: MySQL, SQLite",
+        "References upon request."
+      ],
+      "recovered_chunks": [
+        "WORKING EXPERIENCE Fab.com Cairo Egypt (Remote)",
+        "Graduate Student - Software Engineer [Grade: Very Good]",
+        "Familiar with node js Software",
+        "Platforms: windows, Linux",
+        "Frameworks: React Js, Node Js",
+        "Backend & APIs: Node.js, JWT, WebSockets",
+        "Databases: MySQL, SQLite"
+      ],
+      "unrecovered_chunks": [
+        "References upon request."
+      ],
+      "recovered_ratio": 0.875
+    },
+    {
+      "cv_id": "11",
+      "file_path": "CVs/Ahmed Maher CV-1.pdf",
+      "status": "matched",
+      "missed_chunks": [
+        "2025 Nasr City",
+        "2022 Nasr City, Egypt",
+        "Communication: Clear technical communication, active listening, technical writing Collaboration: Teamwork, conflict resolution, interpersonal skills Critical Thinking: Analytical thinking, problem-solving, decision-making under pressure Adaptability: Flexible, quick learner, multitasking",
+        "Member in Org Team in Compiler Community This is a volunteer community that helps students and provides events and training so that they are familiar with the market and help them in college."
+      ],
+      "recovered_chunks": [
+        "2025 Nasr City",
+        "Communication: Clear technical communication, active listening, technical writing Collaboration: Teamwork, conflict resolution, interpersonal skills Critical Thinking: Analytical thinking, problem-solving, decision-making under pressure Adaptability: Flexible, quick learner, multitasking",
+        "Member in Org Team in Compiler Community This is a volunteer community that helps students and provides events and training so that they are familiar with the market and help them in college."
+      ],
+      "unrecovered_chunks": [
+        "2022 Nasr City, Egypt"
+      ],
+      "recovered_ratio": 0.75
+    },
+    {
+      "cv_id": "15",
+      "file_path": "CVs/ali - Resume[1].pdf",
+      "status": "matched",
+      "missed_chunks": [
+        "MEAN STACK DEVELOPMENT Sector B5, Smart Village , Egypt | Jul 2025 – Aug 2025 IOT workshop Sprints, Cairo , Egypt | May 2025 – Jun 2025 SprintUp - Web Development Fundamentals National Telecommunication Institute, New capital , Egypt | Apr 2025 – Jun 2025 Huawei Egyptian Talents Academy - AI Arab open University, Cairo , Egypt | Oct 2020 – Jul 2024 Bachelor’s degree in computer science and information technology"
+      ],
+      "recovered_chunks": [
+        "MEAN STACK DEVELOPMENT Sector B5, Smart Village , Egypt | Jul 2025 – Aug 2025 IOT workshop Sprints, Cairo , Egypt | May 2025 – Jun 2025 SprintUp - Web Development Fundamentals National Telecommunication Institute, New capital , Egypt | Apr 2025 – Jun 2025 Huawei Egyptian Talents Academy - AI Arab open University, Cairo , Egypt | Oct 2020 – Jul 2024 Bachelor’s degree in computer science and information technology"
+      ],
+      "unrecovered_chunks": [],
+      "recovered_ratio": 1.0
+    },
+    {
+      "cv_id": "16",
+      "file_path": "CVs/Almohanad_Ahmed_CV.pdf",
+      "status": "matched",
+      "missed_chunks": [
+        "Languages & Frameworks: Flutter, Dart.",
+        "Software Design: SOLID Principles, Clean Architecture, Design Patterns.",
+        "Technical Problem Solving: Strong debugging and troubleshooting capabilities in complex Flutter environments.",
+        "Collaborative Development: Experienced in working within technical teams and maintaining clear project documentation.",
+        "Continuous Learning: Rapidly adapting to new frameworks and evolving industry best practices to deliver modern mobile solutions."
+      ],
+      "recovered_chunks": [
+        "Languages & Frameworks: Flutter, Dart.",
+        "Software Design: SOLID Principles, Clean Architecture, Design Patterns.",
+        "Technical Problem Solving: Strong debugging and troubleshooting capabilities in complex Flutter environments.",
+        "Collaborative Development: Experienced in working within technical teams and maintaining clear project documentation.",
+        "Continuous Learning: Rapidly adapting to new frameworks and evolving industry best practices to deliver modern mobile solutions."
+      ],
+      "unrecovered_chunks": [],
+      "recovered_ratio": 1.0
+    },
+    {
+      "cv_id": "17",
+      "file_path": "CVs/Andrew's CV.pdf",
+      "status": "matched",
+      "missed_chunks": [
+        "AWARDS ▪ Participated in the ACQUIN Accreditation Meeting for GIU’s Faculty of Economics and Business Administration (2024)",
+        "Represented the Faculty of Business Informatics. | ▪ Excellence Awards for Academic ▪ Attended the President of Germany's Speech at the GIU (2024) | Achievement:",
+        "Gained insights into international relations and leadership Ranked 4 th at the GIU (Winter 2023) perspectives. Ranked 3 rd at the GIU (Spring 2024)",
+        "Enhanced understanding of global political and economic Ranked 4 th at the GIU (Winter 2024) landscapes. Ranked 5th at the GIU (Spring 2025) ▪ Ushered in GIU’s graduation ceremony in the Cap & Gown Team (2024). ▪ Ushered in GIU’s graduation ceremony as a team leader for the Cap & ▪ DAAD scholarship Award for Academic excellence (2025) Gown Team (2025)."
+      ],
+      "recovered_chunks": [
+        "AWARDS ▪ Participated in the ACQUIN Accreditation Meeting for GIU’s Faculty of Economics and Business Administration (2024)",
+        "Represented the Faculty of Business Informatics. | ▪ Excellence Awards for Academic ▪ Attended the President of Germany's Speech at the GIU (2024) | Achievement:",
+        "Gained insights into international relations and leadership Ranked 4 th at the GIU (Winter 2023) perspectives. Ranked 3 rd at the GIU (Spring 2024)",
+        "Enhanced understanding of global political and economic Ranked 4 th at the GIU (Winter 2024) landscapes. Ranked 5th at the GIU (Spring 2025) ▪ Ushered in GIU’s graduation ceremony in the Cap & Gown Team (2024). ▪ Ushered in GIU’s graduation ceremony as a team leader for the Cap & ▪ DAAD scholarship Award for Academic excellence (2025) Gown Team (2025)."
+      ],
+      "unrecovered_chunks": [],
+      "recovered_ratio": 1.0
+    },
+    {
+      "cv_id": "18",
+      "file_path": "CVs/Bashar El-Samahy_Resume.pdf",
+      "status": "matched",
+      "missed_chunks": [
+        "Technical Support Specialist – ( full-time ) | 12/2024 – 2/2025 | Nasr City - Cairo",
+        "Systems Administration/DevOps Trainee | 03/2025 – 07/2025 Information Technology Institute – ITI (Intensive Code Camps) | Damanhur City, Al Beheira Governorate"
+      ],
+      "recovered_chunks": [
+        "Technical Support Specialist – ( full-time ) | 12/2024 – 2/2025 | Nasr City - Cairo",
+        "Systems Administration/DevOps Trainee | 03/2025 – 07/2025 Information Technology Institute – ITI (Intensive Code Camps) | Damanhur City, Al Beheira Governorate"
+      ],
+      "unrecovered_chunks": [],
+      "recovered_ratio": 1.0
+    },
+    {
+      "cv_id": "19",
+      "file_path": "CVs/Basmala ayman abdelhamedd cv.pdf",
+      "status": "matched",
+      "missed_chunks": [
+        "VOLUNTEERING MAY 2022 ,FAZZA INTERNATIONAL BADMINTON CHAMPIONSHIP",
+        "- Collaborated with the media team and Dubai TV channel for event coverage. FEBRUARY 2022 ,DUBAI 2022 WORLD ARCHERY PARA CHAMPIONSHIPS",
+        "-Responsible for data entry and providing access to individuals on the technical committee.",
+        "FEBRUARY 2022 ,GULF FOOD FESTIVAL WITH DUBAI MUNICIPALITY",
+        "-Led a team responsible for shipping food products from the festival to charities in less fortunate countries FEBRUARY 2022 ,2022 WORLD CUP QUALIFIERS IN UAE",
+        "- Permitted entry for fans and validated tickets. DECEMBER 2021 ,EXPO 2020 DUBAI",
+        "-Helped lead a tour of the Russian Pavilion and managed exhibition demonstrations."
+      ],
+      "recovered_chunks": [
+        "VOLUNTEERING MAY 2022 ,FAZZA INTERNATIONAL BADMINTON CHAMPIONSHIP",
+        "- Collaborated with the media team and Dubai TV channel for event coverage. FEBRUARY 2022 ,DUBAI 2022 WORLD ARCHERY PARA CHAMPIONSHIPS",
+        "-Responsible for data entry and providing access to individuals on the technical committee.",
+        "FEBRUARY 2022 ,GULF FOOD FESTIVAL WITH DUBAI MUNICIPALITY",
+        "-Led a team responsible for shipping food products from the festival to charities in less fortunate countries FEBRUARY 2022 ,2022 WORLD CUP QUALIFIERS IN UAE",
+        "- Permitted entry for fans and validated tickets. DECEMBER 2021 ,EXPO 2020 DUBAI",
+        "-Helped lead a tour of the Russian Pavilion and managed exhibition demonstrations."
+      ],
+      "unrecovered_chunks": [],
+      "recovered_ratio": 1.0
+    }
+  ]
+}
